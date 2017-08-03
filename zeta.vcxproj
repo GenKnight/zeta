@@ -40,6 +40,7 @@
     <ClInclude Include="src\TcpMsgHead.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".gitignore" />
     <None Include="proto\basehead.proto" />
     <None Include="proto\proto.bat" />
     <None Include="proto\protocal.proto" />
@@ -47,7 +48,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{31519246-B270-4510-9FCF-BDA83C01C2BA}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>BasePlatform</RootNamespace>
+    <RootNamespace>zeta</RootNamespace>
     <ProjectName>zeta</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

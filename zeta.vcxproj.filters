@@ -109,5 +109,8 @@
     <None Include="proto\protocal.proto">
       <Filter>proto</Filter>
     </None>
+    <None Include=".gitignore">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>
