@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="proto\basehead.pb.cc" />
+    <ClCompile Include="proto\protocal.pb.cc" />
+    <ClCompile Include="src\ClientSession.cpp" />
+    <ClCompile Include="src\EngineTask.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\ProjectServer.cpp" />
+    <ClCompile Include="src\RequestCMDParser.cpp" />
+    <ClCompile Include="src\RequestCommand.cpp" />
+    <ClCompile Include="src\TaskFactory.cpp" />
+    <ClCompile Include="src\TaskLogin.cpp" />
+    <ClCompile Include="src\TaskRegister.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="proto\basehead.pb.h" />
+    <ClInclude Include="proto\parse.h" />
+    <ClInclude Include="proto\protocal.pb.h" />
+    <ClInclude Include="src\ClientSession.h" />
+    <ClInclude Include="src\EngineTask.h" />
+    <ClInclude Include="src\ProjectServer.h" />
+    <ClInclude Include="src\RequestCMDParser.h" />
+    <ClInclude Include="src\RequestCommand.h" />
+    <ClInclude Include="src\TaskData.h" />
+    <ClInclude Include="src\TaskFactory.h" />
+    <ClInclude Include="src\TaskInterfaceDef.h" />
+    <ClInclude Include="src\TaskLogin.h" />
+    <ClInclude Include="src\TaskRegister.h" />
+    <ClInclude Include="src\TcpMsgHead.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="proto\basehead.proto" />
+    <None Include="proto\proto.bat" />
+    <None Include="proto\protocal.proto" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{31519246-B270-4510-9FCF-BDA83C01C2BA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BasePlatform</RootNamespace>
+    <ProjectName>zeta</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)temp\$(ProjectName)</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)lib;</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)google\protobuf\lib_vc120\debug;$(SolutionDir)lib;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>utility.lib;libprotobuf.lib;libprotobuf-lite.lib;libprotoc.lib;ws2_32.lib;wsock32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>
+      </ImportLibrary>
+    </Link>
+    <PreBuildEvent>
+      <Command>IF NOT EXIST $(SolutionDir)bin\$(Configuration) md $(SolutionDir)bin\$(Configuration)
+copy $(ProjectDir)*.conf  $(SolutionDir)bin\$(Configuration)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
