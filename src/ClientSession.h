@@ -18,7 +18,7 @@ namespace itstation
 
 		explicit ClientSession( int nType=0 );
 		virtual ~ClientSession();
-	protected:
+	//protected:
 
 		virtual void OnMessageStream( const char* stream, TCP_MSG_HEAD &header );
 

@@ -51,8 +51,7 @@ namespace itstation {
 	{ 
 		int nDataSize = header.datasize;
 
-		if ( nDataSize<1 )
-		{
+		if ( nDataSize<1 ) {
 			APP_LOG(utility::applog::LOG_ERROR) << "Recv stream msg error!";
 			return;
 		}
