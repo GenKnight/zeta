@@ -37,10 +37,11 @@ void protobuf_AssignDesc_protocal_2eproto() {
       "protocal.proto");
   GOOGLE_CHECK(file != NULL);
   login_info_descriptor_ = file->message_type(0);
-  static const int login_info_offsets_[3] = {
+  static const int login_info_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(login_info, head_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(login_info, userid_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(login_info, pwd_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(login_info, record_),
   };
   login_info_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -104,11 +105,11 @@ void protobuf_AddDesc_protocal_2eproto() {
 
   ::zeta::protobuf_AddDesc_basehead_2eproto();
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\016protocal.proto\022\004zeta\032\016basehead.proto\"K"
+    "\n\016protocal.proto\022\004zeta\032\016basehead.proto\"["
     "\n\nlogin_info\022 \n\004head\030\001 \002(\0132\022.zeta.messag"
-    "e_head\022\016\n\006userid\030\002 \001(\005\022\013\n\003pwd\030\003 \001(\t\"\?\n\013l"
-    "ogout_info\022 \n\004head\030\001 \002(\0132\022.zeta.message_"
-    "head\022\016\n\006userid\030\002 \001(\005", 180);
+    "e_head\022\016\n\006userid\030\002 \001(\005\022\013\n\003pwd\030\003 \001(\t\022\016\n\006r"
+    "ecord\030\004 \003(\t\"\?\n\013logout_info\022 \n\004head\030\001 \002(\013"
+    "2\022.zeta.message_head\022\016\n\006userid\030\002 \001(\005", 196);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "protocal.proto", &protobuf_RegisterTypes);
   login_info::default_instance_ = new login_info();
@@ -131,6 +132,7 @@ struct StaticDescriptorInitializer_protocal_2eproto {
 const int login_info::kHeadFieldNumber;
 const int login_info::kUseridFieldNumber;
 const int login_info::kPwdFieldNumber;
+const int login_info::kRecordFieldNumber;
 #endif  // !_MSC_VER
 
 login_info::login_info()
@@ -202,6 +204,7 @@ void login_info::Clear() {
       }
     }
   }
+  record_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
 }
@@ -254,6 +257,25 @@ bool login_info::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(34)) goto parse_record;
+        break;
+      }
+
+      // repeated string record = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_record:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->add_record()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->record(this->record_size() - 1).data(),
+            this->record(this->record_size() - 1).length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_record;
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -296,6 +318,15 @@ void login_info::SerializeWithCachedSizes(
       3, this->pwd(), output);
   }
 
+  // repeated string record = 4;
+  for (int i = 0; i < this->record_size(); i++) {
+  ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    this->record(i).data(), this->record(i).length(),
+    ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      4, this->record(i), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -324,6 +355,15 @@ void login_info::SerializeWithCachedSizes(
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         3, this->pwd(), target);
+  }
+
+  // repeated string record = 4;
+  for (int i = 0; i < this->record_size(); i++) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->record(i).data(), this->record(i).length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteStringToArray(4, this->record(i), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -359,6 +399,13 @@ int login_info::ByteSize() const {
     }
 
   }
+  // repeated string record = 4;
+  total_size += 1 * this->record_size();
+  for (int i = 0; i < this->record_size(); i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+      this->record(i));
+  }
+
   if (!unknown_fields().empty()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
@@ -384,6 +431,7 @@ void login_info::MergeFrom(const ::google::protobuf::Message& from) {
 
 void login_info::MergeFrom(const login_info& from) {
   GOOGLE_CHECK_NE(&from, this);
+  record_.MergeFrom(from.record_);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (from.has_head()) {
       mutable_head()->::zeta::message_head::MergeFrom(from.head());
@@ -424,6 +472,7 @@ void login_info::Swap(login_info* other) {
     std::swap(head_, other->head_);
     std::swap(userid_, other->userid_);
     std::swap(pwd_, other->pwd_);
+    record_.Swap(&other->record_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);

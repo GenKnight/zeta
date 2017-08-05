@@ -21,22 +21,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\ClientSession.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\EngineTask.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="src\main.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\RequestCMDParser.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\RequestCommand.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\TaskFactory.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\TaskLogin.cpp">
@@ -45,35 +30,32 @@
     <ClCompile Include="src\TaskRegister.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\ProjectServer.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="proto\protocal.pb.cc">
       <Filter>proto</Filter>
     </ClCompile>
     <ClCompile Include="proto\basehead.pb.cc">
       <Filter>proto</Filter>
     </ClCompile>
+    <ClCompile Include="src\server.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\session.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\command.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\parser.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine_task.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\task_factory.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\ClientSession.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\EngineTask.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\RequestCMDParser.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\RequestCommand.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\TaskData.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\TaskFactory.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="src\TaskInterfaceDef.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -89,14 +71,32 @@
     <ClInclude Include="proto\parse.h">
       <Filter>proto</Filter>
     </ClInclude>
-    <ClInclude Include="src\ProjectServer.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="proto\protocal.pb.h">
       <Filter>proto</Filter>
     </ClInclude>
     <ClInclude Include="proto\basehead.pb.h">
       <Filter>proto</Filter>
+    </ClInclude>
+    <ClInclude Include="src\server.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\session.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\command.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\parser.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine_task.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\task_data.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\task_factory.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

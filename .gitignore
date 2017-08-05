@@ -15,7 +15,7 @@ project/db_sync/log/*
 *.com 
 *.class 
 *.dll 
-*.exe 
+#*.exe 
 *.o 
 *.so 
 *.exp

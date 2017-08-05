@@ -1,14 +1,25 @@
+/******************************************************************************
+Copyright (c) 2016. All Rights Reserved.
+
+FileName: task_factory.h
+Version: 1.0
+Date: 2017.8.5
+
+History:
+eric     2017.8.5   1.0     Create
+******************************************************************************/
+
 #include "TaskLogin.h"
 #include "TaskInterfaceDef.h"
 #include <memory>
 #include "proto/parse.h"
 #include "proto/protocal.pb.h"
 #include <iostream>
-namespace itstation 
+namespace zeta 
 {
 
-	CTaskLogin::CTaskLogin( TaskData task_desc)
-        :EngineTask(task_desc)
+	CTaskLogin::CTaskLogin( task_data task_desc)
+        :engine_task(task_desc)
 	{
 		
 	}
@@ -19,7 +30,7 @@ namespace itstation
 
 	//@brief    : execute implement method, implement task execute operator
 	//@return   : return 0 if success, or -1 if failed
-	int CTaskLogin::executeImpl()
+	int CTaskLogin::execute_impl()
 	{
 		ASSET_MESSAGE_STRUCT Msg;
 		TCP_MSG_HEAD header;
@@ -46,6 +57,9 @@ namespace itstation
                 cout << pReq->mutable_head()->size() << endl;
                 cout << pReq->userid() << endl;
                 cout << pReq->pwd() << endl;
+                for (int i = 0; i < pReq->record_size(); i++) {
+                    cout << pReq->record(i) << endl;
+                }
             }
 		}
 		catch( ... )
@@ -55,4 +69,4 @@ namespace itstation
 
 		return 0;
 	}
-} //namespace itstation 
+} 

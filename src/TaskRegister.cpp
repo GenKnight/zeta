@@ -1,12 +1,23 @@
+/******************************************************************************
+Copyright (c) 2016. All Rights Reserved.
+
+FileName: task_factory.h
+Version: 1.0
+Date: 2017.8.5
+
+History:
+eric     2017.8.5   1.0     Create
+******************************************************************************/
+
 #include "TaskRegister.h"
 #include "TaskInterfaceDef.h"
-#include "ProjectServer.h"
+#include "server.h"
 #include "utility/applog.h"
-namespace itstation 
+namespace zeta 
 {
 
-	CTaskRegister::CTaskRegister( TaskData task_desc)
-		:EngineTask(task_desc)
+	CTaskRegister::CTaskRegister( task_data task_desc)
+		:engine_task(task_desc)
 	{
 	}
 
@@ -15,8 +26,7 @@ namespace itstation
 	{
 	}
 
-	//@brief    : execute implement method, implement task execute operator
-	int CTaskRegister::executeImpl()
+	int CTaskRegister::execute_impl()
 	{
 		APP_REGISTER *ptrData;
 
@@ -40,7 +50,7 @@ namespace itstation
 			APP_LOG(utility::applog::LOG_INFO) << "task register: " << ptrData->num;
             APP_REGISTER sp = { 0 };
             sp.num = 1;
-            get_CProjectServer().SendMessages(1, (const char*)&sp, header);
+            get_server().send_messages(1, (const char*)&sp, header);
 		}
 		catch( ... )
 		{
@@ -49,4 +59,4 @@ namespace itstation
 
 		return 0;
 	}
-} //namespace itstation 
+} 

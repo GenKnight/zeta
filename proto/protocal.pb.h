@@ -121,6 +121,22 @@ class login_info : public ::google::protobuf::Message {
   inline ::std::string* release_pwd();
   inline void set_allocated_pwd(::std::string* pwd);
 
+  // repeated string record = 4;
+  inline int record_size() const;
+  inline void clear_record();
+  static const int kRecordFieldNumber = 4;
+  inline const ::std::string& record(int index) const;
+  inline ::std::string* mutable_record(int index);
+  inline void set_record(int index, const ::std::string& value);
+  inline void set_record(int index, const char* value);
+  inline void set_record(int index, const char* value, size_t size);
+  inline ::std::string* add_record();
+  inline void add_record(const ::std::string& value);
+  inline void add_record(const char* value);
+  inline void add_record(const char* value, size_t size);
+  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& record() const;
+  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_record();
+
   // @@protoc_insertion_point(class_scope:zeta.login_info)
  private:
   inline void set_has_head();
@@ -134,10 +150,11 @@ class login_info : public ::google::protobuf::Message {
 
   ::zeta::message_head* head_;
   ::std::string* pwd_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> record_;
   ::google::protobuf::int32 userid_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
 
   friend void  protobuf_AddDesc_protocal_2eproto();
   friend void protobuf_AssignDesc_protocal_2eproto();
@@ -375,6 +392,50 @@ inline void login_info::set_allocated_pwd(::std::string* pwd) {
     clear_has_pwd();
     pwd_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   }
+}
+
+// repeated string record = 4;
+inline int login_info::record_size() const {
+  return record_.size();
+}
+inline void login_info::clear_record() {
+  record_.Clear();
+}
+inline const ::std::string& login_info::record(int index) const {
+  return record_.Get(index);
+}
+inline ::std::string* login_info::mutable_record(int index) {
+  return record_.Mutable(index);
+}
+inline void login_info::set_record(int index, const ::std::string& value) {
+  record_.Mutable(index)->assign(value);
+}
+inline void login_info::set_record(int index, const char* value) {
+  record_.Mutable(index)->assign(value);
+}
+inline void login_info::set_record(int index, const char* value, size_t size) {
+  record_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* login_info::add_record() {
+  return record_.Add();
+}
+inline void login_info::add_record(const ::std::string& value) {
+  record_.Add()->assign(value);
+}
+inline void login_info::add_record(const char* value) {
+  record_.Add()->assign(value);
+}
+inline void login_info::add_record(const char* value, size_t size) {
+  record_.Add()->assign(reinterpret_cast<const char*>(value), size);
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+login_info::record() const {
+  return record_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+login_info::mutable_record() {
+  return &record_;
 }
 
 // -------------------------------------------------------------------

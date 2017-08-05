@@ -13,13 +13,13 @@
   <ItemGroup>
     <ClCompile Include="proto\basehead.pb.cc" />
     <ClCompile Include="proto\protocal.pb.cc" />
-    <ClCompile Include="src\ClientSession.cpp" />
-    <ClCompile Include="src\EngineTask.cpp" />
+    <ClCompile Include="src\session.cpp" />
+    <ClCompile Include="src\engine_task.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\ProjectServer.cpp" />
-    <ClCompile Include="src\RequestCMDParser.cpp" />
-    <ClCompile Include="src\RequestCommand.cpp" />
-    <ClCompile Include="src\TaskFactory.cpp" />
+    <ClCompile Include="src\server.cpp" />
+    <ClCompile Include="src\parser.cpp" />
+    <ClCompile Include="src\command.cpp" />
+    <ClCompile Include="src\task_factory.cpp" />
     <ClCompile Include="src\TaskLogin.cpp" />
     <ClCompile Include="src\TaskRegister.cpp" />
   </ItemGroup>
@@ -27,13 +27,13 @@
     <ClInclude Include="proto\basehead.pb.h" />
     <ClInclude Include="proto\parse.h" />
     <ClInclude Include="proto\protocal.pb.h" />
-    <ClInclude Include="src\ClientSession.h" />
-    <ClInclude Include="src\EngineTask.h" />
-    <ClInclude Include="src\ProjectServer.h" />
-    <ClInclude Include="src\RequestCMDParser.h" />
-    <ClInclude Include="src\RequestCommand.h" />
-    <ClInclude Include="src\TaskData.h" />
-    <ClInclude Include="src\TaskFactory.h" />
+    <ClInclude Include="src\session.h" />
+    <ClInclude Include="src\engine_task.h" />
+    <ClInclude Include="src\server.h" />
+    <ClInclude Include="src\parser.h" />
+    <ClInclude Include="src\command.h" />
+    <ClInclude Include="src\task_data.h" />
+    <ClInclude Include="src\task_factory.h" />
     <ClInclude Include="src\TaskInterfaceDef.h" />
     <ClInclude Include="src\TaskLogin.h" />
     <ClInclude Include="src\TaskRegister.h" />

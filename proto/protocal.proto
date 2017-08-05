@@ -6,6 +6,7 @@ message login_info
 	required message_head	head=1;
 	optional int32			userid=2;		//ÓÃ»§Ãû
 	optional string			pwd=3;			//ÃÜÂë
+	repeated string			record=4;
 }
 
 message logout_info
