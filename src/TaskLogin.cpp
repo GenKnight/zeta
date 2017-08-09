@@ -10,7 +10,7 @@ eric     2017.8.5   1.0     Create
 ******************************************************************************/
 
 #include "TaskLogin.h"
-#include "TaskInterfaceDef.h"
+#include "task_interface.h"
 #include <memory>
 #include "proto/parse.h"
 #include "proto/protocal.pb.h"
@@ -32,8 +32,8 @@ namespace zeta
 	//@return   : return 0 if success, or -1 if failed
 	int CTaskLogin::execute_impl()
 	{
-		ASSET_MESSAGE_STRUCT Msg;
-		TCP_MSG_HEAD header;
+		MESSAGE_STRUCT Msg;
+		MESSAGE_HEAD header;
 
 		task_desc_.get_task_message( Msg );
 
@@ -45,7 +45,6 @@ namespace zeta
         memcpy(&read_msg[0], 
             (const char*)Msg.ptrData+sizeof(int32_t),
             len);
-        //read_msg.append((const char *)Msg.ptrData + sizeof(int32_t));
 		try
 		{
             std::shared_ptr<google::protobuf::Message> 

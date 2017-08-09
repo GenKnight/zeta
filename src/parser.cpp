@@ -15,7 +15,7 @@ eric     2017.8.5   1.0     Create
 #include "engine_task.h"
 namespace zeta 
 {
-    int parser::parse_taskgroup(ASSET_MESSAGE_STRUCT message, command& cmd)
+    int parser::parse_taskgroup(MESSAGE_STRUCT message, command& cmd)
 	{
         std::shared_ptr<engine_task> task(
             get_taskfactory().create_enginetask(message));

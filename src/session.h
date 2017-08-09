@@ -21,7 +21,7 @@ namespace zeta
         explicit session();
         virtual ~session();
 
-		virtual void on_notify( const char* stream, TCP_MSG_HEAD &header );
+		virtual void on_notify( const char* stream, MESSAGE_HEAD &header );
 	};
 } 
 #endif

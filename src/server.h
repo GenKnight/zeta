@@ -33,7 +33,7 @@ namespace zeta
 		void start_server();
 		void stop_server();
 
-		void send_messages( int type, const char* stream, TCP_MSG_HEAD &header );
+		void send_messages( int type, const char* stream, MESSAGE_HEAD &header );
 
 		//Implement Thread "run" interface
 		virtual void run();

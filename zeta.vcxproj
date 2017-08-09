@@ -34,10 +34,9 @@
     <ClInclude Include="src\command.h" />
     <ClInclude Include="src\task_data.h" />
     <ClInclude Include="src\task_factory.h" />
-    <ClInclude Include="src\TaskInterfaceDef.h" />
+    <ClInclude Include="src\task_interface.h" />
     <ClInclude Include="src\TaskLogin.h" />
     <ClInclude Include="src\TaskRegister.h" />
-    <ClInclude Include="src\TcpMsgHead.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

@@ -54,7 +54,7 @@ namespace zeta
 	{
 	}
 
-	void session::on_notify( const char* stream, TCP_MSG_HEAD &header )
+	void session::on_notify( const char* stream, MESSAGE_HEAD &header )
 	{
 		int size = header.datasize;
 
@@ -67,7 +67,7 @@ namespace zeta
 		gettimeofday(&start,0); 
 #endif
 
-		ASSET_MESSAGE_STRUCT message;
+		MESSAGE_STRUCT message;
 
 		message.header.datatype			= header.datatype;
 		message.header.datasize			= size;

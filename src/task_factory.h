@@ -21,8 +21,8 @@ namespace zeta
 	*task enum list -- APP请求命令类型定义
 	*/
 	enum TASKID{
-        e_register = 1,		//用户注册
-        e_login = 2,			//用户登录
+        e_register = 1,     //用户注册
+        e_login = 2,        //用户登录
         e_unknown = 9999
 	};
 //简单工厂模式
@@ -31,7 +31,7 @@ class taskfactory {
 
     TASKID get_taskid(const int& code);
 public:
-	std::shared_ptr<engine_task> create_enginetask(ASSET_MESSAGE_STRUCT message);
+    std::shared_ptr<engine_task> create_enginetask(MESSAGE_STRUCT message);
 
 };
 SINGLETON_GET(taskfactory);

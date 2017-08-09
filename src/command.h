@@ -9,8 +9,8 @@ History:
 eric     2017.8.5   1.0     Create
 ******************************************************************************/
 
-#ifndef WORKPLAN_REQUESTCOMMAND_H
-#define WORKPLAN_REQUESTCOMMAND_H
+#ifndef __COMMAND_H__
+#define __COMMAND_H__
 
 #include "engine_task.h"
 #include <memory>

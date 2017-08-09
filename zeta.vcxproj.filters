@@ -56,16 +56,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\TaskInterfaceDef.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="src\TaskLogin.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\TaskRegister.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\TcpMsgHead.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="proto\parse.h">
@@ -96,6 +90,9 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\task_factory.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\task_interface.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

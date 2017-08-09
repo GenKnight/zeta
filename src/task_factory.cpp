@@ -29,7 +29,7 @@ namespace zeta
 	}
 
     std::shared_ptr<engine_task> taskfactory::create_enginetask(
-        ASSET_MESSAGE_STRUCT message) {
+        MESSAGE_STRUCT message) {
         int id = message.header.datatype;
 		TASKID t = get_taskid( id );
 		std::shared_ptr<task_data> data(new task_data());

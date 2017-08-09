@@ -9,8 +9,8 @@ History:
 eric     2017.8.5   1.0     Create
 ******************************************************************************/
 
-#ifndef WORKPLAN_REQUESTCMDPARSER_H_
-#define WORKPLAN_REQUESTCMDPARSER_H_
+#ifndef __PARSER_H__
+#define __PARSER_H__
 
 #include "command.h"
 namespace zeta 
@@ -21,7 +21,7 @@ namespace zeta
         parser(){};
         virtual ~parser(){};
 
-		int parse_taskgroup(ASSET_MESSAGE_STRUCT Message, command& cmd);
+		int parse_taskgroup(MESSAGE_STRUCT Message, command& cmd);
 	private:
 
 	};

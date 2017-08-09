@@ -11,7 +11,7 @@ eric     2017.8.5   1.0     Create
 
 #include "server.h"
 #include "utility/applog.h"
-#include "TaskInterfaceDef.h"
+#include "task_interface.h"
 #include "session.h"
 #include "../proto/protocal.pb.h"
 #include "../proto/parse.h"
@@ -33,7 +33,7 @@ namespace zeta
         msg.add_record("three");
         string result;
         encode(result, msg);
-        TCP_MSG_HEAD header;
+        MESSAGE_HEAD header;
         header.datasize = result.size();
         header.datatype = 2;
         client.on_notify(result.c_str(), header);
@@ -45,7 +45,7 @@ namespace zeta
         m_bstop = true;
 	}
 
-	void server::send_messages( int type, const char* stream, TCP_MSG_HEAD &header )
+	void server::send_messages( int type, const char* stream, MESSAGE_HEAD &header )
 	{
 		switch(type)
 		{

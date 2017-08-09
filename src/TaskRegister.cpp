@@ -10,7 +10,7 @@ eric     2017.8.5   1.0     Create
 ******************************************************************************/
 
 #include "TaskRegister.h"
-#include "TaskInterfaceDef.h"
+#include "task_interface.h"
 #include "server.h"
 #include "utility/applog.h"
 namespace zeta 
@@ -28,28 +28,29 @@ namespace zeta
 
 	int CTaskRegister::execute_impl()
 	{
-		APP_REGISTER *ptrData;
+		REQ_REGISTER *ptrData;
 
-		ASSET_MESSAGE_STRUCT Msg;
-		TCP_MSG_HEAD header;
+		MESSAGE_STRUCT Msg;
+		MESSAGE_HEAD header;
 
 		task_desc_.get_task_message( Msg );
 
 		header.datatype = Msg.header.datatype;
 		header.datasize = sizeof(int);
 
-		if ( Msg.ptrData==NULL || Msg.header.datasize!=sizeof(APP_REGISTER) || Msg.header.datatype!=1 )
+        if (Msg.ptrData == NULL 
+            || Msg.header.datasize != sizeof(RSP_REGISTER) 
+            || Msg.header.datatype != 1)
 		{
 			return -1;
 		}
 
-		ptrData = (APP_REGISTER *)(Msg.ptrData);
+        ptrData = (REQ_REGISTER *)(Msg.ptrData);
 
 		try
 		{
-			APP_LOG(utility::applog::LOG_INFO) << "task register: " << ptrData->num;
-            APP_REGISTER sp = { 0 };
-            sp.num = 1;
+            RSP_REGISTER sp = { 0 };
+            sp.success = 0;
             get_server().send_messages(1, (const char*)&sp, header);
 		}
 		catch( ... )
