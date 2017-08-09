@@ -12,14 +12,23 @@ eric     2017.8.5   1.0     Create
 #ifndef __TASK_DATA_H__
 #define __TASK_DATA_H__
 #include <string>
-#include "TcpMsgHead.h"
-
-typedef struct ASSET_MESSAGE_STRUCT
+typedef struct message_head
 {
-	TCP_MSG_HEAD header;
+    int datatype;
+    int datasize;
+
+    message_head()
+        :datatype(0), datasize(0)
+    {
+    }
+}MESSAGE_HEAD;
+
+typedef struct message_struct
+{
+    MESSAGE_HEAD header;
 	void *ptrData;
 
-}ASSET_MESSAGE_STRUCT;
+}MESSAGE_STRUCT;
 
 class task_data
 {
@@ -27,19 +36,19 @@ public:
     task_data() { }
     virtual ~task_data() { }
 
-	void set_task_message( ASSET_MESSAGE_STRUCT &msg );
-	void get_task_message( ASSET_MESSAGE_STRUCT &msg );
+    void set_task_message(MESSAGE_STRUCT &msg);
+    void get_task_message(MESSAGE_STRUCT &msg);
 private:
-	ASSET_MESSAGE_STRUCT m_Data;
+    MESSAGE_STRUCT m_Data;
 };
 
-inline void task_data::set_task_message(ASSET_MESSAGE_STRUCT &msg)
+inline void task_data::set_task_message(MESSAGE_STRUCT &msg)
 {
 	m_Data.header	= msg.header;
 	m_Data.ptrData	= msg.ptrData;
 }
 
-inline void task_data::get_task_message(ASSET_MESSAGE_STRUCT &msg)
+inline void task_data::get_task_message(MESSAGE_STRUCT &msg)
 {
 	msg.header	= m_Data.header;
 	msg.ptrData = m_Data.ptrData;
