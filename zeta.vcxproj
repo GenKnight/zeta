@@ -27,6 +27,8 @@
     <ClInclude Include="proto\basehead.pb.h" />
     <ClInclude Include="proto\parse.h" />
     <ClInclude Include="proto\protocal.pb.h" />
+    <ClInclude Include="src\message_queue.h" />
+    <ClInclude Include="src\message_server.h" />
     <ClInclude Include="src\session.h" />
     <ClInclude Include="src\engine_task.h" />
     <ClInclude Include="src\server.h" />
@@ -37,6 +39,7 @@
     <ClInclude Include="src\task_interface.h" />
     <ClInclude Include="src\TaskLogin.h" />
     <ClInclude Include="src\TaskRegister.h" />
+    <ClInclude Include="src\thread_manager.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

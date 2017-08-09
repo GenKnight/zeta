@@ -12,11 +12,9 @@ eric     2017.8.5   1.0     Create
 #include <iostream>
 #include <memory>
 #include "session.h"
-#include "parser.h"
-#include "command.h"
 #include "utility/applog.h"
 #include <string.h>
-
+#include "server.h"
 #ifndef _WIN32
 #include <sys/time.h>
 #endif
@@ -74,20 +72,8 @@ namespace zeta
 		message.ptrData					= new char[size];
         memcpy(message.ptrData, stream, size);
 
-        std::shared_ptr<parser> cmdParse(new parser());
-        std::shared_ptr<command> command(new command());
+        get_server().post(message);
 
-        try {
-            cmdParse->parse_taskgroup(message, *command);
-        }
-        catch (...) {
-            APP_LOG(utility::applog::LOG_CRITICAL) << "Fatal Error, Task Can not find£°" << header.datatype;
-            return;
-        }
-        command->exe_command_impl();
-
-        delete[] message.ptrData;
-        message.ptrData = NULL;
 #ifndef _WIN32	//≤‚ ‘–‘ƒ‹
 		gettimeofday(&stop,0); 
 		timeval_subtract(&diff,&start,&stop); 

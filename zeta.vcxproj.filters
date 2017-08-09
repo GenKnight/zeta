@@ -95,6 +95,15 @@
     <ClInclude Include="src\task_interface.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="src\message_queue.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\message_server.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\thread_manager.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="proto\proto.bat">

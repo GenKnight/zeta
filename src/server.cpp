@@ -20,6 +20,7 @@ namespace zeta
 	void server::start_server()
 	{
         m_bstop = false;
+        m_message_server.run(2);
         start();
 
         session client;

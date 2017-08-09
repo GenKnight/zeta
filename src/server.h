@@ -19,7 +19,8 @@ eric     2017.8.5   1.0     Create
 #include "utility/mutex.h"
 #include "utility/thread.h"
 #include "session.h"
-
+#include "message_server.h"
+#include "task_data.h"
 namespace zeta 
 {
 	class server
@@ -38,7 +39,12 @@ namespace zeta
 		//Implement Thread "run" interface
 		virtual void run();
 
+        void post(MESSAGE_STRUCT &msg)
+        {
+            m_message_server.post(msg);
+        }
 	private: 
+        message_server<MESSAGE_STRUCT> m_message_server;
 		bool m_bstop;
 	}; 
     SINGLETON_GET(server);
