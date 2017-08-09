@@ -44,6 +44,7 @@ namespace zeta
             m_message_server.post(msg);
         }
 	private: 
+        session m_notify;
         message_server<MESSAGE_STRUCT> m_message_server;
 		bool m_bstop;
 	}; 

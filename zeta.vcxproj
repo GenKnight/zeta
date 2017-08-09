@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClCompile Include="proto\basehead.pb.cc" />
     <ClCompile Include="proto\protocal.pb.cc" />
+    <ClCompile Include="src\AmqEngine.cpp" />
     <ClCompile Include="src\session.cpp" />
     <ClCompile Include="src\engine_task.cpp" />
     <ClCompile Include="src\main.cpp" />
@@ -24,9 +25,13 @@
     <ClCompile Include="src\TaskRegister.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="lib\fndcms\fndAsyncConsumer.h" />
+    <ClInclude Include="lib\fndcms\fndcms.h" />
+    <ClInclude Include="lib\fndcms\fndProducer.h" />
     <ClInclude Include="proto\basehead.pb.h" />
     <ClInclude Include="proto\parse.h" />
     <ClInclude Include="proto\protocal.pb.h" />
+    <ClInclude Include="src\AmqEngine.h" />
     <ClInclude Include="src\message_queue.h" />
     <ClInclude Include="src\message_server.h" />
     <ClInclude Include="src\session.h" />
@@ -57,7 +62,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -99,7 +104,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)google\protobuf\lib_vc120\debug;$(SolutionDir)lib;</AdditionalLibraryDirectories>
-      <AdditionalDependencies>utility.lib;libprotobuf.lib;libprotobuf-lite.lib;libprotoc.lib;ws2_32.lib;wsock32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libactivemq-cpp.lib;fndcms.lib;utility.lib;libprotobuf.lib;libprotobuf-lite.lib;libprotoc.lib;ws2_32.lib;wsock32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>
       </ImportLibrary>

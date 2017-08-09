@@ -54,6 +54,9 @@
     <ClCompile Include="src\task_factory.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\AmqEngine.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\TaskLogin.h">
@@ -103,6 +106,18 @@
     </ClInclude>
     <ClInclude Include="src\thread_manager.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AmqEngine.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\fndcms\fndAsyncConsumer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\fndcms\fndcms.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\fndcms\fndProducer.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
