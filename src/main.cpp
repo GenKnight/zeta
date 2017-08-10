@@ -170,7 +170,7 @@ static int proc_main(std::string& param)
 #ifndef  WIN32
     if (!check_single_instance()) return -1;
 #endif // ! WIN32
-    get_server().start_server();
+    get_server().run(2);
     while (!b_stop) {
         //cout << "master thread" << endl;
         q_sleep(1000);

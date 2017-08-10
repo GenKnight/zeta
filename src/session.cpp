@@ -52,7 +52,7 @@ namespace zeta
 	{
 	}
 
-	void session::on_notify( const char* stream, MESSAGE_HEAD &header )
+    void session::OnMessageStream(const char* stream, CMS_HEADER &header)
 	{
 		int size = header.datasize;
 

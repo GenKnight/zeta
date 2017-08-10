@@ -11,6 +11,7 @@ eric     2017.8.5   1.0     Create
 
 #include "TaskLogin.h"
 #include "task_interface.h"
+#include "server.h"
 #include <memory>
 #include "proto/parse.h"
 #include "proto/protocal.pb.h"
@@ -59,6 +60,10 @@ namespace zeta
                 for (int i = 0; i < pReq->record_size(); i++) {
                     cout << pReq->record(i) << endl;
                 }
+
+                string pwd = pReq->pwd();
+                header.datasize = pwd.size();
+                get_server().send_messages(1, pwd.c_str(), header);
             }
 		}
 		catch( ... )

@@ -12,16 +12,9 @@ eric     2017.8.5   1.0     Create
 #ifndef __TASK_DATA_H__
 #define __TASK_DATA_H__
 #include <string>
-typedef struct message_head
-{
-    int datatype;
-    int datasize;
+#include "fndcms/fndcms.h"
 
-    message_head()
-        :datatype(0), datasize(0)
-    {
-    }
-}MESSAGE_HEAD;
+typedef CMS_HEADER MESSAGE_HEAD;
 
 typedef struct message_struct
 {

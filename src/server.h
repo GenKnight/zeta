@@ -17,27 +17,23 @@ eric     2017.8.5   1.0     Create
 #include <string.h>
 #include "utility/singleton.h"
 #include "utility/mutex.h"
-#include "utility/thread.h"
 #include "session.h"
 #include "message_server.h"
 #include "task_data.h"
 namespace zeta 
 {
 	class server
-        : public utility::thread
 	{ 
         SINGLETON_ONCE_UNINIT(server);
         server(){};
     public:
-        ~server(){ stop_server(); }
+        ~server(){ stop(); }
 	public:
-		void start_server();
-		void stop_server();
+        void run(const size_t thread_num);
+        void join();
+		void stop();
 
 		void send_messages( int type, const char* stream, MESSAGE_HEAD &header );
-
-		//Implement Thread "run" interface
-		virtual void run();
 
         void post(MESSAGE_STRUCT &msg)
         {
@@ -46,7 +42,6 @@ namespace zeta
 	private: 
         session m_notify;
         message_server<MESSAGE_STRUCT> m_message_server;
-		bool m_bstop;
 	}; 
     SINGLETON_GET(server);
 

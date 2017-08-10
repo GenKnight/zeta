@@ -2,7 +2,7 @@
 ############ 
 bin/*
 temp/*
-lib/*
+#lib/*
 include/*
 project/riskapidemo/*
 ipch/*
@@ -14,7 +14,7 @@ project/db_sync/log/*
 ################### 
 *.com 
 *.class 
-*.dll 
+#*.dll 
 #*.exe 
 *.o 
 *.so 

@@ -28,13 +28,13 @@ void AmqEngine::Init(IAmqAsyncConsumerNotify& ts_notify)
 {
 	std::string amq_addr = "127.0.0.1:61616";
 
-	//std::string rsp_server = "Q.ERIC2TOM";
- //   m_amq_rsp = AmqCreateProducer(amq_addr.c_str(), rsp_server.c_str());
- //   m_amq_rsp->AmqStart();
+	std::string rsp_server = "Q.ERIC2TOM";
+    m_amq_rsp = AmqCreateProducer(amq_addr.c_str(), rsp_server.c_str());
+    m_amq_rsp->AmqStart();
 
-	//std::string req_server = "Q.TOM2ERIC";
- //   m_amq_req = AmqCreateAsyncConsumer(&ts_notify, amq_addr.c_str(), req_server.c_str());
- //   m_amq_req->AmqStart();
+	std::string req_server = "Q.TOM2ERIC";
+    m_amq_req = AmqCreateAsyncConsumer(&ts_notify, amq_addr.c_str(), req_server.c_str());
+    m_amq_req->AmqStart();
 	
 	Sleep(1000);	// 等待1秒
 }
