@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zeta", "zeta.vcxproj", "{31519246-B270-4510-9FCF-BDA83C01C2BA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cms_async_consumer", "cms_async_consumer\cmsAsyncConsumer.vcxproj", "{1C972BAA-673A-401A-8581-A8EFA697DE65}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cms_producer", "cms_producer\cmsProducer.vcxproj", "{F78C99DC-BD06-4416-BFB6-5044194E59EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -15,6 +19,14 @@ Global
 		{31519246-B270-4510-9FCF-BDA83C01C2BA}.Debug|Win32.Build.0 = Debug|Win32
 		{31519246-B270-4510-9FCF-BDA83C01C2BA}.Release|Win32.ActiveCfg = Release|Win32
 		{31519246-B270-4510-9FCF-BDA83C01C2BA}.Release|Win32.Build.0 = Release|Win32
+		{1C972BAA-673A-401A-8581-A8EFA697DE65}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1C972BAA-673A-401A-8581-A8EFA697DE65}.Debug|Win32.Build.0 = Debug|Win32
+		{1C972BAA-673A-401A-8581-A8EFA697DE65}.Release|Win32.ActiveCfg = Release|Win32
+		{1C972BAA-673A-401A-8581-A8EFA697DE65}.Release|Win32.Build.0 = Release|Win32
+		{F78C99DC-BD06-4416-BFB6-5044194E59EA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F78C99DC-BD06-4416-BFB6-5044194E59EA}.Debug|Win32.Build.0 = Debug|Win32
+		{F78C99DC-BD06-4416-BFB6-5044194E59EA}.Release|Win32.ActiveCfg = Release|Win32
+		{F78C99DC-BD06-4416-BFB6-5044194E59EA}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
