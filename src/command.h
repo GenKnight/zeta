@@ -28,8 +28,8 @@ namespace zeta
 
         void exe_command_impl();
 
-		map<int, std::shared_ptr<engine_task> > tasks_;
-
+		//map<int, std::shared_ptr<engine_task> > tasks_;
+        std::shared_ptr<engine_task> m_task;
 	private:
 
 	};

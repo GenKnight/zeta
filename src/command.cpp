@@ -17,10 +17,11 @@ namespace zeta
 
 void command::exe_command_impl()
 {  
-    for (auto it = tasks_.begin(); it != tasks_.end(); it++) {
-		std::shared_ptr<engine_task> task_ptr = it->second;
-        task_ptr->execute_impl();
-    }
+  //  for (auto it = tasks_.begin(); it != tasks_.end(); it++) {
+		//std::shared_ptr<engine_task> task_ptr = it->second;
+  //      task_ptr->execute_impl();
+  //  }
+    m_task->execute_impl();
 }
 
 } // namespace itstation 

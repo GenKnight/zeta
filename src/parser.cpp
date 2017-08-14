@@ -22,7 +22,8 @@ namespace zeta
 		if(task == nullptr) {
 			throw "unknown task id";
 		}
-        cmd.tasks_[message.header.datatype] = task;
-		return 0;
+        //cmd.tasks_[message.header.datatype] = task;
+        cmd.m_task = task;
+        return 0;
 	}
 }
