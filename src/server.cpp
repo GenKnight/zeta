@@ -34,6 +34,8 @@ namespace zeta
         //msg.add_record("three");
         //string result;
         //encode(result, msg);
+        //cout << result.size() << endl;
+
         //MESSAGE_HEAD header;
         //header.datasize = result.size();
         //header.datatype = 2;
