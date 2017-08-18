@@ -1,6 +1,6 @@
 // Protocol Buffers - Google's data interchange format
 // Copyright 2008 Google Inc.  All rights reserved.
-// http://code.google.com/p/protobuf/
+// https://developers.google.com/protocol-buffers/
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -32,8 +32,9 @@
 //  Based on original Protocol Buffers design by
 //  Sanjay Ghemawat, Jeff Dean, and others.
 
+
 #ifdef _MSC_VER
-#include <io.h>
+#include <direct.h>
 #else
 #include <unistd.h>
 #endif
@@ -43,24 +44,33 @@
 #include <errno.h>
 
 #include <algorithm>
+#include <memory>
+#ifndef _SHARED_PTR_H
+#include <google/protobuf/stubs/shared_ptr.h>
+#endif
 
 #include <google/protobuf/compiler/importer.h>
 
 #include <google/protobuf/compiler/parser.h>
 #include <google/protobuf/io/tokenizer.h>
 #include <google/protobuf/io/zero_copy_stream_impl.h>
+#include <google/protobuf/stubs/io_win32.h>
 #include <google/protobuf/stubs/strutil.h>
+
+#ifdef _WIN32
+#include <ctype.h>
+#endif
+
+#ifdef _MSC_VER
+// DO NOT include <io.h>, instead create functions in io_win32.{h,cc} and import
+// them like we do below.
+using google::protobuf::internal::win32::access;
+using google::protobuf::internal::win32::open;
+#endif
 
 namespace google {
 namespace protobuf {
 namespace compiler {
-
-#ifdef _WIN32
-#ifndef F_OK
-#define F_OK 00  // not defined by MSVC for whatever reason
-#endif
-#include <ctype.h>
-#endif
 
 // Returns true if the text looks like a Windows-style absolute path, starting
 // with a drive letter.  Example:  "C:\foo".  TODO(kenton):  Share this with
@@ -121,10 +131,11 @@ SourceTreeDescriptorDatabase::~SourceTreeDescriptorDatabase() {}
 
 bool SourceTreeDescriptorDatabase::FindFileByName(
     const string& filename, FileDescriptorProto* output) {
-  scoped_ptr<io::ZeroCopyInputStream> input(source_tree_->Open(filename));
+  google::protobuf::scoped_ptr<io::ZeroCopyInputStream> input(source_tree_->Open(filename));
   if (input == NULL) {
     if (error_collector_ != NULL) {
-      error_collector_->AddError(filename, -1, 0, "File not found.");
+      error_collector_->AddError(filename, -1, 0,
+                                 source_tree_->GetLastErrorMessage());
     }
     return false;
   }
@@ -180,12 +191,26 @@ void SourceTreeDescriptorDatabase::ValidationErrorCollector::AddError(
   owner_->error_collector_->AddError(filename, line, column, message);
 }
 
+void SourceTreeDescriptorDatabase::ValidationErrorCollector::AddWarning(
+    const string& filename,
+    const string& element_name,
+    const Message* descriptor,
+    ErrorLocation location,
+    const string& message) {
+  if (owner_->error_collector_ == NULL) return;
+
+  int line, column;
+  owner_->source_locations_.Find(descriptor, location, &line, &column);
+  owner_->error_collector_->AddWarning(filename, line, column, message);
+}
+
 // ===================================================================
 
 Importer::Importer(SourceTree* source_tree,
                    MultiFileErrorCollector* error_collector)
   : database_(source_tree),
     pool_(&database_, database_.GetValidationErrorCollector()) {
+  pool_.EnforceWeakDependencies(true);
   database_.RecordErrorsTo(error_collector);
 }
 
@@ -195,9 +220,22 @@ const FileDescriptor* Importer::Import(const string& filename) {
   return pool_.FindFileByName(filename);
 }
 
+void Importer::AddUnusedImportTrackFile(const string& file_name) {
+  pool_.AddUnusedImportTrackFile(file_name);
+}
+
+void Importer::ClearUnusedImportTrackFiles() {
+  pool_.ClearUnusedImportTrackFiles();
+}
+
+
 // ===================================================================
 
 SourceTree::~SourceTree() {}
+
+string SourceTree::GetLastErrorMessage() {
+  return "File not found.";
+}
 
 DiskSourceTree::DiskSourceTree() {}
 
@@ -239,9 +277,9 @@ static string CanonicalizePath(string path) {
   }
 #endif
 
-  vector<string> parts;
-  vector<string> canonical_parts;
-  SplitStringUsing(path, "/", &parts);  // Note:  Removes empty parts.
+  std::vector<string> canonical_parts;
+  std::vector<string> parts = Split(
+      path, "/", true);  // Note:  Removes empty parts.
   for (int i = 0; i < parts.size(); i++) {
     if (parts[i] == ".") {
       // Ignore.
@@ -249,7 +287,7 @@ static string CanonicalizePath(string path) {
       canonical_parts.push_back(parts[i]);
     }
   }
-  string result = JoinStrings(canonical_parts, "/");
+  string result = Join(canonical_parts, "/");
   if (!path.empty() && path[0] == '/') {
     // Restore leading slash.
     result = '/' + result;
@@ -263,10 +301,8 @@ static string CanonicalizePath(string path) {
 }
 
 static inline bool ContainsParentReference(const string& path) {
-  return path == ".." ||
-         HasPrefixString(path, "../") ||
-         HasSuffixString(path, "/..") ||
-         path.find("/../") != string::npos;
+  return path == ".." || HasPrefixString(path, "../") ||
+         HasSuffixString(path, "/..") || path.find("/../") != string::npos;
 }
 
 // Maps a file from an old location to a new one.  Typically, old_prefix is
@@ -296,8 +332,7 @@ static bool ApplyMapping(const string& filename,
       // We do not allow the file name to use "..".
       return false;
     }
-    if (HasPrefixString(filename, "/") ||
-        IsWindowsAbsolutePath(filename)) {
+    if (HasPrefixString(filename, "/") || IsWindowsAbsolutePath(filename)) {
       // This is an absolute path, so it isn't matched by the empty string.
       return false;
     }
@@ -385,7 +420,7 @@ DiskSourceTree::DiskFileToVirtualFile(
   // Verify that we can open the file.  Note that this also has the side-effect
   // of verifying that we are not canonicalizing away any non-existent
   // directories.
-  scoped_ptr<io::ZeroCopyInputStream> stream(OpenDiskFile(disk_file));
+  google::protobuf::scoped_ptr<io::ZeroCopyInputStream> stream(OpenDiskFile(disk_file));
   if (stream == NULL) {
     return CANNOT_OPEN;
   }
@@ -395,13 +430,17 @@ DiskSourceTree::DiskFileToVirtualFile(
 
 bool DiskSourceTree::VirtualFileToDiskFile(const string& virtual_file,
                                            string* disk_file) {
-  scoped_ptr<io::ZeroCopyInputStream> stream(OpenVirtualFile(virtual_file,
-                                                             disk_file));
+  google::protobuf::scoped_ptr<io::ZeroCopyInputStream> stream(
+      OpenVirtualFile(virtual_file, disk_file));
   return stream != NULL;
 }
 
 io::ZeroCopyInputStream* DiskSourceTree::Open(const string& filename) {
   return OpenVirtualFile(filename, NULL);
+}
+
+string DiskSourceTree::GetLastErrorMessage() {
+  return last_error_message_;
 }
 
 io::ZeroCopyInputStream* DiskSourceTree::OpenVirtualFile(
@@ -412,6 +451,8 @@ io::ZeroCopyInputStream* DiskSourceTree::OpenVirtualFile(
     // We do not allow importing of paths containing things like ".." or
     // consecutive slashes since the compiler expects files to be uniquely
     // identified by file name.
+    last_error_message_ = "Backslashes, consecutive slashes, \".\", or \"..\" "
+                          "are not allowed in the virtual path";
     return NULL;
   }
 
@@ -429,13 +470,13 @@ io::ZeroCopyInputStream* DiskSourceTree::OpenVirtualFile(
 
       if (errno == EACCES) {
         // The file exists but is not readable.
-        // TODO(kenton):  Find a way to report this more nicely.
-        GOOGLE_LOG(WARNING) << "Read access is denied for file: " << temp_disk_file;
+        last_error_message_ = "Read access is denied for file: " +
+                              temp_disk_file;
         return NULL;
       }
     }
   }
-
+  last_error_message_ = "File not found.";
   return NULL;
 }
 

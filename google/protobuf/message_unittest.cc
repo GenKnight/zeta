@@ -1,6 +1,6 @@
 // Protocol Buffers - Google's data interchange format
 // Copyright 2008 Google Inc.  All rights reserved.
-// http://code.google.com/p/protobuf/
+// https://developers.google.com/protocol-buffers/
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -37,27 +37,38 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#ifdef _MSC_VER
-#include <io.h>
-#else
+#ifndef _MSC_VER
 #include <unistd.h>
 #endif
 #include <sstream>
 #include <fstream>
 
-#include <google/protobuf/stubs/common.h>
-#include <google/protobuf/io/zero_copy_stream_impl.h>
-#include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/descriptor.pb.h>
-#include <google/protobuf/unittest.pb.h>
 #include <google/protobuf/test_util.h>
+#include <google/protobuf/unittest.pb.h>
+#include <google/protobuf/io/coded_stream.h>
+#include <google/protobuf/io/zero_copy_stream.h>
+#include <google/protobuf/io/zero_copy_stream_impl.h>
+#include <google/protobuf/descriptor.pb.h>
+#include <google/protobuf/arena.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
 
+#include <google/protobuf/stubs/logging.h>
+#include <google/protobuf/stubs/common.h>
+#include <google/protobuf/stubs/io_win32.h>
+#include <google/protobuf/stubs/logging.h>
 #include <google/protobuf/testing/googletest.h>
 #include <gtest/gtest.h>
 
 namespace google {
 namespace protobuf {
+
+#if defined(_MSC_VER)
+// DO NOT include <io.h>, instead create functions in io_win32.{h,cc} and import
+// them like we do below.
+using google::protobuf::internal::win32::close;
+using google::protobuf::internal::win32::open;
+#endif
 
 #ifndef O_BINARY
 #ifdef _O_BINARY
@@ -73,7 +84,7 @@ TEST(MessageTest, SerializeHelpers) {
 
   protobuf_unittest::TestAllTypes message;
   TestUtil::SetAllFields(&message);
-  stringstream stream;
+  std::stringstream stream;
 
   string str1("foo");
   string str2("bar");
@@ -97,7 +108,7 @@ TEST(MessageTest, SerializeHelpers) {
 }
 
 TEST(MessageTest, SerializeToBrokenOstream) {
-  ofstream out;
+  std::ofstream out;
   protobuf_unittest::TestAllTypes message;
   message.set_optional_int32(123);
 
@@ -108,8 +119,9 @@ TEST(MessageTest, ParseFromFileDescriptor) {
   string filename = TestSourceDir() +
                     "/google/protobuf/testdata/golden_message";
   int file = open(filename.c_str(), O_RDONLY | O_BINARY);
+  ASSERT_GE(file, 0);
 
-  unittest::TestAllTypes message;
+  protobuf_unittest::TestAllTypes message;
   EXPECT_TRUE(message.ParseFromFileDescriptor(file));
   TestUtil::ExpectAllFieldsSet(message);
 
@@ -121,8 +133,9 @@ TEST(MessageTest, ParsePackedFromFileDescriptor) {
       TestSourceDir() +
       "/google/protobuf/testdata/golden_packed_fields_message";
   int file = open(filename.c_str(), O_RDONLY | O_BINARY);
+  ASSERT_GE(file, 0);
 
-  unittest::TestPackedTypes message;
+  protobuf_unittest::TestPackedTypes message;
   EXPECT_TRUE(message.ParseFromFileDescriptor(file));
   TestUtil::ExpectPackedFieldsSet(message);
 
@@ -151,7 +164,7 @@ TEST(MessageTest, ParseHelpers) {
   {
     // Test ParseFromIstream.
     protobuf_unittest::TestAllTypes message;
-    stringstream stream(data);
+    std::stringstream stream(data);
     EXPECT_TRUE(message.ParseFromIstream(&stream));
     EXPECT_TRUE(stream.eof());
     TestUtil::ExpectAllFieldsSet(message);
@@ -179,7 +192,7 @@ TEST(MessageTest, ParseHelpers) {
 
 TEST(MessageTest, ParseFailsIfNotInitialized) {
   unittest::TestRequired message;
-  vector<string> errors;
+  std::vector<string> errors;
 
   {
     ScopedMemoryLog log;
@@ -205,7 +218,29 @@ TEST(MessageTest, InitializationErrorString) {
   EXPECT_EQ("a, b, c", message.InitializationErrorString());
 }
 
-#ifdef PROTOBUF_HAS_DEATH_TEST
+TEST(MessageTest, DynamicCastToGenerated) {
+  unittest::TestAllTypes test_all_types;
+
+  google::protobuf::Message* test_all_types_pointer = &test_all_types;
+  EXPECT_EQ(&test_all_types,
+            google::protobuf::internal::DynamicCastToGenerated<unittest::TestAllTypes>(
+                test_all_types_pointer));
+  EXPECT_EQ(NULL,
+            google::protobuf::internal::DynamicCastToGenerated<unittest::TestRequired>(
+                test_all_types_pointer));
+
+  const google::protobuf::Message* test_all_types_pointer_const = &test_all_types;
+  EXPECT_EQ(
+      &test_all_types,
+      google::protobuf::internal::DynamicCastToGenerated<const unittest::TestAllTypes>(
+          test_all_types_pointer_const));
+  EXPECT_EQ(
+      NULL,
+      google::protobuf::internal::DynamicCastToGenerated<const unittest::TestRequired>(
+          test_all_types_pointer_const));
+}
+
+#ifdef PROTOBUF_HAS_DEATH_TEST  // death tests do not work on Windows yet.
 
 TEST(MessageTest, SerializeFailsIfNotInitialized) {
   unittest::TestRequired message;
@@ -222,7 +257,138 @@ TEST(MessageTest, CheckInitialized) {
     "fields: a, b, c");
 }
 
+TEST(MessageTest, CheckOverflow) {
+  unittest::TestAllTypes message;
+  // Create a message with size just over 2GB. This triggers integer overflow
+  // when computing message size.
+  const string data(1024, 'x');
+  Cord one_megabyte;
+  for (int i = 0; i < 1024; i++) {
+    one_megabyte.Append(data);
+  }
+
+  for (int i = 0; i < 2 * 1024 + 1; ++i) {
+    message.add_repeated_cord()->CopyFrom(one_megabyte);
+  }
+
+  Cord serialized;
+  EXPECT_FALSE(message.AppendToCord(&serialized));
+}
+
+TEST(MessageTest, CheckBigOverflow) {
+  // Checking for 4GB buffers on 32 bit systems is problematic.
+  if (sizeof(void*) < 8) return;
+  unittest::TestAllTypes message;
+  // Create a message with size just over 4GB. We should be able to detect this
+  // too, even though it will make a plain "int" wrap back to a positive number.
+  const string data(1024, 'x');
+  Cord one_megabyte;
+  for (int i = 0; i < 1024; i++) {
+    one_megabyte.Append(data);
+  }
+
+  for (int i = 0; i < 4 * 1024 + 1; ++i) {
+    message.add_repeated_cord()->CopyFrom(one_megabyte);
+  }
+
+  Cord serialized;
+  EXPECT_FALSE(message.AppendToCord(&serialized));
+}
+
 #endif  // PROTOBUF_HAS_DEATH_TEST
+
+namespace {
+// An input stream that repeats a string's content for a number of times. It
+// helps us create a really large input without consuming too much memory. Used
+// to test the parsing behavior when the input size exceeds 2G or close to it.
+class RepeatedInputStream : public io::ZeroCopyInputStream {
+ public:
+  RepeatedInputStream(const string& data, size_t count)
+      : data_(data), count_(count), position_(0), total_byte_count_(0) {}
+
+  virtual bool Next(const void** data, int* size) {
+    if (position_ == data_.size()) {
+      if (--count_ == 0) {
+        return false;
+      }
+      position_ = 0;
+    }
+    *data = &data_[position_];
+    *size = static_cast<int>(data_.size() - position_);
+    position_ = data_.size();
+    total_byte_count_ += *size;
+    return true;
+  }
+
+  virtual void BackUp(int count) {
+    position_ -= static_cast<size_t>(count);
+    total_byte_count_ -= count;
+  }
+
+  virtual bool Skip(int count) {
+    while (count > 0) {
+      const void* data;
+      int size;
+      if (!Next(&data, &size)) {
+        break;
+      }
+      if (size >= count) {
+        BackUp(size - count);
+        return true;
+      } else {
+        count -= size;
+      }
+    }
+    return false;
+  }
+
+  virtual int64 ByteCount() const { return total_byte_count_; }
+
+ private:
+  string data_;
+  size_t count_;     // The number of strings that haven't been consuemd.
+  size_t position_;  // Position in the string for the next read.
+  int64 total_byte_count_;
+};
+}  // namespace
+
+TEST(MessageTest, TestParseMessagesCloseTo2G) {
+  // Create a message with a large string field.
+  string value = string(64 * 1024 * 1024, 'x');
+  protobuf_unittest::TestAllTypes message;
+  message.set_optional_string(value);
+
+  // Repeat this message in the input stream to make the total input size
+  // close to 2G.
+  string data = message.SerializeAsString();
+  size_t count = static_cast<size_t>(kint32max) / data.size();
+  RepeatedInputStream input(data, count);
+
+  // The parsing should succeed.
+  protobuf_unittest::TestAllTypes result;
+  EXPECT_TRUE(result.ParseFromZeroCopyStream(&input));
+
+  // When there are multiple occurences of a singulr field, the last one
+  // should win.
+  EXPECT_EQ(value, result.optional_string());
+}
+
+TEST(MessageTest, TestParseMessagesOver2G) {
+  // Create a message with a large string field.
+  string value = string(64 * 1024 * 1024, 'x');
+  protobuf_unittest::TestAllTypes message;
+  message.set_optional_string(value);
+
+  // Repeat this message in the input stream to make the total input size
+  // larger than 2G.
+  string data = message.SerializeAsString();
+  size_t count = static_cast<size_t>(kint32max) / data.size() + 1;
+  RepeatedInputStream input(data, count);
+
+  // The parsing should fail.
+  protobuf_unittest::TestAllTypes result;
+  EXPECT_FALSE(result.ParseFromZeroCopyStream(&input));
+}
 
 TEST(MessageTest, BypassInitializationCheckOnSerialize) {
   unittest::TestRequired message;
@@ -233,7 +399,7 @@ TEST(MessageTest, BypassInitializationCheckOnSerialize) {
 
 TEST(MessageTest, FindInitializationErrors) {
   unittest::TestRequired message;
-  vector<string> errors;
+  std::vector<string> errors;
   message.FindInitializationErrors(&errors);
   ASSERT_EQ(3, errors.size());
   EXPECT_EQ("a", errors[0]);
@@ -255,6 +421,30 @@ TEST(MessageTest, ParseFailsOnInvalidMessageEnd) {
 
   // The byte is an endgroup tag, but we aren't parsing a group.
   EXPECT_FALSE(message.ParseFromArray("\014", 1));
+}
+
+// Regression test for b/23630858
+TEST(MessageTest, MessageIsStillValidAfterParseFails) {
+  unittest::TestAllTypes message;
+
+  // 9 0xFFs for the "optional_uint64" field.
+  string invalid_data = "\x20\xFF\xFF\xFF\xFF\xFF\xFF\xFF\xFF\xFF";
+
+  EXPECT_FALSE(message.ParseFromString(invalid_data));
+  message.Clear();
+  EXPECT_EQ(0, message.optional_uint64());
+
+  // invalid data for field "optional_string". Length prefix is 1 but no
+  // payload.
+  string invalid_string_data = "\x72\x01";
+  {
+    google::protobuf::Arena arena;
+    unittest::TestAllTypes* arena_message =
+        google::protobuf::Arena::CreateMessage<unittest::TestAllTypes>(&arena);
+    EXPECT_FALSE(arena_message->ParseFromString(invalid_string_data));
+    arena_message->Clear();
+    EXPECT_EQ("", arena_message->optional_string());
+  }
 }
 
 namespace {
@@ -327,6 +517,72 @@ TEST(MessageTest, ParsingMerge) {
   EXPECT_EQ(3, parsing_merge.repeatedgroup_size());
   EXPECT_EQ(3, parsing_merge.ExtensionSize(
       unittest::TestParsingMerge::repeated_ext));
+}
+
+TEST(MessageTest, MergeFrom) {
+  unittest::TestAllTypes source;
+  unittest::TestAllTypes dest;
+
+  // Optional fields
+  source.set_optional_int32(1);  // only source
+  source.set_optional_int64(2);  // both source and dest
+  dest.set_optional_int64(3);
+  dest.set_optional_uint32(4);   // only dest
+
+  // Optional fields with defaults
+  source.set_default_int32(13);  // only source
+  source.set_default_int64(14);  // both source and dest
+  dest.set_default_int64(15);
+  dest.set_default_uint32(16);   // only dest
+
+  // Repeated fields
+  source.add_repeated_int32(5);  // only source
+  source.add_repeated_int32(6);
+  source.add_repeated_int64(7);  // both source and dest
+  source.add_repeated_int64(8);
+  dest.add_repeated_int64(9);
+  dest.add_repeated_int64(10);
+  dest.add_repeated_uint32(11);  // only dest
+  dest.add_repeated_uint32(12);
+
+  dest.MergeFrom(source);
+
+  // Optional fields: source overwrites dest if source is specified
+  EXPECT_EQ(1, dest.optional_int32());  // only source: use source
+  EXPECT_EQ(2, dest.optional_int64());  // source and dest: use source
+  EXPECT_EQ(4, dest.optional_uint32());  // only dest: use dest
+  EXPECT_EQ(0, dest.optional_uint64());  // neither: use default
+
+  // Optional fields with defaults
+  EXPECT_EQ(13, dest.default_int32());  // only source: use source
+  EXPECT_EQ(14, dest.default_int64());  // source and dest: use source
+  EXPECT_EQ(16, dest.default_uint32());  // only dest: use dest
+  EXPECT_EQ(44, dest.default_uint64());  // neither: use default
+
+  // Repeated fields: concatenate source onto the end of dest
+  ASSERT_EQ(2, dest.repeated_int32_size());
+  EXPECT_EQ(5, dest.repeated_int32(0));
+  EXPECT_EQ(6, dest.repeated_int32(1));
+  ASSERT_EQ(4, dest.repeated_int64_size());
+  EXPECT_EQ(9,  dest.repeated_int64(0));
+  EXPECT_EQ(10, dest.repeated_int64(1));
+  EXPECT_EQ(7,  dest.repeated_int64(2));
+  EXPECT_EQ(8,  dest.repeated_int64(3));
+  ASSERT_EQ(2, dest.repeated_uint32_size());
+  EXPECT_EQ(11, dest.repeated_uint32(0));
+  EXPECT_EQ(12, dest.repeated_uint32(1));
+  ASSERT_EQ(0, dest.repeated_uint64_size());
+}
+
+TEST(MessageTest, IsInitialized) {
+  protobuf_unittest::TestIsInitialized msg;
+  EXPECT_TRUE(msg.IsInitialized());
+  protobuf_unittest::TestIsInitialized::SubMessage* sub_message = msg.mutable_sub_message();
+  EXPECT_TRUE(msg.IsInitialized());
+  protobuf_unittest::TestIsInitialized::SubMessage::SubGroup* sub_group = sub_message->mutable_subgroup();
+  EXPECT_FALSE(msg.IsInitialized());
+  sub_group->set_i(1);
+  EXPECT_TRUE(msg.IsInitialized());
 }
 
 TEST(MessageFactoryTest, GeneratedFactoryLookup) {

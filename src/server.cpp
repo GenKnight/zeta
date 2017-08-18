@@ -21,25 +21,26 @@ namespace zeta
     void server::run(const size_t thread_num)
 	{
         m_message_server.run(thread_num);
-        get_AmqEngine().Init(m_notify);
-        
-//for test
-        //zeta::login_info msg;
-        //msg.mutable_head()->set_size(10001);
-        //msg.mutable_head()->set_type(10002);
-        //msg.set_userid(10003);
-        //msg.set_pwd("123456");
-        //msg.add_record("one");
-        //msg.add_record("two");
-        //msg.add_record("three");
-        //string result;
-        //encode(result, msg);
-        //cout << result.size() << endl;
 
-        //MESSAGE_HEAD header;
-        //header.datasize = result.size();
-        //header.datatype = 2;
-        //m_notify.OnMessageStream(result.c_str(), header);
+        //for test
+        zeta::login_info msg;
+        msg.mutable_head()->set_size(10001);
+        msg.mutable_head()->set_type(10002);
+        msg.set_userid(10003);
+        msg.set_pwd("123456");
+        msg.add_record("one");
+        msg.add_record("two");
+        msg.add_record("three");
+        string result;
+        encode(result, msg);
+        cout << result.size() << endl;
+
+        MESSAGE_HEAD header;
+        header.datasize = result.size();
+        header.datatype = 2;
+        m_notify.OnMessageStream(result.c_str(), header);
+
+        get_AmqEngine().Init(m_notify);
 
 	}
 

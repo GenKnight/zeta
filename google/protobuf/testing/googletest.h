@@ -1,6 +1,6 @@
 // Protocol Buffers - Google's data interchange format
 // Copyright 2008 Google Inc.  All rights reserved.
-// http://code.google.com/p/protobuf/
+// https://developers.google.com/protocol-buffers/
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -37,7 +37,7 @@
 #include <map>
 #include <vector>
 #include <google/protobuf/stubs/common.h>
-
+#include <gmock/gmock.h>
 // Disable death tests if we use exceptions in CHECK().
 #if !PROTOBUF_USE_EXCEPTIONS && defined(GTEST_HAS_DEATH_TEST)
 #define PROTOBUF_HAS_DEATH_TEST
@@ -85,7 +85,7 @@ class ScopedMemoryLog {
   const vector<string>& GetMessages(LogLevel error);
 
  private:
-  map<LogLevel, vector<string> > messages_;
+  std::map<LogLevel, vector<string> > messages_;
   LogHandler* old_handler_;
 
   static void HandleLog(LogLevel level, const char* filename, int line,

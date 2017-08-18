@@ -1,9 +1,11 @@
+syntax = "proto3";
+
 package	zeta;
 
 message message_head
 {
-	required int32 size=1;
-	optional int32 type=2;
+    int32 size=1;
+    int32 type=2;
 }
 
 

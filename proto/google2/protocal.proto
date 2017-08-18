@@ -1,0 +1,16 @@
+package	zeta;
+import "basehead.proto";
+
+message login_info
+{
+	required message_head	head=1;
+	optional int32			userid=2;		//用户名
+	optional string			pwd=3;			//密码
+	repeated string			record=4;
+}
+
+message logout_info
+{
+	required message_head	head=1;
+	optional int32			userid=2;		//用户名
+}

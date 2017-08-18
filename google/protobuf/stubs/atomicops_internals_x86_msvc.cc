@@ -1,6 +1,6 @@
 // Protocol Buffers - Google's data interchange format
 // Copyright 2012 Google Inc.  All rights reserved.
-// http://code.google.com/p/protobuf/
+// https://developers.google.com/protocol-buffers/
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -44,9 +44,10 @@ namespace google {
 namespace protobuf {
 namespace internal {
 
-inline void MemoryBarrier() {
-  // We use MemoryBarrier from WinNT.h
-  ::MemoryBarrier();
+inline void MemoryBarrierInternal() {
+  // On ARM this is a define while on x86/x64 this is
+  // a function declared in WinNT.h
+  MemoryBarrier();
 }
 
 Atomic32 NoBarrier_CompareAndSwap(volatile Atomic32* ptr,

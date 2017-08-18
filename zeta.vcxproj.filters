@@ -121,9 +121,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="proto\proto.bat">
-      <Filter>proto</Filter>
-    </None>
     <None Include="proto\basehead.proto">
       <Filter>proto</Filter>
     </None>
@@ -132,6 +129,9 @@
     </None>
     <None Include=".gitignore">
       <Filter>资源文件</Filter>
+    </None>
+    <None Include="proto\proto.bat">
+      <Filter>proto</Filter>
     </None>
   </ItemGroup>
 </Project>
