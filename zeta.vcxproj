@@ -51,6 +51,7 @@
     <None Include="proto\basehead.proto" />
     <None Include="proto\proto.bat" />
     <None Include="proto\protocal.proto" />
+    <None Include="proto\risk_protocal.proto" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{31519246-B270-4510-9FCF-BDA83C01C2BA}</ProjectGuid>

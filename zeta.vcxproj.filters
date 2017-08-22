@@ -133,5 +133,8 @@
     <None Include="proto\proto.bat">
       <Filter>proto</Filter>
     </None>
+    <None Include="proto\risk_protocal.proto">
+      <Filter>proto</Filter>
+    </None>
   </ItemGroup>
 </Project>

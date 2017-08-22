@@ -1,14 +1,12 @@
 syntax = "proto3";
 
+//namespace
 package risk;
 
-message rtn_front_connected
+//订阅保证金信息
+message subscribe_margin
 {
-}
-
-message rtn_front_disconnected
-{
-    int32           reason=1;               //错误原因
+    string           investor=1;                    //资金账号 , 所有:"all"
 }
 
 //上期所保证金信息
@@ -16,8 +14,7 @@ message shfe_margin_field
 {
     string           exchangeid=1;                  //交易所
     double           pre_favorable=2;               //优惠前总保证金
-    double           speculation_favorable=3;       //投机仓优惠
-    double           hedging_favorable=4;           //套保仓优惠
+    double           big_side_favorable=3;          //单向大边优惠
 }
 
 //中金所保证金信息
@@ -49,19 +46,19 @@ message czce_margin_field
     double           spd_favorable=3;               //跨期仓优惠
     double           ips_favorable=4;               //跨品种仓优惠
     double           prt_favorable=5;               //备兑仓优惠
-    double           std_favorable=6;               //跨式仓优惠
+    double           std_favorable=6;               //跨式仓优惠。
     double           stg_favorable=7;               //宽跨式仓优惠
     double           zprt_favorable=8;              //组备兑仓优惠
     double           locked_favorable=9;            //剩余期货对锁仓优惠
 }
 
-//回报保证金信息
+//保证金信息回报
 message rtn_margin_field
 {
-    uint32               timestamp=1;                 //时间戳
-    string               investor=2;                  //资金账户
-    shfe_margin_field    shfe_margin=3;               //上期所保证金
-    cffex_margin_field   cffex_margin=4;              //上期所保证金
-    dce_margin_field     dce_margin=5;                //上期所保证金
-    czce_margin_field    czce_margin=6;               //上期所保证金
+    uint32               timestamp=1;               //计算时间戳
+    string               investor=2;                //资金账户
+    shfe_margin_field    shfe_margin=3;             //上期所保证金
+    cffex_margin_field   cffex_margin=4;            //中金所保证金
+    dce_margin_field     dce_margin=5;              //大商所保证金
+    czce_margin_field    czce_margin=6;             //郑商所保证金
 }
