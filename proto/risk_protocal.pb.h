@@ -40,6 +40,21 @@ extern czce_margin_fieldDefaultTypeInternal _czce_margin_field_default_instance_
 class dce_margin_field;
 class dce_margin_fieldDefaultTypeInternal;
 extern dce_margin_fieldDefaultTypeInternal _dce_margin_field_default_instance_;
+class error_info;
+class error_infoDefaultTypeInternal;
+extern error_infoDefaultTypeInternal _error_info_default_instance_;
+class req_investor_list;
+class req_investor_listDefaultTypeInternal;
+extern req_investor_listDefaultTypeInternal _req_investor_list_default_instance_;
+class req_risker_login;
+class req_risker_loginDefaultTypeInternal;
+extern req_risker_loginDefaultTypeInternal _req_risker_login_default_instance_;
+class rsp_investor_list;
+class rsp_investor_listDefaultTypeInternal;
+extern rsp_investor_listDefaultTypeInternal _rsp_investor_list_default_instance_;
+class rsp_risker_login;
+class rsp_risker_loginDefaultTypeInternal;
+extern rsp_risker_loginDefaultTypeInternal _rsp_risker_login_default_instance_;
 class rtn_margin_field;
 class rtn_margin_fieldDefaultTypeInternal;
 extern rtn_margin_fieldDefaultTypeInternal _rtn_margin_field_default_instance_;
@@ -49,6 +64,9 @@ extern shfe_margin_fieldDefaultTypeInternal _shfe_margin_field_default_instance_
 class subscribe_margin;
 class subscribe_marginDefaultTypeInternal;
 extern subscribe_marginDefaultTypeInternal _subscribe_margin_default_instance_;
+class unsubscribe_margin;
+class unsubscribe_marginDefaultTypeInternal;
+extern unsubscribe_marginDefaultTypeInternal _unsubscribe_margin_default_instance_;
 }  // namespace risk
 
 namespace risk {
@@ -69,6 +87,565 @@ void InitDefaults();
 }  // namespace protobuf_risk_5fprotocal_2eproto
 
 // ===================================================================
+
+class error_info : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:risk.error_info) */ {
+ public:
+  error_info();
+  virtual ~error_info();
+
+  error_info(const error_info& from);
+
+  inline error_info& operator=(const error_info& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  error_info(error_info&& from) noexcept
+    : error_info() {
+    *this = ::std::move(from);
+  }
+
+  inline error_info& operator=(error_info&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const error_info& default_instance();
+
+  static inline const error_info* internal_default_instance() {
+    return reinterpret_cast<const error_info*>(
+               &_error_info_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    0;
+
+  void Swap(error_info* other);
+  friend void swap(error_info& a, error_info& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline error_info* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  error_info* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const error_info& from);
+  void MergeFrom(const error_info& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(error_info* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string errormsg = 2;
+  void clear_errormsg();
+  static const int kErrormsgFieldNumber = 2;
+  const ::std::string& errormsg() const;
+  void set_errormsg(const ::std::string& value);
+  #if LANG_CXX11
+  void set_errormsg(::std::string&& value);
+  #endif
+  void set_errormsg(const char* value);
+  void set_errormsg(const char* value, size_t size);
+  ::std::string* mutable_errormsg();
+  ::std::string* release_errormsg();
+  void set_allocated_errormsg(::std::string* errormsg);
+
+  // sint32 errorid = 1;
+  void clear_errorid();
+  static const int kErroridFieldNumber = 1;
+  ::google::protobuf::int32 errorid() const;
+  void set_errorid(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:risk.error_info)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr errormsg_;
+  ::google::protobuf::int32 errorid_;
+  mutable int _cached_size_;
+  friend struct protobuf_risk_5fprotocal_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class req_risker_login : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:risk.req_risker_login) */ {
+ public:
+  req_risker_login();
+  virtual ~req_risker_login();
+
+  req_risker_login(const req_risker_login& from);
+
+  inline req_risker_login& operator=(const req_risker_login& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  req_risker_login(req_risker_login&& from) noexcept
+    : req_risker_login() {
+    *this = ::std::move(from);
+  }
+
+  inline req_risker_login& operator=(req_risker_login&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const req_risker_login& default_instance();
+
+  static inline const req_risker_login* internal_default_instance() {
+    return reinterpret_cast<const req_risker_login*>(
+               &_req_risker_login_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    1;
+
+  void Swap(req_risker_login* other);
+  friend void swap(req_risker_login& a, req_risker_login& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline req_risker_login* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  req_risker_login* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const req_risker_login& from);
+  void MergeFrom(const req_risker_login& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(req_risker_login* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string riskerid = 1;
+  void clear_riskerid();
+  static const int kRiskeridFieldNumber = 1;
+  const ::std::string& riskerid() const;
+  void set_riskerid(const ::std::string& value);
+  #if LANG_CXX11
+  void set_riskerid(::std::string&& value);
+  #endif
+  void set_riskerid(const char* value);
+  void set_riskerid(const char* value, size_t size);
+  ::std::string* mutable_riskerid();
+  ::std::string* release_riskerid();
+  void set_allocated_riskerid(::std::string* riskerid);
+
+  // string password = 2;
+  void clear_password();
+  static const int kPasswordFieldNumber = 2;
+  const ::std::string& password() const;
+  void set_password(const ::std::string& value);
+  #if LANG_CXX11
+  void set_password(::std::string&& value);
+  #endif
+  void set_password(const char* value);
+  void set_password(const char* value, size_t size);
+  ::std::string* mutable_password();
+  ::std::string* release_password();
+  void set_allocated_password(::std::string* password);
+
+  // @@protoc_insertion_point(class_scope:risk.req_risker_login)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr riskerid_;
+  ::google::protobuf::internal::ArenaStringPtr password_;
+  mutable int _cached_size_;
+  friend struct protobuf_risk_5fprotocal_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class rsp_risker_login : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:risk.rsp_risker_login) */ {
+ public:
+  rsp_risker_login();
+  virtual ~rsp_risker_login();
+
+  rsp_risker_login(const rsp_risker_login& from);
+
+  inline rsp_risker_login& operator=(const rsp_risker_login& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  rsp_risker_login(rsp_risker_login&& from) noexcept
+    : rsp_risker_login() {
+    *this = ::std::move(from);
+  }
+
+  inline rsp_risker_login& operator=(rsp_risker_login&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const rsp_risker_login& default_instance();
+
+  static inline const rsp_risker_login* internal_default_instance() {
+    return reinterpret_cast<const rsp_risker_login*>(
+               &_rsp_risker_login_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    2;
+
+  void Swap(rsp_risker_login* other);
+  friend void swap(rsp_risker_login& a, rsp_risker_login& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline rsp_risker_login* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  rsp_risker_login* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const rsp_risker_login& from);
+  void MergeFrom(const rsp_risker_login& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(rsp_risker_login* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .risk.error_info info = 1;
+  bool has_info() const;
+  void clear_info();
+  static const int kInfoFieldNumber = 1;
+  const ::risk::error_info& info() const;
+  ::risk::error_info* mutable_info();
+  ::risk::error_info* release_info();
+  void set_allocated_info(::risk::error_info* info);
+
+  // @@protoc_insertion_point(class_scope:risk.rsp_risker_login)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::risk::error_info* info_;
+  mutable int _cached_size_;
+  friend struct protobuf_risk_5fprotocal_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class req_investor_list : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:risk.req_investor_list) */ {
+ public:
+  req_investor_list();
+  virtual ~req_investor_list();
+
+  req_investor_list(const req_investor_list& from);
+
+  inline req_investor_list& operator=(const req_investor_list& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  req_investor_list(req_investor_list&& from) noexcept
+    : req_investor_list() {
+    *this = ::std::move(from);
+  }
+
+  inline req_investor_list& operator=(req_investor_list&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const req_investor_list& default_instance();
+
+  static inline const req_investor_list* internal_default_instance() {
+    return reinterpret_cast<const req_investor_list*>(
+               &_req_investor_list_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    3;
+
+  void Swap(req_investor_list* other);
+  friend void swap(req_investor_list& a, req_investor_list& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline req_investor_list* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  req_investor_list* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const req_investor_list& from);
+  void MergeFrom(const req_investor_list& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(req_investor_list* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string riskerid = 1;
+  void clear_riskerid();
+  static const int kRiskeridFieldNumber = 1;
+  const ::std::string& riskerid() const;
+  void set_riskerid(const ::std::string& value);
+  #if LANG_CXX11
+  void set_riskerid(::std::string&& value);
+  #endif
+  void set_riskerid(const char* value);
+  void set_riskerid(const char* value, size_t size);
+  ::std::string* mutable_riskerid();
+  ::std::string* release_riskerid();
+  void set_allocated_riskerid(::std::string* riskerid);
+
+  // @@protoc_insertion_point(class_scope:risk.req_investor_list)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr riskerid_;
+  mutable int _cached_size_;
+  friend struct protobuf_risk_5fprotocal_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class rsp_investor_list : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:risk.rsp_investor_list) */ {
+ public:
+  rsp_investor_list();
+  virtual ~rsp_investor_list();
+
+  rsp_investor_list(const rsp_investor_list& from);
+
+  inline rsp_investor_list& operator=(const rsp_investor_list& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  rsp_investor_list(rsp_investor_list&& from) noexcept
+    : rsp_investor_list() {
+    *this = ::std::move(from);
+  }
+
+  inline rsp_investor_list& operator=(rsp_investor_list&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const rsp_investor_list& default_instance();
+
+  static inline const rsp_investor_list* internal_default_instance() {
+    return reinterpret_cast<const rsp_investor_list*>(
+               &_rsp_investor_list_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    4;
+
+  void Swap(rsp_investor_list* other);
+  friend void swap(rsp_investor_list& a, rsp_investor_list& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline rsp_investor_list* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  rsp_investor_list* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const rsp_investor_list& from);
+  void MergeFrom(const rsp_investor_list& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(rsp_investor_list* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string investorid = 2;
+  void clear_investorid();
+  static const int kInvestoridFieldNumber = 2;
+  const ::std::string& investorid() const;
+  void set_investorid(const ::std::string& value);
+  #if LANG_CXX11
+  void set_investorid(::std::string&& value);
+  #endif
+  void set_investorid(const char* value);
+  void set_investorid(const char* value, size_t size);
+  ::std::string* mutable_investorid();
+  ::std::string* release_investorid();
+  void set_allocated_investorid(::std::string* investorid);
+
+  // .risk.error_info info = 1;
+  bool has_info() const;
+  void clear_info();
+  static const int kInfoFieldNumber = 1;
+  const ::risk::error_info& info() const;
+  ::risk::error_info* mutable_info();
+  ::risk::error_info* release_info();
+  void set_allocated_info(::risk::error_info* info);
+
+  // bool islast = 3;
+  void clear_islast();
+  static const int kIslastFieldNumber = 3;
+  bool islast() const;
+  void set_islast(bool value);
+
+  // @@protoc_insertion_point(class_scope:risk.rsp_investor_list)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr investorid_;
+  ::risk::error_info* info_;
+  bool islast_;
+  mutable int _cached_size_;
+  friend struct protobuf_risk_5fprotocal_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
 
 class subscribe_margin : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:risk.subscribe_margin) */ {
  public:
@@ -104,7 +681,7 @@ class subscribe_margin : public ::google::protobuf::Message /* @@protoc_insertio
                &_subscribe_margin_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    0;
+    5;
 
   void Swap(subscribe_margin* other);
   friend void swap(subscribe_margin& a, subscribe_margin& b) {
@@ -151,25 +728,146 @@ class subscribe_margin : public ::google::protobuf::Message /* @@protoc_insertio
 
   // accessors -------------------------------------------------------
 
-  // string investor = 1;
+  // repeated string investor = 1;
+  int investor_size() const;
   void clear_investor();
   static const int kInvestorFieldNumber = 1;
-  const ::std::string& investor() const;
-  void set_investor(const ::std::string& value);
+  const ::std::string& investor(int index) const;
+  ::std::string* mutable_investor(int index);
+  void set_investor(int index, const ::std::string& value);
   #if LANG_CXX11
-  void set_investor(::std::string&& value);
+  void set_investor(int index, ::std::string&& value);
   #endif
-  void set_investor(const char* value);
-  void set_investor(const char* value, size_t size);
-  ::std::string* mutable_investor();
-  ::std::string* release_investor();
-  void set_allocated_investor(::std::string* investor);
+  void set_investor(int index, const char* value);
+  void set_investor(int index, const char* value, size_t size);
+  ::std::string* add_investor();
+  void add_investor(const ::std::string& value);
+  #if LANG_CXX11
+  void add_investor(::std::string&& value);
+  #endif
+  void add_investor(const char* value);
+  void add_investor(const char* value, size_t size);
+  const ::google::protobuf::RepeatedPtrField< ::std::string>& investor() const;
+  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_investor();
 
   // @@protoc_insertion_point(class_scope:risk.subscribe_margin)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::ArenaStringPtr investor_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> investor_;
+  mutable int _cached_size_;
+  friend struct protobuf_risk_5fprotocal_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class unsubscribe_margin : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:risk.unsubscribe_margin) */ {
+ public:
+  unsubscribe_margin();
+  virtual ~unsubscribe_margin();
+
+  unsubscribe_margin(const unsubscribe_margin& from);
+
+  inline unsubscribe_margin& operator=(const unsubscribe_margin& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  unsubscribe_margin(unsubscribe_margin&& from) noexcept
+    : unsubscribe_margin() {
+    *this = ::std::move(from);
+  }
+
+  inline unsubscribe_margin& operator=(unsubscribe_margin&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const unsubscribe_margin& default_instance();
+
+  static inline const unsubscribe_margin* internal_default_instance() {
+    return reinterpret_cast<const unsubscribe_margin*>(
+               &_unsubscribe_margin_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    6;
+
+  void Swap(unsubscribe_margin* other);
+  friend void swap(unsubscribe_margin& a, unsubscribe_margin& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline unsubscribe_margin* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  unsubscribe_margin* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const unsubscribe_margin& from);
+  void MergeFrom(const unsubscribe_margin& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(unsubscribe_margin* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated string investor = 1;
+  int investor_size() const;
+  void clear_investor();
+  static const int kInvestorFieldNumber = 1;
+  const ::std::string& investor(int index) const;
+  ::std::string* mutable_investor(int index);
+  void set_investor(int index, const ::std::string& value);
+  #if LANG_CXX11
+  void set_investor(int index, ::std::string&& value);
+  #endif
+  void set_investor(int index, const char* value);
+  void set_investor(int index, const char* value, size_t size);
+  ::std::string* add_investor();
+  void add_investor(const ::std::string& value);
+  #if LANG_CXX11
+  void add_investor(::std::string&& value);
+  #endif
+  void add_investor(const char* value);
+  void add_investor(const char* value, size_t size);
+  const ::google::protobuf::RepeatedPtrField< ::std::string>& investor() const;
+  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_investor();
+
+  // @@protoc_insertion_point(class_scope:risk.unsubscribe_margin)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> investor_;
   mutable int _cached_size_;
   friend struct protobuf_risk_5fprotocal_2eproto::TableStruct;
 };
@@ -209,7 +907,7 @@ class shfe_margin_field : public ::google::protobuf::Message /* @@protoc_inserti
                &_shfe_margin_field_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    1;
+    7;
 
   void Swap(shfe_margin_field* other);
   friend void swap(shfe_margin_field& a, shfe_margin_field& b) {
@@ -256,46 +954,24 @@ class shfe_margin_field : public ::google::protobuf::Message /* @@protoc_inserti
 
   // accessors -------------------------------------------------------
 
-  // string exchangeid = 1;
-  void clear_exchangeid();
-  static const int kExchangeidFieldNumber = 1;
-  const ::std::string& exchangeid() const;
-  void set_exchangeid(const ::std::string& value);
-  #if LANG_CXX11
-  void set_exchangeid(::std::string&& value);
-  #endif
-  void set_exchangeid(const char* value);
-  void set_exchangeid(const char* value, size_t size);
-  ::std::string* mutable_exchangeid();
-  ::std::string* release_exchangeid();
-  void set_allocated_exchangeid(::std::string* exchangeid);
-
-  // double pre_favorable = 2;
+  // double pre_favorable = 1;
   void clear_pre_favorable();
-  static const int kPreFavorableFieldNumber = 2;
+  static const int kPreFavorableFieldNumber = 1;
   double pre_favorable() const;
   void set_pre_favorable(double value);
 
-  // double speculation_favorable = 3;
-  void clear_speculation_favorable();
-  static const int kSpeculationFavorableFieldNumber = 3;
-  double speculation_favorable() const;
-  void set_speculation_favorable(double value);
-
-  // double hedging_favorable = 4;
-  void clear_hedging_favorable();
-  static const int kHedgingFavorableFieldNumber = 4;
-  double hedging_favorable() const;
-  void set_hedging_favorable(double value);
+  // double big_side_favorable = 2;
+  void clear_big_side_favorable();
+  static const int kBigSideFavorableFieldNumber = 2;
+  double big_side_favorable() const;
+  void set_big_side_favorable(double value);
 
   // @@protoc_insertion_point(class_scope:risk.shfe_margin_field)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::ArenaStringPtr exchangeid_;
   double pre_favorable_;
-  double speculation_favorable_;
-  double hedging_favorable_;
+  double big_side_favorable_;
   mutable int _cached_size_;
   friend struct protobuf_risk_5fprotocal_2eproto::TableStruct;
 };
@@ -335,7 +1011,7 @@ class cffex_margin_field : public ::google::protobuf::Message /* @@protoc_insert
                &_cffex_margin_field_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    2;
+    8;
 
   void Swap(cffex_margin_field* other);
   friend void swap(cffex_margin_field& a, cffex_margin_field& b) {
@@ -382,47 +1058,33 @@ class cffex_margin_field : public ::google::protobuf::Message /* @@protoc_insert
 
   // accessors -------------------------------------------------------
 
-  // string exchangeid = 1;
-  void clear_exchangeid();
-  static const int kExchangeidFieldNumber = 1;
-  const ::std::string& exchangeid() const;
-  void set_exchangeid(const ::std::string& value);
-  #if LANG_CXX11
-  void set_exchangeid(::std::string&& value);
-  #endif
-  void set_exchangeid(const char* value);
-  void set_exchangeid(const char* value, size_t size);
-  ::std::string* mutable_exchangeid();
-  ::std::string* release_exchangeid();
-  void set_allocated_exchangeid(::std::string* exchangeid);
-
-  // double pre_favorable = 2;
+  // double pre_favorable = 1;
   void clear_pre_favorable();
-  static const int kPreFavorableFieldNumber = 2;
+  static const int kPreFavorableFieldNumber = 1;
   double pre_favorable() const;
   void set_pre_favorable(double value);
 
-  // double speculation_favorable = 3;
+  // double speculation_favorable = 2;
   void clear_speculation_favorable();
-  static const int kSpeculationFavorableFieldNumber = 3;
+  static const int kSpeculationFavorableFieldNumber = 2;
   double speculation_favorable() const;
   void set_speculation_favorable(double value);
 
-  // double hedging_favorable = 4;
+  // double hedging_favorable = 3;
   void clear_hedging_favorable();
-  static const int kHedgingFavorableFieldNumber = 4;
+  static const int kHedgingFavorableFieldNumber = 3;
   double hedging_favorable() const;
   void set_hedging_favorable(double value);
 
-  // double arbitrage_favorable = 5;
+  // double arbitrage_favorable = 4;
   void clear_arbitrage_favorable();
-  static const int kArbitrageFavorableFieldNumber = 5;
+  static const int kArbitrageFavorableFieldNumber = 4;
   double arbitrage_favorable() const;
   void set_arbitrage_favorable(double value);
 
-  // double market_favorable = 6;
+  // double market_favorable = 5;
   void clear_market_favorable();
-  static const int kMarketFavorableFieldNumber = 6;
+  static const int kMarketFavorableFieldNumber = 5;
   double market_favorable() const;
   void set_market_favorable(double value);
 
@@ -430,7 +1092,6 @@ class cffex_margin_field : public ::google::protobuf::Message /* @@protoc_insert
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::ArenaStringPtr exchangeid_;
   double pre_favorable_;
   double speculation_favorable_;
   double hedging_favorable_;
@@ -475,7 +1136,7 @@ class dce_margin_field : public ::google::protobuf::Message /* @@protoc_insertio
                &_dce_margin_field_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    3;
+    9;
 
   void Swap(dce_margin_field* other);
   friend void swap(dce_margin_field& a, dce_margin_field& b) {
@@ -522,41 +1183,27 @@ class dce_margin_field : public ::google::protobuf::Message /* @@protoc_insertio
 
   // accessors -------------------------------------------------------
 
-  // string exchangeid = 1;
-  void clear_exchangeid();
-  static const int kExchangeidFieldNumber = 1;
-  const ::std::string& exchangeid() const;
-  void set_exchangeid(const ::std::string& value);
-  #if LANG_CXX11
-  void set_exchangeid(::std::string&& value);
-  #endif
-  void set_exchangeid(const char* value);
-  void set_exchangeid(const char* value, size_t size);
-  ::std::string* mutable_exchangeid();
-  ::std::string* release_exchangeid();
-  void set_allocated_exchangeid(::std::string* exchangeid);
-
-  // double pre_favorable = 2;
+  // double pre_favorable = 1;
   void clear_pre_favorable();
-  static const int kPreFavorableFieldNumber = 2;
+  static const int kPreFavorableFieldNumber = 1;
   double pre_favorable() const;
   void set_pre_favorable(double value);
 
-  // double sp_favorable = 3;
+  // double sp_favorable = 2;
   void clear_sp_favorable();
-  static const int kSpFavorableFieldNumber = 3;
+  static const int kSpFavorableFieldNumber = 2;
   double sp_favorable() const;
   void set_sp_favorable(double value);
 
-  // double spc_favorable = 4;
+  // double spc_favorable = 3;
   void clear_spc_favorable();
-  static const int kSpcFavorableFieldNumber = 4;
+  static const int kSpcFavorableFieldNumber = 3;
   double spc_favorable() const;
   void set_spc_favorable(double value);
 
-  // double locked_favorable = 5;
+  // double locked_favorable = 4;
   void clear_locked_favorable();
-  static const int kLockedFavorableFieldNumber = 5;
+  static const int kLockedFavorableFieldNumber = 4;
   double locked_favorable() const;
   void set_locked_favorable(double value);
 
@@ -564,7 +1211,6 @@ class dce_margin_field : public ::google::protobuf::Message /* @@protoc_insertio
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::ArenaStringPtr exchangeid_;
   double pre_favorable_;
   double sp_favorable_;
   double spc_favorable_;
@@ -608,7 +1254,7 @@ class czce_margin_field : public ::google::protobuf::Message /* @@protoc_inserti
                &_czce_margin_field_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    4;
+    10;
 
   void Swap(czce_margin_field* other);
   friend void swap(czce_margin_field& a, czce_margin_field& b) {
@@ -655,65 +1301,51 @@ class czce_margin_field : public ::google::protobuf::Message /* @@protoc_inserti
 
   // accessors -------------------------------------------------------
 
-  // string exchangeid = 1;
-  void clear_exchangeid();
-  static const int kExchangeidFieldNumber = 1;
-  const ::std::string& exchangeid() const;
-  void set_exchangeid(const ::std::string& value);
-  #if LANG_CXX11
-  void set_exchangeid(::std::string&& value);
-  #endif
-  void set_exchangeid(const char* value);
-  void set_exchangeid(const char* value, size_t size);
-  ::std::string* mutable_exchangeid();
-  ::std::string* release_exchangeid();
-  void set_allocated_exchangeid(::std::string* exchangeid);
-
-  // double pre_favorable = 2;
+  // double pre_favorable = 1;
   void clear_pre_favorable();
-  static const int kPreFavorableFieldNumber = 2;
+  static const int kPreFavorableFieldNumber = 1;
   double pre_favorable() const;
   void set_pre_favorable(double value);
 
-  // double spd_favorable = 3;
+  // double spd_favorable = 2;
   void clear_spd_favorable();
-  static const int kSpdFavorableFieldNumber = 3;
+  static const int kSpdFavorableFieldNumber = 2;
   double spd_favorable() const;
   void set_spd_favorable(double value);
 
-  // double ips_favorable = 4;
+  // double ips_favorable = 3;
   void clear_ips_favorable();
-  static const int kIpsFavorableFieldNumber = 4;
+  static const int kIpsFavorableFieldNumber = 3;
   double ips_favorable() const;
   void set_ips_favorable(double value);
 
-  // double prt_favorable = 5;
+  // double prt_favorable = 4;
   void clear_prt_favorable();
-  static const int kPrtFavorableFieldNumber = 5;
+  static const int kPrtFavorableFieldNumber = 4;
   double prt_favorable() const;
   void set_prt_favorable(double value);
 
-  // double std_favorable = 6;
+  // double std_favorable = 5;
   void clear_std_favorable();
-  static const int kStdFavorableFieldNumber = 6;
+  static const int kStdFavorableFieldNumber = 5;
   double std_favorable() const;
   void set_std_favorable(double value);
 
-  // double stg_favorable = 7;
+  // double stg_favorable = 6;
   void clear_stg_favorable();
-  static const int kStgFavorableFieldNumber = 7;
+  static const int kStgFavorableFieldNumber = 6;
   double stg_favorable() const;
   void set_stg_favorable(double value);
 
-  // double zprt_favorable = 8;
+  // double zprt_favorable = 7;
   void clear_zprt_favorable();
-  static const int kZprtFavorableFieldNumber = 8;
+  static const int kZprtFavorableFieldNumber = 7;
   double zprt_favorable() const;
   void set_zprt_favorable(double value);
 
-  // double locked_favorable = 9;
+  // double locked_favorable = 8;
   void clear_locked_favorable();
-  static const int kLockedFavorableFieldNumber = 9;
+  static const int kLockedFavorableFieldNumber = 8;
   double locked_favorable() const;
   void set_locked_favorable(double value);
 
@@ -721,7 +1353,6 @@ class czce_margin_field : public ::google::protobuf::Message /* @@protoc_inserti
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::ArenaStringPtr exchangeid_;
   double pre_favorable_;
   double spd_favorable_;
   double ips_favorable_;
@@ -769,7 +1400,7 @@ class rtn_margin_field : public ::google::protobuf::Message /* @@protoc_insertio
                &_rtn_margin_field_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    5;
+    11;
 
   void Swap(rtn_margin_field* other);
   friend void swap(rtn_margin_field& a, rtn_margin_field& b) {
@@ -895,119 +1526,548 @@ class rtn_margin_field : public ::google::protobuf::Message /* @@protoc_insertio
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// subscribe_margin
+// error_info
 
-// string investor = 1;
-inline void subscribe_margin::clear_investor() {
-  investor_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// sint32 errorid = 1;
+inline void error_info::clear_errorid() {
+  errorid_ = 0;
 }
-inline const ::std::string& subscribe_margin::investor() const {
-  // @@protoc_insertion_point(field_get:risk.subscribe_margin.investor)
-  return investor_.GetNoArena();
+inline ::google::protobuf::int32 error_info::errorid() const {
+  // @@protoc_insertion_point(field_get:risk.error_info.errorid)
+  return errorid_;
 }
-inline void subscribe_margin::set_investor(const ::std::string& value) {
+inline void error_info::set_errorid(::google::protobuf::int32 value) {
   
-  investor_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:risk.subscribe_margin.investor)
+  errorid_ = value;
+  // @@protoc_insertion_point(field_set:risk.error_info.errorid)
+}
+
+// string errormsg = 2;
+inline void error_info::clear_errormsg() {
+  errormsg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& error_info::errormsg() const {
+  // @@protoc_insertion_point(field_get:risk.error_info.errormsg)
+  return errormsg_.GetNoArena();
+}
+inline void error_info::set_errormsg(const ::std::string& value) {
+  
+  errormsg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:risk.error_info.errormsg)
 }
 #if LANG_CXX11
-inline void subscribe_margin::set_investor(::std::string&& value) {
+inline void error_info::set_errormsg(::std::string&& value) {
   
-  investor_.SetNoArena(
+  errormsg_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:risk.subscribe_margin.investor)
+  // @@protoc_insertion_point(field_set_rvalue:risk.error_info.errormsg)
 }
 #endif
-inline void subscribe_margin::set_investor(const char* value) {
+inline void error_info::set_errormsg(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
-  investor_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:risk.subscribe_margin.investor)
+  errormsg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:risk.error_info.errormsg)
 }
-inline void subscribe_margin::set_investor(const char* value, size_t size) {
+inline void error_info::set_errormsg(const char* value, size_t size) {
   
-  investor_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  errormsg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:risk.subscribe_margin.investor)
+  // @@protoc_insertion_point(field_set_pointer:risk.error_info.errormsg)
 }
-inline ::std::string* subscribe_margin::mutable_investor() {
+inline ::std::string* error_info::mutable_errormsg() {
   
-  // @@protoc_insertion_point(field_mutable:risk.subscribe_margin.investor)
-  return investor_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:risk.error_info.errormsg)
+  return errormsg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* subscribe_margin::release_investor() {
-  // @@protoc_insertion_point(field_release:risk.subscribe_margin.investor)
+inline ::std::string* error_info::release_errormsg() {
+  // @@protoc_insertion_point(field_release:risk.error_info.errormsg)
   
-  return investor_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return errormsg_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void subscribe_margin::set_allocated_investor(::std::string* investor) {
-  if (investor != NULL) {
+inline void error_info::set_allocated_errormsg(::std::string* errormsg) {
+  if (errormsg != NULL) {
     
   } else {
     
   }
-  investor_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), investor);
-  // @@protoc_insertion_point(field_set_allocated:risk.subscribe_margin.investor)
+  errormsg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), errormsg);
+  // @@protoc_insertion_point(field_set_allocated:risk.error_info.errormsg)
+}
+
+// -------------------------------------------------------------------
+
+// req_risker_login
+
+// string riskerid = 1;
+inline void req_risker_login::clear_riskerid() {
+  riskerid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& req_risker_login::riskerid() const {
+  // @@protoc_insertion_point(field_get:risk.req_risker_login.riskerid)
+  return riskerid_.GetNoArena();
+}
+inline void req_risker_login::set_riskerid(const ::std::string& value) {
+  
+  riskerid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:risk.req_risker_login.riskerid)
+}
+#if LANG_CXX11
+inline void req_risker_login::set_riskerid(::std::string&& value) {
+  
+  riskerid_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:risk.req_risker_login.riskerid)
+}
+#endif
+inline void req_risker_login::set_riskerid(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  riskerid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:risk.req_risker_login.riskerid)
+}
+inline void req_risker_login::set_riskerid(const char* value, size_t size) {
+  
+  riskerid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:risk.req_risker_login.riskerid)
+}
+inline ::std::string* req_risker_login::mutable_riskerid() {
+  
+  // @@protoc_insertion_point(field_mutable:risk.req_risker_login.riskerid)
+  return riskerid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* req_risker_login::release_riskerid() {
+  // @@protoc_insertion_point(field_release:risk.req_risker_login.riskerid)
+  
+  return riskerid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void req_risker_login::set_allocated_riskerid(::std::string* riskerid) {
+  if (riskerid != NULL) {
+    
+  } else {
+    
+  }
+  riskerid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), riskerid);
+  // @@protoc_insertion_point(field_set_allocated:risk.req_risker_login.riskerid)
+}
+
+// string password = 2;
+inline void req_risker_login::clear_password() {
+  password_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& req_risker_login::password() const {
+  // @@protoc_insertion_point(field_get:risk.req_risker_login.password)
+  return password_.GetNoArena();
+}
+inline void req_risker_login::set_password(const ::std::string& value) {
+  
+  password_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:risk.req_risker_login.password)
+}
+#if LANG_CXX11
+inline void req_risker_login::set_password(::std::string&& value) {
+  
+  password_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:risk.req_risker_login.password)
+}
+#endif
+inline void req_risker_login::set_password(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  password_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:risk.req_risker_login.password)
+}
+inline void req_risker_login::set_password(const char* value, size_t size) {
+  
+  password_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:risk.req_risker_login.password)
+}
+inline ::std::string* req_risker_login::mutable_password() {
+  
+  // @@protoc_insertion_point(field_mutable:risk.req_risker_login.password)
+  return password_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* req_risker_login::release_password() {
+  // @@protoc_insertion_point(field_release:risk.req_risker_login.password)
+  
+  return password_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void req_risker_login::set_allocated_password(::std::string* password) {
+  if (password != NULL) {
+    
+  } else {
+    
+  }
+  password_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), password);
+  // @@protoc_insertion_point(field_set_allocated:risk.req_risker_login.password)
+}
+
+// -------------------------------------------------------------------
+
+// rsp_risker_login
+
+// .risk.error_info info = 1;
+inline bool rsp_risker_login::has_info() const {
+  return this != internal_default_instance() && info_ != NULL;
+}
+inline void rsp_risker_login::clear_info() {
+  if (GetArenaNoVirtual() == NULL && info_ != NULL) delete info_;
+  info_ = NULL;
+}
+inline const ::risk::error_info& rsp_risker_login::info() const {
+  const ::risk::error_info* p = info_;
+  // @@protoc_insertion_point(field_get:risk.rsp_risker_login.info)
+  return p != NULL ? *p : *reinterpret_cast<const ::risk::error_info*>(
+      &::risk::_error_info_default_instance_);
+}
+inline ::risk::error_info* rsp_risker_login::mutable_info() {
+  
+  if (info_ == NULL) {
+    info_ = new ::risk::error_info;
+  }
+  // @@protoc_insertion_point(field_mutable:risk.rsp_risker_login.info)
+  return info_;
+}
+inline ::risk::error_info* rsp_risker_login::release_info() {
+  // @@protoc_insertion_point(field_release:risk.rsp_risker_login.info)
+  
+  ::risk::error_info* temp = info_;
+  info_ = NULL;
+  return temp;
+}
+inline void rsp_risker_login::set_allocated_info(::risk::error_info* info) {
+  delete info_;
+  info_ = info;
+  if (info) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:risk.rsp_risker_login.info)
+}
+
+// -------------------------------------------------------------------
+
+// req_investor_list
+
+// string riskerid = 1;
+inline void req_investor_list::clear_riskerid() {
+  riskerid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& req_investor_list::riskerid() const {
+  // @@protoc_insertion_point(field_get:risk.req_investor_list.riskerid)
+  return riskerid_.GetNoArena();
+}
+inline void req_investor_list::set_riskerid(const ::std::string& value) {
+  
+  riskerid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:risk.req_investor_list.riskerid)
+}
+#if LANG_CXX11
+inline void req_investor_list::set_riskerid(::std::string&& value) {
+  
+  riskerid_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:risk.req_investor_list.riskerid)
+}
+#endif
+inline void req_investor_list::set_riskerid(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  riskerid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:risk.req_investor_list.riskerid)
+}
+inline void req_investor_list::set_riskerid(const char* value, size_t size) {
+  
+  riskerid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:risk.req_investor_list.riskerid)
+}
+inline ::std::string* req_investor_list::mutable_riskerid() {
+  
+  // @@protoc_insertion_point(field_mutable:risk.req_investor_list.riskerid)
+  return riskerid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* req_investor_list::release_riskerid() {
+  // @@protoc_insertion_point(field_release:risk.req_investor_list.riskerid)
+  
+  return riskerid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void req_investor_list::set_allocated_riskerid(::std::string* riskerid) {
+  if (riskerid != NULL) {
+    
+  } else {
+    
+  }
+  riskerid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), riskerid);
+  // @@protoc_insertion_point(field_set_allocated:risk.req_investor_list.riskerid)
+}
+
+// -------------------------------------------------------------------
+
+// rsp_investor_list
+
+// .risk.error_info info = 1;
+inline bool rsp_investor_list::has_info() const {
+  return this != internal_default_instance() && info_ != NULL;
+}
+inline void rsp_investor_list::clear_info() {
+  if (GetArenaNoVirtual() == NULL && info_ != NULL) delete info_;
+  info_ = NULL;
+}
+inline const ::risk::error_info& rsp_investor_list::info() const {
+  const ::risk::error_info* p = info_;
+  // @@protoc_insertion_point(field_get:risk.rsp_investor_list.info)
+  return p != NULL ? *p : *reinterpret_cast<const ::risk::error_info*>(
+      &::risk::_error_info_default_instance_);
+}
+inline ::risk::error_info* rsp_investor_list::mutable_info() {
+  
+  if (info_ == NULL) {
+    info_ = new ::risk::error_info;
+  }
+  // @@protoc_insertion_point(field_mutable:risk.rsp_investor_list.info)
+  return info_;
+}
+inline ::risk::error_info* rsp_investor_list::release_info() {
+  // @@protoc_insertion_point(field_release:risk.rsp_investor_list.info)
+  
+  ::risk::error_info* temp = info_;
+  info_ = NULL;
+  return temp;
+}
+inline void rsp_investor_list::set_allocated_info(::risk::error_info* info) {
+  delete info_;
+  info_ = info;
+  if (info) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:risk.rsp_investor_list.info)
+}
+
+// string investorid = 2;
+inline void rsp_investor_list::clear_investorid() {
+  investorid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& rsp_investor_list::investorid() const {
+  // @@protoc_insertion_point(field_get:risk.rsp_investor_list.investorid)
+  return investorid_.GetNoArena();
+}
+inline void rsp_investor_list::set_investorid(const ::std::string& value) {
+  
+  investorid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:risk.rsp_investor_list.investorid)
+}
+#if LANG_CXX11
+inline void rsp_investor_list::set_investorid(::std::string&& value) {
+  
+  investorid_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:risk.rsp_investor_list.investorid)
+}
+#endif
+inline void rsp_investor_list::set_investorid(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  investorid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:risk.rsp_investor_list.investorid)
+}
+inline void rsp_investor_list::set_investorid(const char* value, size_t size) {
+  
+  investorid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:risk.rsp_investor_list.investorid)
+}
+inline ::std::string* rsp_investor_list::mutable_investorid() {
+  
+  // @@protoc_insertion_point(field_mutable:risk.rsp_investor_list.investorid)
+  return investorid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* rsp_investor_list::release_investorid() {
+  // @@protoc_insertion_point(field_release:risk.rsp_investor_list.investorid)
+  
+  return investorid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void rsp_investor_list::set_allocated_investorid(::std::string* investorid) {
+  if (investorid != NULL) {
+    
+  } else {
+    
+  }
+  investorid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), investorid);
+  // @@protoc_insertion_point(field_set_allocated:risk.rsp_investor_list.investorid)
+}
+
+// bool islast = 3;
+inline void rsp_investor_list::clear_islast() {
+  islast_ = false;
+}
+inline bool rsp_investor_list::islast() const {
+  // @@protoc_insertion_point(field_get:risk.rsp_investor_list.islast)
+  return islast_;
+}
+inline void rsp_investor_list::set_islast(bool value) {
+  
+  islast_ = value;
+  // @@protoc_insertion_point(field_set:risk.rsp_investor_list.islast)
+}
+
+// -------------------------------------------------------------------
+
+// subscribe_margin
+
+// repeated string investor = 1;
+inline int subscribe_margin::investor_size() const {
+  return investor_.size();
+}
+inline void subscribe_margin::clear_investor() {
+  investor_.Clear();
+}
+inline const ::std::string& subscribe_margin::investor(int index) const {
+  // @@protoc_insertion_point(field_get:risk.subscribe_margin.investor)
+  return investor_.Get(index);
+}
+inline ::std::string* subscribe_margin::mutable_investor(int index) {
+  // @@protoc_insertion_point(field_mutable:risk.subscribe_margin.investor)
+  return investor_.Mutable(index);
+}
+inline void subscribe_margin::set_investor(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:risk.subscribe_margin.investor)
+  investor_.Mutable(index)->assign(value);
+}
+#if LANG_CXX11
+inline void subscribe_margin::set_investor(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:risk.subscribe_margin.investor)
+  investor_.Mutable(index)->assign(std::move(value));
+}
+#endif
+inline void subscribe_margin::set_investor(int index, const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  investor_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:risk.subscribe_margin.investor)
+}
+inline void subscribe_margin::set_investor(int index, const char* value, size_t size) {
+  investor_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:risk.subscribe_margin.investor)
+}
+inline ::std::string* subscribe_margin::add_investor() {
+  // @@protoc_insertion_point(field_add_mutable:risk.subscribe_margin.investor)
+  return investor_.Add();
+}
+inline void subscribe_margin::add_investor(const ::std::string& value) {
+  investor_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:risk.subscribe_margin.investor)
+}
+#if LANG_CXX11
+inline void subscribe_margin::add_investor(::std::string&& value) {
+  investor_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:risk.subscribe_margin.investor)
+}
+#endif
+inline void subscribe_margin::add_investor(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  investor_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:risk.subscribe_margin.investor)
+}
+inline void subscribe_margin::add_investor(const char* value, size_t size) {
+  investor_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:risk.subscribe_margin.investor)
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+subscribe_margin::investor() const {
+  // @@protoc_insertion_point(field_list:risk.subscribe_margin.investor)
+  return investor_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+subscribe_margin::mutable_investor() {
+  // @@protoc_insertion_point(field_mutable_list:risk.subscribe_margin.investor)
+  return &investor_;
+}
+
+// -------------------------------------------------------------------
+
+// unsubscribe_margin
+
+// repeated string investor = 1;
+inline int unsubscribe_margin::investor_size() const {
+  return investor_.size();
+}
+inline void unsubscribe_margin::clear_investor() {
+  investor_.Clear();
+}
+inline const ::std::string& unsubscribe_margin::investor(int index) const {
+  // @@protoc_insertion_point(field_get:risk.unsubscribe_margin.investor)
+  return investor_.Get(index);
+}
+inline ::std::string* unsubscribe_margin::mutable_investor(int index) {
+  // @@protoc_insertion_point(field_mutable:risk.unsubscribe_margin.investor)
+  return investor_.Mutable(index);
+}
+inline void unsubscribe_margin::set_investor(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:risk.unsubscribe_margin.investor)
+  investor_.Mutable(index)->assign(value);
+}
+#if LANG_CXX11
+inline void unsubscribe_margin::set_investor(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:risk.unsubscribe_margin.investor)
+  investor_.Mutable(index)->assign(std::move(value));
+}
+#endif
+inline void unsubscribe_margin::set_investor(int index, const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  investor_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:risk.unsubscribe_margin.investor)
+}
+inline void unsubscribe_margin::set_investor(int index, const char* value, size_t size) {
+  investor_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:risk.unsubscribe_margin.investor)
+}
+inline ::std::string* unsubscribe_margin::add_investor() {
+  // @@protoc_insertion_point(field_add_mutable:risk.unsubscribe_margin.investor)
+  return investor_.Add();
+}
+inline void unsubscribe_margin::add_investor(const ::std::string& value) {
+  investor_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:risk.unsubscribe_margin.investor)
+}
+#if LANG_CXX11
+inline void unsubscribe_margin::add_investor(::std::string&& value) {
+  investor_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:risk.unsubscribe_margin.investor)
+}
+#endif
+inline void unsubscribe_margin::add_investor(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  investor_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:risk.unsubscribe_margin.investor)
+}
+inline void unsubscribe_margin::add_investor(const char* value, size_t size) {
+  investor_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:risk.unsubscribe_margin.investor)
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+unsubscribe_margin::investor() const {
+  // @@protoc_insertion_point(field_list:risk.unsubscribe_margin.investor)
+  return investor_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+unsubscribe_margin::mutable_investor() {
+  // @@protoc_insertion_point(field_mutable_list:risk.unsubscribe_margin.investor)
+  return &investor_;
 }
 
 // -------------------------------------------------------------------
 
 // shfe_margin_field
 
-// string exchangeid = 1;
-inline void shfe_margin_field::clear_exchangeid() {
-  exchangeid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& shfe_margin_field::exchangeid() const {
-  // @@protoc_insertion_point(field_get:risk.shfe_margin_field.exchangeid)
-  return exchangeid_.GetNoArena();
-}
-inline void shfe_margin_field::set_exchangeid(const ::std::string& value) {
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:risk.shfe_margin_field.exchangeid)
-}
-#if LANG_CXX11
-inline void shfe_margin_field::set_exchangeid(::std::string&& value) {
-  
-  exchangeid_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:risk.shfe_margin_field.exchangeid)
-}
-#endif
-inline void shfe_margin_field::set_exchangeid(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:risk.shfe_margin_field.exchangeid)
-}
-inline void shfe_margin_field::set_exchangeid(const char* value, size_t size) {
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:risk.shfe_margin_field.exchangeid)
-}
-inline ::std::string* shfe_margin_field::mutable_exchangeid() {
-  
-  // @@protoc_insertion_point(field_mutable:risk.shfe_margin_field.exchangeid)
-  return exchangeid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* shfe_margin_field::release_exchangeid() {
-  // @@protoc_insertion_point(field_release:risk.shfe_margin_field.exchangeid)
-  
-  return exchangeid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void shfe_margin_field::set_allocated_exchangeid(::std::string* exchangeid) {
-  if (exchangeid != NULL) {
-    
-  } else {
-    
-  }
-  exchangeid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), exchangeid);
-  // @@protoc_insertion_point(field_set_allocated:risk.shfe_margin_field.exchangeid)
-}
-
-// double pre_favorable = 2;
+// double pre_favorable = 1;
 inline void shfe_margin_field::clear_pre_favorable() {
   pre_favorable_ = 0;
 }
@@ -1021,92 +2081,25 @@ inline void shfe_margin_field::set_pre_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.shfe_margin_field.pre_favorable)
 }
 
-// double speculation_favorable = 3;
-inline void shfe_margin_field::clear_speculation_favorable() {
-  speculation_favorable_ = 0;
+// double big_side_favorable = 2;
+inline void shfe_margin_field::clear_big_side_favorable() {
+  big_side_favorable_ = 0;
 }
-inline double shfe_margin_field::speculation_favorable() const {
-  // @@protoc_insertion_point(field_get:risk.shfe_margin_field.speculation_favorable)
-  return speculation_favorable_;
+inline double shfe_margin_field::big_side_favorable() const {
+  // @@protoc_insertion_point(field_get:risk.shfe_margin_field.big_side_favorable)
+  return big_side_favorable_;
 }
-inline void shfe_margin_field::set_speculation_favorable(double value) {
+inline void shfe_margin_field::set_big_side_favorable(double value) {
   
-  speculation_favorable_ = value;
-  // @@protoc_insertion_point(field_set:risk.shfe_margin_field.speculation_favorable)
-}
-
-// double hedging_favorable = 4;
-inline void shfe_margin_field::clear_hedging_favorable() {
-  hedging_favorable_ = 0;
-}
-inline double shfe_margin_field::hedging_favorable() const {
-  // @@protoc_insertion_point(field_get:risk.shfe_margin_field.hedging_favorable)
-  return hedging_favorable_;
-}
-inline void shfe_margin_field::set_hedging_favorable(double value) {
-  
-  hedging_favorable_ = value;
-  // @@protoc_insertion_point(field_set:risk.shfe_margin_field.hedging_favorable)
+  big_side_favorable_ = value;
+  // @@protoc_insertion_point(field_set:risk.shfe_margin_field.big_side_favorable)
 }
 
 // -------------------------------------------------------------------
 
 // cffex_margin_field
 
-// string exchangeid = 1;
-inline void cffex_margin_field::clear_exchangeid() {
-  exchangeid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& cffex_margin_field::exchangeid() const {
-  // @@protoc_insertion_point(field_get:risk.cffex_margin_field.exchangeid)
-  return exchangeid_.GetNoArena();
-}
-inline void cffex_margin_field::set_exchangeid(const ::std::string& value) {
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:risk.cffex_margin_field.exchangeid)
-}
-#if LANG_CXX11
-inline void cffex_margin_field::set_exchangeid(::std::string&& value) {
-  
-  exchangeid_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:risk.cffex_margin_field.exchangeid)
-}
-#endif
-inline void cffex_margin_field::set_exchangeid(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:risk.cffex_margin_field.exchangeid)
-}
-inline void cffex_margin_field::set_exchangeid(const char* value, size_t size) {
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:risk.cffex_margin_field.exchangeid)
-}
-inline ::std::string* cffex_margin_field::mutable_exchangeid() {
-  
-  // @@protoc_insertion_point(field_mutable:risk.cffex_margin_field.exchangeid)
-  return exchangeid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* cffex_margin_field::release_exchangeid() {
-  // @@protoc_insertion_point(field_release:risk.cffex_margin_field.exchangeid)
-  
-  return exchangeid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void cffex_margin_field::set_allocated_exchangeid(::std::string* exchangeid) {
-  if (exchangeid != NULL) {
-    
-  } else {
-    
-  }
-  exchangeid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), exchangeid);
-  // @@protoc_insertion_point(field_set_allocated:risk.cffex_margin_field.exchangeid)
-}
-
-// double pre_favorable = 2;
+// double pre_favorable = 1;
 inline void cffex_margin_field::clear_pre_favorable() {
   pre_favorable_ = 0;
 }
@@ -1120,7 +2113,7 @@ inline void cffex_margin_field::set_pre_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.cffex_margin_field.pre_favorable)
 }
 
-// double speculation_favorable = 3;
+// double speculation_favorable = 2;
 inline void cffex_margin_field::clear_speculation_favorable() {
   speculation_favorable_ = 0;
 }
@@ -1134,7 +2127,7 @@ inline void cffex_margin_field::set_speculation_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.cffex_margin_field.speculation_favorable)
 }
 
-// double hedging_favorable = 4;
+// double hedging_favorable = 3;
 inline void cffex_margin_field::clear_hedging_favorable() {
   hedging_favorable_ = 0;
 }
@@ -1148,7 +2141,7 @@ inline void cffex_margin_field::set_hedging_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.cffex_margin_field.hedging_favorable)
 }
 
-// double arbitrage_favorable = 5;
+// double arbitrage_favorable = 4;
 inline void cffex_margin_field::clear_arbitrage_favorable() {
   arbitrage_favorable_ = 0;
 }
@@ -1162,7 +2155,7 @@ inline void cffex_margin_field::set_arbitrage_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.cffex_margin_field.arbitrage_favorable)
 }
 
-// double market_favorable = 6;
+// double market_favorable = 5;
 inline void cffex_margin_field::clear_market_favorable() {
   market_favorable_ = 0;
 }
@@ -1180,60 +2173,7 @@ inline void cffex_margin_field::set_market_favorable(double value) {
 
 // dce_margin_field
 
-// string exchangeid = 1;
-inline void dce_margin_field::clear_exchangeid() {
-  exchangeid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& dce_margin_field::exchangeid() const {
-  // @@protoc_insertion_point(field_get:risk.dce_margin_field.exchangeid)
-  return exchangeid_.GetNoArena();
-}
-inline void dce_margin_field::set_exchangeid(const ::std::string& value) {
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:risk.dce_margin_field.exchangeid)
-}
-#if LANG_CXX11
-inline void dce_margin_field::set_exchangeid(::std::string&& value) {
-  
-  exchangeid_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:risk.dce_margin_field.exchangeid)
-}
-#endif
-inline void dce_margin_field::set_exchangeid(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:risk.dce_margin_field.exchangeid)
-}
-inline void dce_margin_field::set_exchangeid(const char* value, size_t size) {
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:risk.dce_margin_field.exchangeid)
-}
-inline ::std::string* dce_margin_field::mutable_exchangeid() {
-  
-  // @@protoc_insertion_point(field_mutable:risk.dce_margin_field.exchangeid)
-  return exchangeid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* dce_margin_field::release_exchangeid() {
-  // @@protoc_insertion_point(field_release:risk.dce_margin_field.exchangeid)
-  
-  return exchangeid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void dce_margin_field::set_allocated_exchangeid(::std::string* exchangeid) {
-  if (exchangeid != NULL) {
-    
-  } else {
-    
-  }
-  exchangeid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), exchangeid);
-  // @@protoc_insertion_point(field_set_allocated:risk.dce_margin_field.exchangeid)
-}
-
-// double pre_favorable = 2;
+// double pre_favorable = 1;
 inline void dce_margin_field::clear_pre_favorable() {
   pre_favorable_ = 0;
 }
@@ -1247,7 +2187,7 @@ inline void dce_margin_field::set_pre_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.dce_margin_field.pre_favorable)
 }
 
-// double sp_favorable = 3;
+// double sp_favorable = 2;
 inline void dce_margin_field::clear_sp_favorable() {
   sp_favorable_ = 0;
 }
@@ -1261,7 +2201,7 @@ inline void dce_margin_field::set_sp_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.dce_margin_field.sp_favorable)
 }
 
-// double spc_favorable = 4;
+// double spc_favorable = 3;
 inline void dce_margin_field::clear_spc_favorable() {
   spc_favorable_ = 0;
 }
@@ -1275,7 +2215,7 @@ inline void dce_margin_field::set_spc_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.dce_margin_field.spc_favorable)
 }
 
-// double locked_favorable = 5;
+// double locked_favorable = 4;
 inline void dce_margin_field::clear_locked_favorable() {
   locked_favorable_ = 0;
 }
@@ -1293,60 +2233,7 @@ inline void dce_margin_field::set_locked_favorable(double value) {
 
 // czce_margin_field
 
-// string exchangeid = 1;
-inline void czce_margin_field::clear_exchangeid() {
-  exchangeid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& czce_margin_field::exchangeid() const {
-  // @@protoc_insertion_point(field_get:risk.czce_margin_field.exchangeid)
-  return exchangeid_.GetNoArena();
-}
-inline void czce_margin_field::set_exchangeid(const ::std::string& value) {
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:risk.czce_margin_field.exchangeid)
-}
-#if LANG_CXX11
-inline void czce_margin_field::set_exchangeid(::std::string&& value) {
-  
-  exchangeid_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:risk.czce_margin_field.exchangeid)
-}
-#endif
-inline void czce_margin_field::set_exchangeid(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:risk.czce_margin_field.exchangeid)
-}
-inline void czce_margin_field::set_exchangeid(const char* value, size_t size) {
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:risk.czce_margin_field.exchangeid)
-}
-inline ::std::string* czce_margin_field::mutable_exchangeid() {
-  
-  // @@protoc_insertion_point(field_mutable:risk.czce_margin_field.exchangeid)
-  return exchangeid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* czce_margin_field::release_exchangeid() {
-  // @@protoc_insertion_point(field_release:risk.czce_margin_field.exchangeid)
-  
-  return exchangeid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void czce_margin_field::set_allocated_exchangeid(::std::string* exchangeid) {
-  if (exchangeid != NULL) {
-    
-  } else {
-    
-  }
-  exchangeid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), exchangeid);
-  // @@protoc_insertion_point(field_set_allocated:risk.czce_margin_field.exchangeid)
-}
-
-// double pre_favorable = 2;
+// double pre_favorable = 1;
 inline void czce_margin_field::clear_pre_favorable() {
   pre_favorable_ = 0;
 }
@@ -1360,7 +2247,7 @@ inline void czce_margin_field::set_pre_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.czce_margin_field.pre_favorable)
 }
 
-// double spd_favorable = 3;
+// double spd_favorable = 2;
 inline void czce_margin_field::clear_spd_favorable() {
   spd_favorable_ = 0;
 }
@@ -1374,7 +2261,7 @@ inline void czce_margin_field::set_spd_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.czce_margin_field.spd_favorable)
 }
 
-// double ips_favorable = 4;
+// double ips_favorable = 3;
 inline void czce_margin_field::clear_ips_favorable() {
   ips_favorable_ = 0;
 }
@@ -1388,7 +2275,7 @@ inline void czce_margin_field::set_ips_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.czce_margin_field.ips_favorable)
 }
 
-// double prt_favorable = 5;
+// double prt_favorable = 4;
 inline void czce_margin_field::clear_prt_favorable() {
   prt_favorable_ = 0;
 }
@@ -1402,7 +2289,7 @@ inline void czce_margin_field::set_prt_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.czce_margin_field.prt_favorable)
 }
 
-// double std_favorable = 6;
+// double std_favorable = 5;
 inline void czce_margin_field::clear_std_favorable() {
   std_favorable_ = 0;
 }
@@ -1416,7 +2303,7 @@ inline void czce_margin_field::set_std_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.czce_margin_field.std_favorable)
 }
 
-// double stg_favorable = 7;
+// double stg_favorable = 6;
 inline void czce_margin_field::clear_stg_favorable() {
   stg_favorable_ = 0;
 }
@@ -1430,7 +2317,7 @@ inline void czce_margin_field::set_stg_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.czce_margin_field.stg_favorable)
 }
 
-// double zprt_favorable = 8;
+// double zprt_favorable = 7;
 inline void czce_margin_field::clear_zprt_favorable() {
   zprt_favorable_ = 0;
 }
@@ -1444,7 +2331,7 @@ inline void czce_margin_field::set_zprt_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.czce_margin_field.zprt_favorable)
 }
 
-// double locked_favorable = 9;
+// double locked_favorable = 8;
 inline void czce_margin_field::clear_locked_favorable() {
   locked_favorable_ = 0;
 }
@@ -1693,6 +2580,18 @@ inline void rtn_margin_field::set_allocated_czce_margin(::risk::czce_margin_fiel
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

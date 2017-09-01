@@ -3,53 +3,90 @@ syntax = "proto3";
 //namespace
 package risk;
 
+//错误信息
+message error_info
+{
+    sint32          errorid=1;
+    string          errormsg=2;
+}
+
+
+//登录请求
+message req_risker_login
+{
+    string          riskerid=1;
+    string          password=2;
+}
+
+//登录应答
+message rsp_risker_login
+{
+    error_info      info=1;
+}
+
+//查询资金账号
+message req_investor_list
+{
+    string          riskerid=1;
+}
+
+//查询资金账号应答
+message rsp_investor_list
+{
+    error_info      info=1;
+    string          investorid=2;
+    bool            islast=3;
+}
+
 //订阅保证金信息
 message subscribe_margin
 {
-    string           investor=1;                    //资金账号 , 所有:"all"
+    repeated string investor=1;                    //资金账号
+}
+
+///取消订阅保证金信息
+message unsubscribe_margin
+{
+    repeated string investor=1;                    //资金账号
 }
 
 //上期所保证金信息
 message shfe_margin_field
 {
-    string           exchangeid=1;                  //交易所
-    double           pre_favorable=2;               //优惠前总保证金
-    double           big_side_favorable=3;          //单向大边优惠
+    double           pre_favorable=1;               //优惠前总保证金
+    double           big_side_favorable=2;          //单向大边优惠
 }
 
 //中金所保证金信息
 message cffex_margin_field
 {
-    string           exchangeid=1;                  //交易所
-    double           pre_favorable=2;               //优惠前总保证金
-    double           speculation_favorable=3;       //投机仓优惠
-    double           hedging_favorable=4;           //套保仓优惠
-    double           arbitrage_favorable=5;         //套利仓优惠
-    double           market_favorable=6;            //做市商仓优惠
+    double           pre_favorable=1;               //优惠前总保证金
+    double           speculation_favorable=2;       //投机仓优惠
+    double           hedging_favorable=3;           //套保仓优惠
+    double           arbitrage_favorable=4;         //套利仓优惠
+    double           market_favorable=5;            //做市商仓优惠
 }
 
 //大商所保证金信息
 message dce_margin_field
 {
-    string           exchangeid=1;                  //交易所
-    double           pre_favorable=2;               //优惠前总保证金
-    double           sp_favorable=3;                //跨期仓优惠
-    double           spc_favorable=4;               //跨品种仓优惠
-    double           locked_favorable=5;            //对锁仓优惠
+    double           pre_favorable=1;               //优惠前总保证金
+    double           sp_favorable=2;                //跨期仓优惠
+    double           spc_favorable=3;               //跨品种仓优惠
+    double           locked_favorable=4;            //对锁仓优惠
 }
 
 //郑商所保证金信息
 message czce_margin_field
 {
-    string           exchangeid=1;                  //交易所
-    double           pre_favorable=2;               //优惠前总保证金
-    double           spd_favorable=3;               //跨期仓优惠
-    double           ips_favorable=4;               //跨品种仓优惠
-    double           prt_favorable=5;               //备兑仓优惠
-    double           std_favorable=6;               //跨式仓优惠。
-    double           stg_favorable=7;               //宽跨式仓优惠
-    double           zprt_favorable=8;              //组备兑仓优惠
-    double           locked_favorable=9;            //剩余期货对锁仓优惠
+    double           pre_favorable=1;               //优惠前总保证金
+    double           spd_favorable=2;               //跨期仓优惠
+    double           ips_favorable=3;               //跨品种仓优惠
+    double           prt_favorable=4;               //备兑仓优惠
+    double           std_favorable=5;               //跨式仓优惠。
+    double           stg_favorable=6;               //宽跨式仓优惠
+    double           zprt_favorable=7;              //组备兑仓优惠
+    double           locked_favorable=8;            //剩余期货对锁仓优惠
 }
 
 //保证金信息回报

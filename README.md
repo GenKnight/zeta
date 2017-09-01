@@ -2,7 +2,7 @@
 通信协议protobuf实现的消息处理服务
 
 # 开发环境
-windows7 + vs2013
+windows7 + vs2015
 
 # protobuf
 google目录里是编译好的静态库

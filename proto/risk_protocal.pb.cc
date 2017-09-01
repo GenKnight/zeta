@@ -18,11 +18,41 @@
 // @@protoc_insertion_point(includes)
 
 namespace risk {
+class error_infoDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<error_info>
+     _instance;
+} _error_info_default_instance_;
+class req_risker_loginDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<req_risker_login>
+     _instance;
+} _req_risker_login_default_instance_;
+class rsp_risker_loginDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<rsp_risker_login>
+     _instance;
+} _rsp_risker_login_default_instance_;
+class req_investor_listDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<req_investor_list>
+     _instance;
+} _req_investor_list_default_instance_;
+class rsp_investor_listDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<rsp_investor_list>
+     _instance;
+} _rsp_investor_list_default_instance_;
 class subscribe_marginDefaultTypeInternal {
 public:
  ::google::protobuf::internal::ExplicitlyConstructed<subscribe_margin>
      _instance;
 } _subscribe_margin_default_instance_;
+class unsubscribe_marginDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<unsubscribe_margin>
+     _instance;
+} _unsubscribe_margin_default_instance_;
 class shfe_margin_fieldDefaultTypeInternal {
 public:
  ::google::protobuf::internal::ExplicitlyConstructed<shfe_margin_field>
@@ -54,7 +84,7 @@ namespace protobuf_risk_5fprotocal_2eproto {
 
 namespace {
 
-::google::protobuf::Metadata file_level_metadata[6];
+::google::protobuf::Metadata file_level_metadata[12];
 
 }  // namespace
 
@@ -75,9 +105,49 @@ PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
   { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
   { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
   { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
 };
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(error_info, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(error_info, errorid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(error_info, errormsg_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(req_risker_login, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(req_risker_login, riskerid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(req_risker_login, password_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(rsp_risker_login, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(rsp_risker_login, info_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(req_investor_list, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(req_investor_list, riskerid_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(rsp_investor_list, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(rsp_investor_list, info_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(rsp_investor_list, investorid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(rsp_investor_list, islast_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(subscribe_margin, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -85,20 +155,23 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(subscribe_margin, investor_),
   ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(unsubscribe_margin, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(unsubscribe_margin, investor_),
+  ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(shfe_margin_field, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(shfe_margin_field, exchangeid_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(shfe_margin_field, pre_favorable_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(shfe_margin_field, speculation_favorable_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(shfe_margin_field, hedging_favorable_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(shfe_margin_field, big_side_favorable_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(cffex_margin_field, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(cffex_margin_field, exchangeid_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(cffex_margin_field, pre_favorable_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(cffex_margin_field, speculation_favorable_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(cffex_margin_field, hedging_favorable_),
@@ -109,7 +182,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(dce_margin_field, exchangeid_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(dce_margin_field, pre_favorable_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(dce_margin_field, sp_favorable_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(dce_margin_field, spc_favorable_),
@@ -119,7 +191,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(czce_margin_field, exchangeid_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(czce_margin_field, pre_favorable_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(czce_margin_field, spd_favorable_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(czce_margin_field, ips_favorable_),
@@ -141,16 +212,28 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(rtn_margin_field, czce_margin_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(subscribe_margin)},
-  { 6, -1, sizeof(shfe_margin_field)},
-  { 15, -1, sizeof(cffex_margin_field)},
-  { 26, -1, sizeof(dce_margin_field)},
-  { 36, -1, sizeof(czce_margin_field)},
-  { 50, -1, sizeof(rtn_margin_field)},
+  { 0, -1, sizeof(error_info)},
+  { 7, -1, sizeof(req_risker_login)},
+  { 14, -1, sizeof(rsp_risker_login)},
+  { 20, -1, sizeof(req_investor_list)},
+  { 26, -1, sizeof(rsp_investor_list)},
+  { 34, -1, sizeof(subscribe_margin)},
+  { 40, -1, sizeof(unsubscribe_margin)},
+  { 46, -1, sizeof(shfe_margin_field)},
+  { 53, -1, sizeof(cffex_margin_field)},
+  { 63, -1, sizeof(dce_margin_field)},
+  { 72, -1, sizeof(czce_margin_field)},
+  { 85, -1, sizeof(rtn_margin_field)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::google::protobuf::Message*>(&_error_info_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_req_risker_login_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_rsp_risker_login_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_req_investor_list_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_rsp_investor_list_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_subscribe_margin_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_unsubscribe_margin_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_shfe_margin_field_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_cffex_margin_field_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_dce_margin_field_default_instance_),
@@ -176,7 +259,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 6);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 12);
 }
 
 }  // namespace
@@ -184,9 +267,21 @@ void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::internal::InitProtobufDefaults();
-  _subscribe_margin_default_instance_._instance.DefaultConstruct();
+  _error_info_default_instance_._instance.DefaultConstruct();
   ::google::protobuf::internal::OnShutdownDestroyMessage(
-      &_subscribe_margin_default_instance_);_shfe_margin_field_default_instance_._instance.DefaultConstruct();
+      &_error_info_default_instance_);_req_risker_login_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_req_risker_login_default_instance_);_rsp_risker_login_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_rsp_risker_login_default_instance_);_req_investor_list_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_req_investor_list_default_instance_);_rsp_investor_list_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_rsp_investor_list_default_instance_);_subscribe_margin_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_subscribe_margin_default_instance_);_unsubscribe_margin_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_unsubscribe_margin_default_instance_);_shfe_margin_field_default_instance_._instance.DefaultConstruct();
   ::google::protobuf::internal::OnShutdownDestroyMessage(
       &_shfe_margin_field_default_instance_);_cffex_margin_field_default_instance_._instance.DefaultConstruct();
   ::google::protobuf::internal::OnShutdownDestroyMessage(
@@ -196,7 +291,11 @@ void TableStruct::InitDefaultsImpl() {
   ::google::protobuf::internal::OnShutdownDestroyMessage(
       &_czce_margin_field_default_instance_);_rtn_margin_field_default_instance_._instance.DefaultConstruct();
   ::google::protobuf::internal::OnShutdownDestroyMessage(
-      &_rtn_margin_field_default_instance_);_rtn_margin_field_default_instance_._instance.get_mutable()->shfe_margin_ = const_cast< ::risk::shfe_margin_field*>(
+      &_rtn_margin_field_default_instance_);_rsp_risker_login_default_instance_._instance.get_mutable()->info_ = const_cast< ::risk::error_info*>(
+      ::risk::error_info::internal_default_instance());
+  _rsp_investor_list_default_instance_._instance.get_mutable()->info_ = const_cast< ::risk::error_info*>(
+      ::risk::error_info::internal_default_instance());
+  _rtn_margin_field_default_instance_._instance.get_mutable()->shfe_margin_ = const_cast< ::risk::shfe_margin_field*>(
       ::risk::shfe_margin_field::internal_default_instance());
   _rtn_margin_field_default_instance_._instance.get_mutable()->cffex_margin_ = const_cast< ::risk::cffex_margin_field*>(
       ::risk::cffex_margin_field::internal_default_instance());
@@ -214,34 +313,39 @@ namespace {
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\023risk_protocal.proto\022\004risk\"$\n\020subscribe"
-      "_margin\022\020\n\010investor\030\001 \001(\t\"x\n\021shfe_margin"
-      "_field\022\022\n\nexchangeid\030\001 \001(\t\022\025\n\rpre_favora"
-      "ble\030\002 \001(\001\022\035\n\025speculation_favorable\030\003 \001(\001"
-      "\022\031\n\021hedging_favorable\030\004 \001(\001\"\260\001\n\022cffex_ma"
-      "rgin_field\022\022\n\nexchangeid\030\001 \001(\t\022\025\n\rpre_fa"
-      "vorable\030\002 \001(\001\022\035\n\025speculation_favorable\030\003"
-      " \001(\001\022\031\n\021hedging_favorable\030\004 \001(\001\022\033\n\023arbit"
-      "rage_favorable\030\005 \001(\001\022\030\n\020market_favorable"
-      "\030\006 \001(\001\"\204\001\n\020dce_margin_field\022\022\n\nexchangei"
-      "d\030\001 \001(\t\022\025\n\rpre_favorable\030\002 \001(\001\022\024\n\014sp_fav"
-      "orable\030\003 \001(\001\022\025\n\rspc_favorable\030\004 \001(\001\022\030\n\020l"
-      "ocked_favorable\030\005 \001(\001\"\343\001\n\021czce_margin_fi"
-      "eld\022\022\n\nexchangeid\030\001 \001(\t\022\025\n\rpre_favorable"
-      "\030\002 \001(\001\022\025\n\rspd_favorable\030\003 \001(\001\022\025\n\rips_fav"
-      "orable\030\004 \001(\001\022\025\n\rprt_favorable\030\005 \001(\001\022\025\n\rs"
-      "td_favorable\030\006 \001(\001\022\025\n\rstg_favorable\030\007 \001("
-      "\001\022\026\n\016zprt_favorable\030\010 \001(\001\022\030\n\020locked_favo"
-      "rable\030\t \001(\001\"\357\001\n\020rtn_margin_field\022\021\n\ttime"
-      "stamp\030\001 \001(\r\022\020\n\010investor\030\002 \001(\t\022,\n\013shfe_ma"
-      "rgin\030\003 \001(\0132\027.risk.shfe_margin_field\022.\n\014c"
-      "ffex_margin\030\004 \001(\0132\030.risk.cffex_margin_fi"
-      "eld\022*\n\ndce_margin\030\005 \001(\0132\026.risk.dce_margi"
-      "n_field\022,\n\013czce_margin\030\006 \001(\0132\027.risk.czce"
-      "_margin_fieldb\006proto3"
+      "\n\023risk_protocal.proto\022\004risk\"/\n\nerror_inf"
+      "o\022\017\n\007errorid\030\001 \001(\021\022\020\n\010errormsg\030\002 \001(\t\"6\n\020"
+      "req_risker_login\022\020\n\010riskerid\030\001 \001(\t\022\020\n\010pa"
+      "ssword\030\002 \001(\t\"2\n\020rsp_risker_login\022\036\n\004info"
+      "\030\001 \001(\0132\020.risk.error_info\"%\n\021req_investor"
+      "_list\022\020\n\010riskerid\030\001 \001(\t\"W\n\021rsp_investor_"
+      "list\022\036\n\004info\030\001 \001(\0132\020.risk.error_info\022\022\n\n"
+      "investorid\030\002 \001(\t\022\016\n\006islast\030\003 \001(\010\"$\n\020subs"
+      "cribe_margin\022\020\n\010investor\030\001 \003(\t\"&\n\022unsubs"
+      "cribe_margin\022\020\n\010investor\030\001 \003(\t\"F\n\021shfe_m"
+      "argin_field\022\025\n\rpre_favorable\030\001 \001(\001\022\032\n\022bi"
+      "g_side_favorable\030\002 \001(\001\"\234\001\n\022cffex_margin_"
+      "field\022\025\n\rpre_favorable\030\001 \001(\001\022\035\n\025speculat"
+      "ion_favorable\030\002 \001(\001\022\031\n\021hedging_favorable"
+      "\030\003 \001(\001\022\033\n\023arbitrage_favorable\030\004 \001(\001\022\030\n\020m"
+      "arket_favorable\030\005 \001(\001\"p\n\020dce_margin_fiel"
+      "d\022\025\n\rpre_favorable\030\001 \001(\001\022\024\n\014sp_favorable"
+      "\030\002 \001(\001\022\025\n\rspc_favorable\030\003 \001(\001\022\030\n\020locked_"
+      "favorable\030\004 \001(\001\"\317\001\n\021czce_margin_field\022\025\n"
+      "\rpre_favorable\030\001 \001(\001\022\025\n\rspd_favorable\030\002 "
+      "\001(\001\022\025\n\rips_favorable\030\003 \001(\001\022\025\n\rprt_favora"
+      "ble\030\004 \001(\001\022\025\n\rstd_favorable\030\005 \001(\001\022\025\n\rstg_"
+      "favorable\030\006 \001(\001\022\026\n\016zprt_favorable\030\007 \001(\001\022"
+      "\030\n\020locked_favorable\030\010 \001(\001\"\357\001\n\020rtn_margin"
+      "_field\022\021\n\ttimestamp\030\001 \001(\r\022\020\n\010investor\030\002 "
+      "\001(\t\022,\n\013shfe_margin\030\003 \001(\0132\027.risk.shfe_mar"
+      "gin_field\022.\n\014cffex_margin\030\004 \001(\0132\030.risk.c"
+      "ffex_margin_field\022*\n\ndce_margin\030\005 \001(\0132\026."
+      "risk.dce_margin_field\022,\n\013czce_margin\030\006 \001"
+      "(\0132\027.risk.czce_margin_fieldb\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 981);
+      descriptor, 1195);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "risk_protocal.proto", &protobuf_RegisterTypes);
 }
@@ -264,6 +368,1842 @@ struct StaticDescriptorInitializer {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int error_info::kErroridFieldNumber;
+const int error_info::kErrormsgFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+error_info::error_info()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_risk_5fprotocal_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:risk.error_info)
+}
+error_info::error_info(const error_info& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  errormsg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.errormsg().size() > 0) {
+    errormsg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.errormsg_);
+  }
+  errorid_ = from.errorid_;
+  // @@protoc_insertion_point(copy_constructor:risk.error_info)
+}
+
+void error_info::SharedCtor() {
+  errormsg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  errorid_ = 0;
+  _cached_size_ = 0;
+}
+
+error_info::~error_info() {
+  // @@protoc_insertion_point(destructor:risk.error_info)
+  SharedDtor();
+}
+
+void error_info::SharedDtor() {
+  errormsg_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void error_info::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* error_info::descriptor() {
+  protobuf_risk_5fprotocal_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_risk_5fprotocal_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const error_info& error_info::default_instance() {
+  protobuf_risk_5fprotocal_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+error_info* error_info::New(::google::protobuf::Arena* arena) const {
+  error_info* n = new error_info;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void error_info::Clear() {
+// @@protoc_insertion_point(message_clear_start:risk.error_info)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  errormsg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  errorid_ = 0;
+  _internal_metadata_.Clear();
+}
+
+bool error_info::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:risk.error_info)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // sint32 errorid = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_SINT32>(
+                 input, &errorid_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string errormsg = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_errormsg()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->errormsg().data(), static_cast<int>(this->errormsg().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "risk.error_info.errormsg"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:risk.error_info)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:risk.error_info)
+  return false;
+#undef DO_
+}
+
+void error_info::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:risk.error_info)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // sint32 errorid = 1;
+  if (this->errorid() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteSInt32(1, this->errorid(), output);
+  }
+
+  // string errormsg = 2;
+  if (this->errormsg().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->errormsg().data(), static_cast<int>(this->errormsg().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "risk.error_info.errormsg");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->errormsg(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:risk.error_info)
+}
+
+::google::protobuf::uint8* error_info::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:risk.error_info)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // sint32 errorid = 1;
+  if (this->errorid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteSInt32ToArray(1, this->errorid(), target);
+  }
+
+  // string errormsg = 2;
+  if (this->errormsg().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->errormsg().data(), static_cast<int>(this->errormsg().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "risk.error_info.errormsg");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->errormsg(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:risk.error_info)
+  return target;
+}
+
+size_t error_info::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:risk.error_info)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // string errormsg = 2;
+  if (this->errormsg().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->errormsg());
+  }
+
+  // sint32 errorid = 1;
+  if (this->errorid() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::SInt32Size(
+        this->errorid());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void error_info::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:risk.error_info)
+  GOOGLE_DCHECK_NE(&from, this);
+  const error_info* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const error_info>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:risk.error_info)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:risk.error_info)
+    MergeFrom(*source);
+  }
+}
+
+void error_info::MergeFrom(const error_info& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:risk.error_info)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.errormsg().size() > 0) {
+
+    errormsg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.errormsg_);
+  }
+  if (from.errorid() != 0) {
+    set_errorid(from.errorid());
+  }
+}
+
+void error_info::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:risk.error_info)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void error_info::CopyFrom(const error_info& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:risk.error_info)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool error_info::IsInitialized() const {
+  return true;
+}
+
+void error_info::Swap(error_info* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void error_info::InternalSwap(error_info* other) {
+  using std::swap;
+  errormsg_.Swap(&other->errormsg_);
+  swap(errorid_, other->errorid_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata error_info::GetMetadata() const {
+  protobuf_risk_5fprotocal_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_risk_5fprotocal_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// error_info
+
+// sint32 errorid = 1;
+void error_info::clear_errorid() {
+  errorid_ = 0;
+}
+::google::protobuf::int32 error_info::errorid() const {
+  // @@protoc_insertion_point(field_get:risk.error_info.errorid)
+  return errorid_;
+}
+void error_info::set_errorid(::google::protobuf::int32 value) {
+  
+  errorid_ = value;
+  // @@protoc_insertion_point(field_set:risk.error_info.errorid)
+}
+
+// string errormsg = 2;
+void error_info::clear_errormsg() {
+  errormsg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+const ::std::string& error_info::errormsg() const {
+  // @@protoc_insertion_point(field_get:risk.error_info.errormsg)
+  return errormsg_.GetNoArena();
+}
+void error_info::set_errormsg(const ::std::string& value) {
+  
+  errormsg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:risk.error_info.errormsg)
+}
+#if LANG_CXX11
+void error_info::set_errormsg(::std::string&& value) {
+  
+  errormsg_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:risk.error_info.errormsg)
+}
+#endif
+void error_info::set_errormsg(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  errormsg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:risk.error_info.errormsg)
+}
+void error_info::set_errormsg(const char* value, size_t size) {
+  
+  errormsg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:risk.error_info.errormsg)
+}
+::std::string* error_info::mutable_errormsg() {
+  
+  // @@protoc_insertion_point(field_mutable:risk.error_info.errormsg)
+  return errormsg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* error_info::release_errormsg() {
+  // @@protoc_insertion_point(field_release:risk.error_info.errormsg)
+  
+  return errormsg_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void error_info::set_allocated_errormsg(::std::string* errormsg) {
+  if (errormsg != NULL) {
+    
+  } else {
+    
+  }
+  errormsg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), errormsg);
+  // @@protoc_insertion_point(field_set_allocated:risk.error_info.errormsg)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int req_risker_login::kRiskeridFieldNumber;
+const int req_risker_login::kPasswordFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+req_risker_login::req_risker_login()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_risk_5fprotocal_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:risk.req_risker_login)
+}
+req_risker_login::req_risker_login(const req_risker_login& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  riskerid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.riskerid().size() > 0) {
+    riskerid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.riskerid_);
+  }
+  password_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.password().size() > 0) {
+    password_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.password_);
+  }
+  // @@protoc_insertion_point(copy_constructor:risk.req_risker_login)
+}
+
+void req_risker_login::SharedCtor() {
+  riskerid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  password_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _cached_size_ = 0;
+}
+
+req_risker_login::~req_risker_login() {
+  // @@protoc_insertion_point(destructor:risk.req_risker_login)
+  SharedDtor();
+}
+
+void req_risker_login::SharedDtor() {
+  riskerid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  password_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void req_risker_login::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* req_risker_login::descriptor() {
+  protobuf_risk_5fprotocal_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_risk_5fprotocal_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const req_risker_login& req_risker_login::default_instance() {
+  protobuf_risk_5fprotocal_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+req_risker_login* req_risker_login::New(::google::protobuf::Arena* arena) const {
+  req_risker_login* n = new req_risker_login;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void req_risker_login::Clear() {
+// @@protoc_insertion_point(message_clear_start:risk.req_risker_login)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  riskerid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  password_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _internal_metadata_.Clear();
+}
+
+bool req_risker_login::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:risk.req_risker_login)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // string riskerid = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_riskerid()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->riskerid().data(), static_cast<int>(this->riskerid().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "risk.req_risker_login.riskerid"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string password = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_password()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->password().data(), static_cast<int>(this->password().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "risk.req_risker_login.password"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:risk.req_risker_login)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:risk.req_risker_login)
+  return false;
+#undef DO_
+}
+
+void req_risker_login::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:risk.req_risker_login)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string riskerid = 1;
+  if (this->riskerid().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->riskerid().data(), static_cast<int>(this->riskerid().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "risk.req_risker_login.riskerid");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->riskerid(), output);
+  }
+
+  // string password = 2;
+  if (this->password().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->password().data(), static_cast<int>(this->password().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "risk.req_risker_login.password");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->password(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:risk.req_risker_login)
+}
+
+::google::protobuf::uint8* req_risker_login::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:risk.req_risker_login)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string riskerid = 1;
+  if (this->riskerid().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->riskerid().data(), static_cast<int>(this->riskerid().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "risk.req_risker_login.riskerid");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->riskerid(), target);
+  }
+
+  // string password = 2;
+  if (this->password().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->password().data(), static_cast<int>(this->password().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "risk.req_risker_login.password");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->password(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:risk.req_risker_login)
+  return target;
+}
+
+size_t req_risker_login::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:risk.req_risker_login)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // string riskerid = 1;
+  if (this->riskerid().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->riskerid());
+  }
+
+  // string password = 2;
+  if (this->password().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->password());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void req_risker_login::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:risk.req_risker_login)
+  GOOGLE_DCHECK_NE(&from, this);
+  const req_risker_login* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const req_risker_login>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:risk.req_risker_login)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:risk.req_risker_login)
+    MergeFrom(*source);
+  }
+}
+
+void req_risker_login::MergeFrom(const req_risker_login& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:risk.req_risker_login)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.riskerid().size() > 0) {
+
+    riskerid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.riskerid_);
+  }
+  if (from.password().size() > 0) {
+
+    password_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.password_);
+  }
+}
+
+void req_risker_login::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:risk.req_risker_login)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void req_risker_login::CopyFrom(const req_risker_login& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:risk.req_risker_login)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool req_risker_login::IsInitialized() const {
+  return true;
+}
+
+void req_risker_login::Swap(req_risker_login* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void req_risker_login::InternalSwap(req_risker_login* other) {
+  using std::swap;
+  riskerid_.Swap(&other->riskerid_);
+  password_.Swap(&other->password_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata req_risker_login::GetMetadata() const {
+  protobuf_risk_5fprotocal_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_risk_5fprotocal_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// req_risker_login
+
+// string riskerid = 1;
+void req_risker_login::clear_riskerid() {
+  riskerid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+const ::std::string& req_risker_login::riskerid() const {
+  // @@protoc_insertion_point(field_get:risk.req_risker_login.riskerid)
+  return riskerid_.GetNoArena();
+}
+void req_risker_login::set_riskerid(const ::std::string& value) {
+  
+  riskerid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:risk.req_risker_login.riskerid)
+}
+#if LANG_CXX11
+void req_risker_login::set_riskerid(::std::string&& value) {
+  
+  riskerid_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:risk.req_risker_login.riskerid)
+}
+#endif
+void req_risker_login::set_riskerid(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  riskerid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:risk.req_risker_login.riskerid)
+}
+void req_risker_login::set_riskerid(const char* value, size_t size) {
+  
+  riskerid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:risk.req_risker_login.riskerid)
+}
+::std::string* req_risker_login::mutable_riskerid() {
+  
+  // @@protoc_insertion_point(field_mutable:risk.req_risker_login.riskerid)
+  return riskerid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* req_risker_login::release_riskerid() {
+  // @@protoc_insertion_point(field_release:risk.req_risker_login.riskerid)
+  
+  return riskerid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void req_risker_login::set_allocated_riskerid(::std::string* riskerid) {
+  if (riskerid != NULL) {
+    
+  } else {
+    
+  }
+  riskerid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), riskerid);
+  // @@protoc_insertion_point(field_set_allocated:risk.req_risker_login.riskerid)
+}
+
+// string password = 2;
+void req_risker_login::clear_password() {
+  password_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+const ::std::string& req_risker_login::password() const {
+  // @@protoc_insertion_point(field_get:risk.req_risker_login.password)
+  return password_.GetNoArena();
+}
+void req_risker_login::set_password(const ::std::string& value) {
+  
+  password_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:risk.req_risker_login.password)
+}
+#if LANG_CXX11
+void req_risker_login::set_password(::std::string&& value) {
+  
+  password_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:risk.req_risker_login.password)
+}
+#endif
+void req_risker_login::set_password(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  password_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:risk.req_risker_login.password)
+}
+void req_risker_login::set_password(const char* value, size_t size) {
+  
+  password_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:risk.req_risker_login.password)
+}
+::std::string* req_risker_login::mutable_password() {
+  
+  // @@protoc_insertion_point(field_mutable:risk.req_risker_login.password)
+  return password_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* req_risker_login::release_password() {
+  // @@protoc_insertion_point(field_release:risk.req_risker_login.password)
+  
+  return password_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void req_risker_login::set_allocated_password(::std::string* password) {
+  if (password != NULL) {
+    
+  } else {
+    
+  }
+  password_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), password);
+  // @@protoc_insertion_point(field_set_allocated:risk.req_risker_login.password)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int rsp_risker_login::kInfoFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+rsp_risker_login::rsp_risker_login()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_risk_5fprotocal_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:risk.rsp_risker_login)
+}
+rsp_risker_login::rsp_risker_login(const rsp_risker_login& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_info()) {
+    info_ = new ::risk::error_info(*from.info_);
+  } else {
+    info_ = NULL;
+  }
+  // @@protoc_insertion_point(copy_constructor:risk.rsp_risker_login)
+}
+
+void rsp_risker_login::SharedCtor() {
+  info_ = NULL;
+  _cached_size_ = 0;
+}
+
+rsp_risker_login::~rsp_risker_login() {
+  // @@protoc_insertion_point(destructor:risk.rsp_risker_login)
+  SharedDtor();
+}
+
+void rsp_risker_login::SharedDtor() {
+  if (this != internal_default_instance()) delete info_;
+}
+
+void rsp_risker_login::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* rsp_risker_login::descriptor() {
+  protobuf_risk_5fprotocal_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_risk_5fprotocal_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const rsp_risker_login& rsp_risker_login::default_instance() {
+  protobuf_risk_5fprotocal_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+rsp_risker_login* rsp_risker_login::New(::google::protobuf::Arena* arena) const {
+  rsp_risker_login* n = new rsp_risker_login;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void rsp_risker_login::Clear() {
+// @@protoc_insertion_point(message_clear_start:risk.rsp_risker_login)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == NULL && info_ != NULL) {
+    delete info_;
+  }
+  info_ = NULL;
+  _internal_metadata_.Clear();
+}
+
+bool rsp_risker_login::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:risk.rsp_risker_login)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .risk.error_info info = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_info()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:risk.rsp_risker_login)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:risk.rsp_risker_login)
+  return false;
+#undef DO_
+}
+
+void rsp_risker_login::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:risk.rsp_risker_login)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .risk.error_info info = 1;
+  if (this->has_info()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, *this->info_, output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:risk.rsp_risker_login)
+}
+
+::google::protobuf::uint8* rsp_risker_login::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:risk.rsp_risker_login)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .risk.error_info info = 1;
+  if (this->has_info()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        1, *this->info_, deterministic, target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:risk.rsp_risker_login)
+  return target;
+}
+
+size_t rsp_risker_login::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:risk.rsp_risker_login)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // .risk.error_info info = 1;
+  if (this->has_info()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->info_);
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void rsp_risker_login::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:risk.rsp_risker_login)
+  GOOGLE_DCHECK_NE(&from, this);
+  const rsp_risker_login* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const rsp_risker_login>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:risk.rsp_risker_login)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:risk.rsp_risker_login)
+    MergeFrom(*source);
+  }
+}
+
+void rsp_risker_login::MergeFrom(const rsp_risker_login& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:risk.rsp_risker_login)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_info()) {
+    mutable_info()->::risk::error_info::MergeFrom(from.info());
+  }
+}
+
+void rsp_risker_login::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:risk.rsp_risker_login)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void rsp_risker_login::CopyFrom(const rsp_risker_login& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:risk.rsp_risker_login)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool rsp_risker_login::IsInitialized() const {
+  return true;
+}
+
+void rsp_risker_login::Swap(rsp_risker_login* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void rsp_risker_login::InternalSwap(rsp_risker_login* other) {
+  using std::swap;
+  swap(info_, other->info_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata rsp_risker_login::GetMetadata() const {
+  protobuf_risk_5fprotocal_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_risk_5fprotocal_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// rsp_risker_login
+
+// .risk.error_info info = 1;
+bool rsp_risker_login::has_info() const {
+  return this != internal_default_instance() && info_ != NULL;
+}
+void rsp_risker_login::clear_info() {
+  if (GetArenaNoVirtual() == NULL && info_ != NULL) delete info_;
+  info_ = NULL;
+}
+const ::risk::error_info& rsp_risker_login::info() const {
+  const ::risk::error_info* p = info_;
+  // @@protoc_insertion_point(field_get:risk.rsp_risker_login.info)
+  return p != NULL ? *p : *reinterpret_cast<const ::risk::error_info*>(
+      &::risk::_error_info_default_instance_);
+}
+::risk::error_info* rsp_risker_login::mutable_info() {
+  
+  if (info_ == NULL) {
+    info_ = new ::risk::error_info;
+  }
+  // @@protoc_insertion_point(field_mutable:risk.rsp_risker_login.info)
+  return info_;
+}
+::risk::error_info* rsp_risker_login::release_info() {
+  // @@protoc_insertion_point(field_release:risk.rsp_risker_login.info)
+  
+  ::risk::error_info* temp = info_;
+  info_ = NULL;
+  return temp;
+}
+void rsp_risker_login::set_allocated_info(::risk::error_info* info) {
+  delete info_;
+  info_ = info;
+  if (info) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:risk.rsp_risker_login.info)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int req_investor_list::kRiskeridFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+req_investor_list::req_investor_list()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_risk_5fprotocal_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:risk.req_investor_list)
+}
+req_investor_list::req_investor_list(const req_investor_list& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  riskerid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.riskerid().size() > 0) {
+    riskerid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.riskerid_);
+  }
+  // @@protoc_insertion_point(copy_constructor:risk.req_investor_list)
+}
+
+void req_investor_list::SharedCtor() {
+  riskerid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _cached_size_ = 0;
+}
+
+req_investor_list::~req_investor_list() {
+  // @@protoc_insertion_point(destructor:risk.req_investor_list)
+  SharedDtor();
+}
+
+void req_investor_list::SharedDtor() {
+  riskerid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void req_investor_list::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* req_investor_list::descriptor() {
+  protobuf_risk_5fprotocal_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_risk_5fprotocal_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const req_investor_list& req_investor_list::default_instance() {
+  protobuf_risk_5fprotocal_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+req_investor_list* req_investor_list::New(::google::protobuf::Arena* arena) const {
+  req_investor_list* n = new req_investor_list;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void req_investor_list::Clear() {
+// @@protoc_insertion_point(message_clear_start:risk.req_investor_list)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  riskerid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _internal_metadata_.Clear();
+}
+
+bool req_investor_list::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:risk.req_investor_list)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // string riskerid = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_riskerid()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->riskerid().data(), static_cast<int>(this->riskerid().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "risk.req_investor_list.riskerid"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:risk.req_investor_list)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:risk.req_investor_list)
+  return false;
+#undef DO_
+}
+
+void req_investor_list::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:risk.req_investor_list)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string riskerid = 1;
+  if (this->riskerid().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->riskerid().data(), static_cast<int>(this->riskerid().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "risk.req_investor_list.riskerid");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->riskerid(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:risk.req_investor_list)
+}
+
+::google::protobuf::uint8* req_investor_list::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:risk.req_investor_list)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string riskerid = 1;
+  if (this->riskerid().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->riskerid().data(), static_cast<int>(this->riskerid().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "risk.req_investor_list.riskerid");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->riskerid(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:risk.req_investor_list)
+  return target;
+}
+
+size_t req_investor_list::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:risk.req_investor_list)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // string riskerid = 1;
+  if (this->riskerid().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->riskerid());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void req_investor_list::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:risk.req_investor_list)
+  GOOGLE_DCHECK_NE(&from, this);
+  const req_investor_list* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const req_investor_list>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:risk.req_investor_list)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:risk.req_investor_list)
+    MergeFrom(*source);
+  }
+}
+
+void req_investor_list::MergeFrom(const req_investor_list& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:risk.req_investor_list)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.riskerid().size() > 0) {
+
+    riskerid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.riskerid_);
+  }
+}
+
+void req_investor_list::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:risk.req_investor_list)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void req_investor_list::CopyFrom(const req_investor_list& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:risk.req_investor_list)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool req_investor_list::IsInitialized() const {
+  return true;
+}
+
+void req_investor_list::Swap(req_investor_list* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void req_investor_list::InternalSwap(req_investor_list* other) {
+  using std::swap;
+  riskerid_.Swap(&other->riskerid_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata req_investor_list::GetMetadata() const {
+  protobuf_risk_5fprotocal_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_risk_5fprotocal_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// req_investor_list
+
+// string riskerid = 1;
+void req_investor_list::clear_riskerid() {
+  riskerid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+const ::std::string& req_investor_list::riskerid() const {
+  // @@protoc_insertion_point(field_get:risk.req_investor_list.riskerid)
+  return riskerid_.GetNoArena();
+}
+void req_investor_list::set_riskerid(const ::std::string& value) {
+  
+  riskerid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:risk.req_investor_list.riskerid)
+}
+#if LANG_CXX11
+void req_investor_list::set_riskerid(::std::string&& value) {
+  
+  riskerid_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:risk.req_investor_list.riskerid)
+}
+#endif
+void req_investor_list::set_riskerid(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  riskerid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:risk.req_investor_list.riskerid)
+}
+void req_investor_list::set_riskerid(const char* value, size_t size) {
+  
+  riskerid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:risk.req_investor_list.riskerid)
+}
+::std::string* req_investor_list::mutable_riskerid() {
+  
+  // @@protoc_insertion_point(field_mutable:risk.req_investor_list.riskerid)
+  return riskerid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* req_investor_list::release_riskerid() {
+  // @@protoc_insertion_point(field_release:risk.req_investor_list.riskerid)
+  
+  return riskerid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void req_investor_list::set_allocated_riskerid(::std::string* riskerid) {
+  if (riskerid != NULL) {
+    
+  } else {
+    
+  }
+  riskerid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), riskerid);
+  // @@protoc_insertion_point(field_set_allocated:risk.req_investor_list.riskerid)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int rsp_investor_list::kInfoFieldNumber;
+const int rsp_investor_list::kInvestoridFieldNumber;
+const int rsp_investor_list::kIslastFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+rsp_investor_list::rsp_investor_list()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_risk_5fprotocal_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:risk.rsp_investor_list)
+}
+rsp_investor_list::rsp_investor_list(const rsp_investor_list& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  investorid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.investorid().size() > 0) {
+    investorid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.investorid_);
+  }
+  if (from.has_info()) {
+    info_ = new ::risk::error_info(*from.info_);
+  } else {
+    info_ = NULL;
+  }
+  islast_ = from.islast_;
+  // @@protoc_insertion_point(copy_constructor:risk.rsp_investor_list)
+}
+
+void rsp_investor_list::SharedCtor() {
+  investorid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&info_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&islast_) -
+      reinterpret_cast<char*>(&info_)) + sizeof(islast_));
+  _cached_size_ = 0;
+}
+
+rsp_investor_list::~rsp_investor_list() {
+  // @@protoc_insertion_point(destructor:risk.rsp_investor_list)
+  SharedDtor();
+}
+
+void rsp_investor_list::SharedDtor() {
+  investorid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete info_;
+}
+
+void rsp_investor_list::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* rsp_investor_list::descriptor() {
+  protobuf_risk_5fprotocal_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_risk_5fprotocal_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const rsp_investor_list& rsp_investor_list::default_instance() {
+  protobuf_risk_5fprotocal_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+rsp_investor_list* rsp_investor_list::New(::google::protobuf::Arena* arena) const {
+  rsp_investor_list* n = new rsp_investor_list;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void rsp_investor_list::Clear() {
+// @@protoc_insertion_point(message_clear_start:risk.rsp_investor_list)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  investorid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (GetArenaNoVirtual() == NULL && info_ != NULL) {
+    delete info_;
+  }
+  info_ = NULL;
+  islast_ = false;
+  _internal_metadata_.Clear();
+}
+
+bool rsp_investor_list::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:risk.rsp_investor_list)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .risk.error_info info = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_info()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string investorid = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_investorid()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->investorid().data(), static_cast<int>(this->investorid().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "risk.rsp_investor_list.investorid"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bool islast = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &islast_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:risk.rsp_investor_list)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:risk.rsp_investor_list)
+  return false;
+#undef DO_
+}
+
+void rsp_investor_list::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:risk.rsp_investor_list)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .risk.error_info info = 1;
+  if (this->has_info()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, *this->info_, output);
+  }
+
+  // string investorid = 2;
+  if (this->investorid().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->investorid().data(), static_cast<int>(this->investorid().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "risk.rsp_investor_list.investorid");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->investorid(), output);
+  }
+
+  // bool islast = 3;
+  if (this->islast() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(3, this->islast(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:risk.rsp_investor_list)
+}
+
+::google::protobuf::uint8* rsp_investor_list::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:risk.rsp_investor_list)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .risk.error_info info = 1;
+  if (this->has_info()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        1, *this->info_, deterministic, target);
+  }
+
+  // string investorid = 2;
+  if (this->investorid().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->investorid().data(), static_cast<int>(this->investorid().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "risk.rsp_investor_list.investorid");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->investorid(), target);
+  }
+
+  // bool islast = 3;
+  if (this->islast() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(3, this->islast(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:risk.rsp_investor_list)
+  return target;
+}
+
+size_t rsp_investor_list::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:risk.rsp_investor_list)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // string investorid = 2;
+  if (this->investorid().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->investorid());
+  }
+
+  // .risk.error_info info = 1;
+  if (this->has_info()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->info_);
+  }
+
+  // bool islast = 3;
+  if (this->islast() != 0) {
+    total_size += 1 + 1;
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void rsp_investor_list::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:risk.rsp_investor_list)
+  GOOGLE_DCHECK_NE(&from, this);
+  const rsp_investor_list* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const rsp_investor_list>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:risk.rsp_investor_list)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:risk.rsp_investor_list)
+    MergeFrom(*source);
+  }
+}
+
+void rsp_investor_list::MergeFrom(const rsp_investor_list& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:risk.rsp_investor_list)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.investorid().size() > 0) {
+
+    investorid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.investorid_);
+  }
+  if (from.has_info()) {
+    mutable_info()->::risk::error_info::MergeFrom(from.info());
+  }
+  if (from.islast() != 0) {
+    set_islast(from.islast());
+  }
+}
+
+void rsp_investor_list::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:risk.rsp_investor_list)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void rsp_investor_list::CopyFrom(const rsp_investor_list& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:risk.rsp_investor_list)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool rsp_investor_list::IsInitialized() const {
+  return true;
+}
+
+void rsp_investor_list::Swap(rsp_investor_list* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void rsp_investor_list::InternalSwap(rsp_investor_list* other) {
+  using std::swap;
+  investorid_.Swap(&other->investorid_);
+  swap(info_, other->info_);
+  swap(islast_, other->islast_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata rsp_investor_list::GetMetadata() const {
+  protobuf_risk_5fprotocal_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_risk_5fprotocal_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// rsp_investor_list
+
+// .risk.error_info info = 1;
+bool rsp_investor_list::has_info() const {
+  return this != internal_default_instance() && info_ != NULL;
+}
+void rsp_investor_list::clear_info() {
+  if (GetArenaNoVirtual() == NULL && info_ != NULL) delete info_;
+  info_ = NULL;
+}
+const ::risk::error_info& rsp_investor_list::info() const {
+  const ::risk::error_info* p = info_;
+  // @@protoc_insertion_point(field_get:risk.rsp_investor_list.info)
+  return p != NULL ? *p : *reinterpret_cast<const ::risk::error_info*>(
+      &::risk::_error_info_default_instance_);
+}
+::risk::error_info* rsp_investor_list::mutable_info() {
+  
+  if (info_ == NULL) {
+    info_ = new ::risk::error_info;
+  }
+  // @@protoc_insertion_point(field_mutable:risk.rsp_investor_list.info)
+  return info_;
+}
+::risk::error_info* rsp_investor_list::release_info() {
+  // @@protoc_insertion_point(field_release:risk.rsp_investor_list.info)
+  
+  ::risk::error_info* temp = info_;
+  info_ = NULL;
+  return temp;
+}
+void rsp_investor_list::set_allocated_info(::risk::error_info* info) {
+  delete info_;
+  info_ = info;
+  if (info) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:risk.rsp_investor_list.info)
+}
+
+// string investorid = 2;
+void rsp_investor_list::clear_investorid() {
+  investorid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+const ::std::string& rsp_investor_list::investorid() const {
+  // @@protoc_insertion_point(field_get:risk.rsp_investor_list.investorid)
+  return investorid_.GetNoArena();
+}
+void rsp_investor_list::set_investorid(const ::std::string& value) {
+  
+  investorid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:risk.rsp_investor_list.investorid)
+}
+#if LANG_CXX11
+void rsp_investor_list::set_investorid(::std::string&& value) {
+  
+  investorid_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:risk.rsp_investor_list.investorid)
+}
+#endif
+void rsp_investor_list::set_investorid(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  investorid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:risk.rsp_investor_list.investorid)
+}
+void rsp_investor_list::set_investorid(const char* value, size_t size) {
+  
+  investorid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:risk.rsp_investor_list.investorid)
+}
+::std::string* rsp_investor_list::mutable_investorid() {
+  
+  // @@protoc_insertion_point(field_mutable:risk.rsp_investor_list.investorid)
+  return investorid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* rsp_investor_list::release_investorid() {
+  // @@protoc_insertion_point(field_release:risk.rsp_investor_list.investorid)
+  
+  return investorid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void rsp_investor_list::set_allocated_investorid(::std::string* investorid) {
+  if (investorid != NULL) {
+    
+  } else {
+    
+  }
+  investorid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), investorid);
+  // @@protoc_insertion_point(field_set_allocated:risk.rsp_investor_list.investorid)
+}
+
+// bool islast = 3;
+void rsp_investor_list::clear_islast() {
+  islast_ = false;
+}
+bool rsp_investor_list::islast() const {
+  // @@protoc_insertion_point(field_get:risk.rsp_investor_list.islast)
+  return islast_;
+}
+void rsp_investor_list::set_islast(bool value) {
+  
+  islast_ = value;
+  // @@protoc_insertion_point(field_set:risk.rsp_investor_list.islast)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int subscribe_margin::kInvestorFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -278,17 +2218,13 @@ subscribe_margin::subscribe_margin()
 subscribe_margin::subscribe_margin(const subscribe_margin& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
+      investor_(from.investor_),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  investor_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.investor().size() > 0) {
-    investor_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.investor_);
-  }
   // @@protoc_insertion_point(copy_constructor:risk.subscribe_margin)
 }
 
 void subscribe_margin::SharedCtor() {
-  investor_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   _cached_size_ = 0;
 }
 
@@ -298,7 +2234,6 @@ subscribe_margin::~subscribe_margin() {
 }
 
 void subscribe_margin::SharedDtor() {
-  investor_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 void subscribe_margin::SetCachedSize(int size) const {
@@ -330,7 +2265,7 @@ void subscribe_margin::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  investor_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  investor_.Clear();
   _internal_metadata_.Clear();
 }
 
@@ -344,14 +2279,15 @@ bool subscribe_margin::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string investor = 1;
+      // repeated string investor = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_investor()));
+                input, this->add_investor()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->investor().data(), static_cast<int>(this->investor().length()),
+            this->investor(this->investor_size() - 1).data(),
+            static_cast<int>(this->investor(this->investor_size() - 1).length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
             "risk.subscribe_margin.investor"));
         } else {
@@ -386,14 +2322,14 @@ void subscribe_margin::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string investor = 1;
-  if (this->investor().size() > 0) {
+  // repeated string investor = 1;
+  for (int i = 0, n = this->investor_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->investor().data(), static_cast<int>(this->investor().length()),
+      this->investor(i).data(), static_cast<int>(this->investor(i).length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "risk.subscribe_margin.investor");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->investor(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      1, this->investor(i), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -410,15 +2346,14 @@ void subscribe_margin::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string investor = 1;
-  if (this->investor().size() > 0) {
+  // repeated string investor = 1;
+  for (int i = 0, n = this->investor_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->investor().data(), static_cast<int>(this->investor().length()),
+      this->investor(i).data(), static_cast<int>(this->investor(i).length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "risk.subscribe_margin.investor");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->investor(), target);
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteStringToArray(1, this->investor(i), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -438,11 +2373,12 @@ size_t subscribe_margin::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // string investor = 1;
-  if (this->investor().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->investor());
+  // repeated string investor = 1;
+  total_size += 1 *
+      ::google::protobuf::internal::FromIntSize(this->investor_size());
+  for (int i = 0, n = this->investor_size(); i < n; i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+      this->investor(i));
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -474,10 +2410,7 @@ void subscribe_margin::MergeFrom(const subscribe_margin& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.investor().size() > 0) {
-
-    investor_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.investor_);
-  }
+  investor_.MergeFrom(from.investor_);
 }
 
 void subscribe_margin::CopyFrom(const ::google::protobuf::Message& from) {
@@ -504,7 +2437,7 @@ void subscribe_margin::Swap(subscribe_margin* other) {
 }
 void subscribe_margin::InternalSwap(subscribe_margin* other) {
   using std::swap;
-  investor_.Swap(&other->investor_);
+  investor_.InternalSwap(&other->investor_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -517,57 +2450,73 @@ void subscribe_margin::InternalSwap(subscribe_margin* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // subscribe_margin
 
-// string investor = 1;
+// repeated string investor = 1;
+int subscribe_margin::investor_size() const {
+  return investor_.size();
+}
 void subscribe_margin::clear_investor() {
-  investor_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  investor_.Clear();
 }
-const ::std::string& subscribe_margin::investor() const {
+const ::std::string& subscribe_margin::investor(int index) const {
   // @@protoc_insertion_point(field_get:risk.subscribe_margin.investor)
-  return investor_.GetNoArena();
+  return investor_.Get(index);
 }
-void subscribe_margin::set_investor(const ::std::string& value) {
-  
-  investor_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+::std::string* subscribe_margin::mutable_investor(int index) {
+  // @@protoc_insertion_point(field_mutable:risk.subscribe_margin.investor)
+  return investor_.Mutable(index);
+}
+void subscribe_margin::set_investor(int index, const ::std::string& value) {
   // @@protoc_insertion_point(field_set:risk.subscribe_margin.investor)
+  investor_.Mutable(index)->assign(value);
 }
 #if LANG_CXX11
-void subscribe_margin::set_investor(::std::string&& value) {
-  
-  investor_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:risk.subscribe_margin.investor)
+void subscribe_margin::set_investor(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:risk.subscribe_margin.investor)
+  investor_.Mutable(index)->assign(std::move(value));
 }
 #endif
-void subscribe_margin::set_investor(const char* value) {
+void subscribe_margin::set_investor(int index, const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
-  investor_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  investor_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:risk.subscribe_margin.investor)
 }
-void subscribe_margin::set_investor(const char* value, size_t size) {
-  
-  investor_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
+void subscribe_margin::set_investor(int index, const char* value, size_t size) {
+  investor_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:risk.subscribe_margin.investor)
 }
-::std::string* subscribe_margin::mutable_investor() {
-  
-  // @@protoc_insertion_point(field_mutable:risk.subscribe_margin.investor)
-  return investor_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+::std::string* subscribe_margin::add_investor() {
+  // @@protoc_insertion_point(field_add_mutable:risk.subscribe_margin.investor)
+  return investor_.Add();
 }
-::std::string* subscribe_margin::release_investor() {
-  // @@protoc_insertion_point(field_release:risk.subscribe_margin.investor)
-  
-  return investor_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+void subscribe_margin::add_investor(const ::std::string& value) {
+  investor_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:risk.subscribe_margin.investor)
 }
-void subscribe_margin::set_allocated_investor(::std::string* investor) {
-  if (investor != NULL) {
-    
-  } else {
-    
-  }
-  investor_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), investor);
-  // @@protoc_insertion_point(field_set_allocated:risk.subscribe_margin.investor)
+#if LANG_CXX11
+void subscribe_margin::add_investor(::std::string&& value) {
+  investor_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:risk.subscribe_margin.investor)
+}
+#endif
+void subscribe_margin::add_investor(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  investor_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:risk.subscribe_margin.investor)
+}
+void subscribe_margin::add_investor(const char* value, size_t size) {
+  investor_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:risk.subscribe_margin.investor)
+}
+const ::google::protobuf::RepeatedPtrField< ::std::string>&
+subscribe_margin::investor() const {
+  // @@protoc_insertion_point(field_list:risk.subscribe_margin.investor)
+  return investor_;
+}
+::google::protobuf::RepeatedPtrField< ::std::string>*
+subscribe_margin::mutable_investor() {
+  // @@protoc_insertion_point(field_mutable_list:risk.subscribe_margin.investor)
+  return &investor_;
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -575,10 +2524,328 @@ void subscribe_margin::set_allocated_investor(::std::string* investor) {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int shfe_margin_field::kExchangeidFieldNumber;
+const int unsubscribe_margin::kInvestorFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+unsubscribe_margin::unsubscribe_margin()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_risk_5fprotocal_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:risk.unsubscribe_margin)
+}
+unsubscribe_margin::unsubscribe_margin(const unsubscribe_margin& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      investor_(from.investor_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:risk.unsubscribe_margin)
+}
+
+void unsubscribe_margin::SharedCtor() {
+  _cached_size_ = 0;
+}
+
+unsubscribe_margin::~unsubscribe_margin() {
+  // @@protoc_insertion_point(destructor:risk.unsubscribe_margin)
+  SharedDtor();
+}
+
+void unsubscribe_margin::SharedDtor() {
+}
+
+void unsubscribe_margin::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* unsubscribe_margin::descriptor() {
+  protobuf_risk_5fprotocal_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_risk_5fprotocal_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const unsubscribe_margin& unsubscribe_margin::default_instance() {
+  protobuf_risk_5fprotocal_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+unsubscribe_margin* unsubscribe_margin::New(::google::protobuf::Arena* arena) const {
+  unsubscribe_margin* n = new unsubscribe_margin;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void unsubscribe_margin::Clear() {
+// @@protoc_insertion_point(message_clear_start:risk.unsubscribe_margin)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  investor_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool unsubscribe_margin::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:risk.unsubscribe_margin)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated string investor = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->add_investor()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->investor(this->investor_size() - 1).data(),
+            static_cast<int>(this->investor(this->investor_size() - 1).length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "risk.unsubscribe_margin.investor"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:risk.unsubscribe_margin)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:risk.unsubscribe_margin)
+  return false;
+#undef DO_
+}
+
+void unsubscribe_margin::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:risk.unsubscribe_margin)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated string investor = 1;
+  for (int i = 0, n = this->investor_size(); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->investor(i).data(), static_cast<int>(this->investor(i).length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "risk.unsubscribe_margin.investor");
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      1, this->investor(i), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:risk.unsubscribe_margin)
+}
+
+::google::protobuf::uint8* unsubscribe_margin::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:risk.unsubscribe_margin)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated string investor = 1;
+  for (int i = 0, n = this->investor_size(); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->investor(i).data(), static_cast<int>(this->investor(i).length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "risk.unsubscribe_margin.investor");
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteStringToArray(1, this->investor(i), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:risk.unsubscribe_margin)
+  return target;
+}
+
+size_t unsubscribe_margin::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:risk.unsubscribe_margin)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // repeated string investor = 1;
+  total_size += 1 *
+      ::google::protobuf::internal::FromIntSize(this->investor_size());
+  for (int i = 0, n = this->investor_size(); i < n; i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+      this->investor(i));
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void unsubscribe_margin::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:risk.unsubscribe_margin)
+  GOOGLE_DCHECK_NE(&from, this);
+  const unsubscribe_margin* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const unsubscribe_margin>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:risk.unsubscribe_margin)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:risk.unsubscribe_margin)
+    MergeFrom(*source);
+  }
+}
+
+void unsubscribe_margin::MergeFrom(const unsubscribe_margin& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:risk.unsubscribe_margin)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  investor_.MergeFrom(from.investor_);
+}
+
+void unsubscribe_margin::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:risk.unsubscribe_margin)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void unsubscribe_margin::CopyFrom(const unsubscribe_margin& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:risk.unsubscribe_margin)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool unsubscribe_margin::IsInitialized() const {
+  return true;
+}
+
+void unsubscribe_margin::Swap(unsubscribe_margin* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void unsubscribe_margin::InternalSwap(unsubscribe_margin* other) {
+  using std::swap;
+  investor_.InternalSwap(&other->investor_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata unsubscribe_margin::GetMetadata() const {
+  protobuf_risk_5fprotocal_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_risk_5fprotocal_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// unsubscribe_margin
+
+// repeated string investor = 1;
+int unsubscribe_margin::investor_size() const {
+  return investor_.size();
+}
+void unsubscribe_margin::clear_investor() {
+  investor_.Clear();
+}
+const ::std::string& unsubscribe_margin::investor(int index) const {
+  // @@protoc_insertion_point(field_get:risk.unsubscribe_margin.investor)
+  return investor_.Get(index);
+}
+::std::string* unsubscribe_margin::mutable_investor(int index) {
+  // @@protoc_insertion_point(field_mutable:risk.unsubscribe_margin.investor)
+  return investor_.Mutable(index);
+}
+void unsubscribe_margin::set_investor(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:risk.unsubscribe_margin.investor)
+  investor_.Mutable(index)->assign(value);
+}
+#if LANG_CXX11
+void unsubscribe_margin::set_investor(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:risk.unsubscribe_margin.investor)
+  investor_.Mutable(index)->assign(std::move(value));
+}
+#endif
+void unsubscribe_margin::set_investor(int index, const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  investor_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:risk.unsubscribe_margin.investor)
+}
+void unsubscribe_margin::set_investor(int index, const char* value, size_t size) {
+  investor_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:risk.unsubscribe_margin.investor)
+}
+::std::string* unsubscribe_margin::add_investor() {
+  // @@protoc_insertion_point(field_add_mutable:risk.unsubscribe_margin.investor)
+  return investor_.Add();
+}
+void unsubscribe_margin::add_investor(const ::std::string& value) {
+  investor_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:risk.unsubscribe_margin.investor)
+}
+#if LANG_CXX11
+void unsubscribe_margin::add_investor(::std::string&& value) {
+  investor_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:risk.unsubscribe_margin.investor)
+}
+#endif
+void unsubscribe_margin::add_investor(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  investor_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:risk.unsubscribe_margin.investor)
+}
+void unsubscribe_margin::add_investor(const char* value, size_t size) {
+  investor_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:risk.unsubscribe_margin.investor)
+}
+const ::google::protobuf::RepeatedPtrField< ::std::string>&
+unsubscribe_margin::investor() const {
+  // @@protoc_insertion_point(field_list:risk.unsubscribe_margin.investor)
+  return investor_;
+}
+::google::protobuf::RepeatedPtrField< ::std::string>*
+unsubscribe_margin::mutable_investor() {
+  // @@protoc_insertion_point(field_mutable_list:risk.unsubscribe_margin.investor)
+  return &investor_;
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int shfe_margin_field::kPreFavorableFieldNumber;
-const int shfe_margin_field::kSpeculationFavorableFieldNumber;
-const int shfe_margin_field::kHedgingFavorableFieldNumber;
+const int shfe_margin_field::kBigSideFavorableFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 shfe_margin_field::shfe_margin_field()
@@ -594,21 +2861,16 @@ shfe_margin_field::shfe_margin_field(const shfe_margin_field& from)
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  exchangeid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.exchangeid().size() > 0) {
-    exchangeid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchangeid_);
-  }
   ::memcpy(&pre_favorable_, &from.pre_favorable_,
-    static_cast<size_t>(reinterpret_cast<char*>(&hedging_favorable_) -
-    reinterpret_cast<char*>(&pre_favorable_)) + sizeof(hedging_favorable_));
+    static_cast<size_t>(reinterpret_cast<char*>(&big_side_favorable_) -
+    reinterpret_cast<char*>(&pre_favorable_)) + sizeof(big_side_favorable_));
   // @@protoc_insertion_point(copy_constructor:risk.shfe_margin_field)
 }
 
 void shfe_margin_field::SharedCtor() {
-  exchangeid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&pre_favorable_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&hedging_favorable_) -
-      reinterpret_cast<char*>(&pre_favorable_)) + sizeof(hedging_favorable_));
+      reinterpret_cast<char*>(&big_side_favorable_) -
+      reinterpret_cast<char*>(&pre_favorable_)) + sizeof(big_side_favorable_));
   _cached_size_ = 0;
 }
 
@@ -618,7 +2880,6 @@ shfe_margin_field::~shfe_margin_field() {
 }
 
 void shfe_margin_field::SharedDtor() {
-  exchangeid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 void shfe_margin_field::SetCachedSize(int size) const {
@@ -650,10 +2911,9 @@ void shfe_margin_field::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  exchangeid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&pre_favorable_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&hedging_favorable_) -
-      reinterpret_cast<char*>(&pre_favorable_)) + sizeof(hedging_favorable_));
+      reinterpret_cast<char*>(&big_side_favorable_) -
+      reinterpret_cast<char*>(&pre_favorable_)) + sizeof(big_side_favorable_));
   _internal_metadata_.Clear();
 }
 
@@ -667,26 +2927,10 @@ bool shfe_margin_field::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string exchangeid = 1;
+      // double pre_favorable = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_exchangeid()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->exchangeid().data(), static_cast<int>(this->exchangeid().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "risk.shfe_margin_field.exchangeid"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double pre_favorable = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(17u /* 17 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(9u /* 9 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -697,28 +2941,14 @@ bool shfe_margin_field::MergePartialFromCodedStream(
         break;
       }
 
-      // double speculation_favorable = 3;
-      case 3: {
+      // double big_side_favorable = 2;
+      case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(25u /* 25 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(17u /* 17 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &speculation_favorable_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double hedging_favorable = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(33u /* 33 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &hedging_favorable_)));
+                 input, &big_side_favorable_)));
         } else {
           goto handle_unusual;
         }
@@ -751,29 +2981,14 @@ void shfe_margin_field::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string exchangeid = 1;
-  if (this->exchangeid().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->exchangeid().data(), static_cast<int>(this->exchangeid().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "risk.shfe_margin_field.exchangeid");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->exchangeid(), output);
-  }
-
-  // double pre_favorable = 2;
+  // double pre_favorable = 1;
   if (this->pre_favorable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(2, this->pre_favorable(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->pre_favorable(), output);
   }
 
-  // double speculation_favorable = 3;
-  if (this->speculation_favorable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(3, this->speculation_favorable(), output);
-  }
-
-  // double hedging_favorable = 4;
-  if (this->hedging_favorable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(4, this->hedging_favorable(), output);
+  // double big_side_favorable = 2;
+  if (this->big_side_favorable() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(2, this->big_side_favorable(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -790,30 +3005,14 @@ void shfe_margin_field::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string exchangeid = 1;
-  if (this->exchangeid().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->exchangeid().data(), static_cast<int>(this->exchangeid().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "risk.shfe_margin_field.exchangeid");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->exchangeid(), target);
-  }
-
-  // double pre_favorable = 2;
+  // double pre_favorable = 1;
   if (this->pre_favorable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(2, this->pre_favorable(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->pre_favorable(), target);
   }
 
-  // double speculation_favorable = 3;
-  if (this->speculation_favorable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(3, this->speculation_favorable(), target);
-  }
-
-  // double hedging_favorable = 4;
-  if (this->hedging_favorable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(4, this->hedging_favorable(), target);
+  // double big_side_favorable = 2;
+  if (this->big_side_favorable() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(2, this->big_side_favorable(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -833,25 +3032,13 @@ size_t shfe_margin_field::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // string exchangeid = 1;
-  if (this->exchangeid().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->exchangeid());
-  }
-
-  // double pre_favorable = 2;
+  // double pre_favorable = 1;
   if (this->pre_favorable() != 0) {
     total_size += 1 + 8;
   }
 
-  // double speculation_favorable = 3;
-  if (this->speculation_favorable() != 0) {
-    total_size += 1 + 8;
-  }
-
-  // double hedging_favorable = 4;
-  if (this->hedging_favorable() != 0) {
+  // double big_side_favorable = 2;
+  if (this->big_side_favorable() != 0) {
     total_size += 1 + 8;
   }
 
@@ -884,18 +3071,11 @@ void shfe_margin_field::MergeFrom(const shfe_margin_field& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.exchangeid().size() > 0) {
-
-    exchangeid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchangeid_);
-  }
   if (from.pre_favorable() != 0) {
     set_pre_favorable(from.pre_favorable());
   }
-  if (from.speculation_favorable() != 0) {
-    set_speculation_favorable(from.speculation_favorable());
-  }
-  if (from.hedging_favorable() != 0) {
-    set_hedging_favorable(from.hedging_favorable());
+  if (from.big_side_favorable() != 0) {
+    set_big_side_favorable(from.big_side_favorable());
   }
 }
 
@@ -923,10 +3103,8 @@ void shfe_margin_field::Swap(shfe_margin_field* other) {
 }
 void shfe_margin_field::InternalSwap(shfe_margin_field* other) {
   using std::swap;
-  exchangeid_.Swap(&other->exchangeid_);
   swap(pre_favorable_, other->pre_favorable_);
-  swap(speculation_favorable_, other->speculation_favorable_);
-  swap(hedging_favorable_, other->hedging_favorable_);
+  swap(big_side_favorable_, other->big_side_favorable_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -939,60 +3117,7 @@ void shfe_margin_field::InternalSwap(shfe_margin_field* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // shfe_margin_field
 
-// string exchangeid = 1;
-void shfe_margin_field::clear_exchangeid() {
-  exchangeid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-const ::std::string& shfe_margin_field::exchangeid() const {
-  // @@protoc_insertion_point(field_get:risk.shfe_margin_field.exchangeid)
-  return exchangeid_.GetNoArena();
-}
-void shfe_margin_field::set_exchangeid(const ::std::string& value) {
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:risk.shfe_margin_field.exchangeid)
-}
-#if LANG_CXX11
-void shfe_margin_field::set_exchangeid(::std::string&& value) {
-  
-  exchangeid_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:risk.shfe_margin_field.exchangeid)
-}
-#endif
-void shfe_margin_field::set_exchangeid(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:risk.shfe_margin_field.exchangeid)
-}
-void shfe_margin_field::set_exchangeid(const char* value, size_t size) {
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:risk.shfe_margin_field.exchangeid)
-}
-::std::string* shfe_margin_field::mutable_exchangeid() {
-  
-  // @@protoc_insertion_point(field_mutable:risk.shfe_margin_field.exchangeid)
-  return exchangeid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-::std::string* shfe_margin_field::release_exchangeid() {
-  // @@protoc_insertion_point(field_release:risk.shfe_margin_field.exchangeid)
-  
-  return exchangeid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-void shfe_margin_field::set_allocated_exchangeid(::std::string* exchangeid) {
-  if (exchangeid != NULL) {
-    
-  } else {
-    
-  }
-  exchangeid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), exchangeid);
-  // @@protoc_insertion_point(field_set_allocated:risk.shfe_margin_field.exchangeid)
-}
-
-// double pre_favorable = 2;
+// double pre_favorable = 1;
 void shfe_margin_field::clear_pre_favorable() {
   pre_favorable_ = 0;
 }
@@ -1006,32 +3131,18 @@ void shfe_margin_field::set_pre_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.shfe_margin_field.pre_favorable)
 }
 
-// double speculation_favorable = 3;
-void shfe_margin_field::clear_speculation_favorable() {
-  speculation_favorable_ = 0;
+// double big_side_favorable = 2;
+void shfe_margin_field::clear_big_side_favorable() {
+  big_side_favorable_ = 0;
 }
-double shfe_margin_field::speculation_favorable() const {
-  // @@protoc_insertion_point(field_get:risk.shfe_margin_field.speculation_favorable)
-  return speculation_favorable_;
+double shfe_margin_field::big_side_favorable() const {
+  // @@protoc_insertion_point(field_get:risk.shfe_margin_field.big_side_favorable)
+  return big_side_favorable_;
 }
-void shfe_margin_field::set_speculation_favorable(double value) {
+void shfe_margin_field::set_big_side_favorable(double value) {
   
-  speculation_favorable_ = value;
-  // @@protoc_insertion_point(field_set:risk.shfe_margin_field.speculation_favorable)
-}
-
-// double hedging_favorable = 4;
-void shfe_margin_field::clear_hedging_favorable() {
-  hedging_favorable_ = 0;
-}
-double shfe_margin_field::hedging_favorable() const {
-  // @@protoc_insertion_point(field_get:risk.shfe_margin_field.hedging_favorable)
-  return hedging_favorable_;
-}
-void shfe_margin_field::set_hedging_favorable(double value) {
-  
-  hedging_favorable_ = value;
-  // @@protoc_insertion_point(field_set:risk.shfe_margin_field.hedging_favorable)
+  big_side_favorable_ = value;
+  // @@protoc_insertion_point(field_set:risk.shfe_margin_field.big_side_favorable)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1039,7 +3150,6 @@ void shfe_margin_field::set_hedging_favorable(double value) {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int cffex_margin_field::kExchangeidFieldNumber;
 const int cffex_margin_field::kPreFavorableFieldNumber;
 const int cffex_margin_field::kSpeculationFavorableFieldNumber;
 const int cffex_margin_field::kHedgingFavorableFieldNumber;
@@ -1060,10 +3170,6 @@ cffex_margin_field::cffex_margin_field(const cffex_margin_field& from)
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  exchangeid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.exchangeid().size() > 0) {
-    exchangeid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchangeid_);
-  }
   ::memcpy(&pre_favorable_, &from.pre_favorable_,
     static_cast<size_t>(reinterpret_cast<char*>(&market_favorable_) -
     reinterpret_cast<char*>(&pre_favorable_)) + sizeof(market_favorable_));
@@ -1071,7 +3177,6 @@ cffex_margin_field::cffex_margin_field(const cffex_margin_field& from)
 }
 
 void cffex_margin_field::SharedCtor() {
-  exchangeid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&pre_favorable_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&market_favorable_) -
       reinterpret_cast<char*>(&pre_favorable_)) + sizeof(market_favorable_));
@@ -1084,7 +3189,6 @@ cffex_margin_field::~cffex_margin_field() {
 }
 
 void cffex_margin_field::SharedDtor() {
-  exchangeid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 void cffex_margin_field::SetCachedSize(int size) const {
@@ -1116,7 +3220,6 @@ void cffex_margin_field::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  exchangeid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&pre_favorable_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&market_favorable_) -
       reinterpret_cast<char*>(&pre_favorable_)) + sizeof(market_favorable_));
@@ -1133,26 +3236,10 @@ bool cffex_margin_field::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string exchangeid = 1;
+      // double pre_favorable = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_exchangeid()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->exchangeid().data(), static_cast<int>(this->exchangeid().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "risk.cffex_margin_field.exchangeid"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double pre_favorable = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(17u /* 17 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(9u /* 9 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -1163,10 +3250,10 @@ bool cffex_margin_field::MergePartialFromCodedStream(
         break;
       }
 
-      // double speculation_favorable = 3;
-      case 3: {
+      // double speculation_favorable = 2;
+      case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(25u /* 25 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(17u /* 17 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -1177,10 +3264,10 @@ bool cffex_margin_field::MergePartialFromCodedStream(
         break;
       }
 
-      // double hedging_favorable = 4;
-      case 4: {
+      // double hedging_favorable = 3;
+      case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(33u /* 33 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(25u /* 25 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -1191,10 +3278,10 @@ bool cffex_margin_field::MergePartialFromCodedStream(
         break;
       }
 
-      // double arbitrage_favorable = 5;
-      case 5: {
+      // double arbitrage_favorable = 4;
+      case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(41u /* 41 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(33u /* 33 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -1205,10 +3292,10 @@ bool cffex_margin_field::MergePartialFromCodedStream(
         break;
       }
 
-      // double market_favorable = 6;
-      case 6: {
+      // double market_favorable = 5;
+      case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(49u /* 49 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(41u /* 41 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -1245,39 +3332,29 @@ void cffex_margin_field::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string exchangeid = 1;
-  if (this->exchangeid().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->exchangeid().data(), static_cast<int>(this->exchangeid().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "risk.cffex_margin_field.exchangeid");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->exchangeid(), output);
-  }
-
-  // double pre_favorable = 2;
+  // double pre_favorable = 1;
   if (this->pre_favorable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(2, this->pre_favorable(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->pre_favorable(), output);
   }
 
-  // double speculation_favorable = 3;
+  // double speculation_favorable = 2;
   if (this->speculation_favorable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(3, this->speculation_favorable(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(2, this->speculation_favorable(), output);
   }
 
-  // double hedging_favorable = 4;
+  // double hedging_favorable = 3;
   if (this->hedging_favorable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(4, this->hedging_favorable(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(3, this->hedging_favorable(), output);
   }
 
-  // double arbitrage_favorable = 5;
+  // double arbitrage_favorable = 4;
   if (this->arbitrage_favorable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(5, this->arbitrage_favorable(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(4, this->arbitrage_favorable(), output);
   }
 
-  // double market_favorable = 6;
+  // double market_favorable = 5;
   if (this->market_favorable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(6, this->market_favorable(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(5, this->market_favorable(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1294,40 +3371,29 @@ void cffex_margin_field::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string exchangeid = 1;
-  if (this->exchangeid().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->exchangeid().data(), static_cast<int>(this->exchangeid().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "risk.cffex_margin_field.exchangeid");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->exchangeid(), target);
-  }
-
-  // double pre_favorable = 2;
+  // double pre_favorable = 1;
   if (this->pre_favorable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(2, this->pre_favorable(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->pre_favorable(), target);
   }
 
-  // double speculation_favorable = 3;
+  // double speculation_favorable = 2;
   if (this->speculation_favorable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(3, this->speculation_favorable(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(2, this->speculation_favorable(), target);
   }
 
-  // double hedging_favorable = 4;
+  // double hedging_favorable = 3;
   if (this->hedging_favorable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(4, this->hedging_favorable(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(3, this->hedging_favorable(), target);
   }
 
-  // double arbitrage_favorable = 5;
+  // double arbitrage_favorable = 4;
   if (this->arbitrage_favorable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(5, this->arbitrage_favorable(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(4, this->arbitrage_favorable(), target);
   }
 
-  // double market_favorable = 6;
+  // double market_favorable = 5;
   if (this->market_favorable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(6, this->market_favorable(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(5, this->market_favorable(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1347,34 +3413,27 @@ size_t cffex_margin_field::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // string exchangeid = 1;
-  if (this->exchangeid().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->exchangeid());
-  }
-
-  // double pre_favorable = 2;
+  // double pre_favorable = 1;
   if (this->pre_favorable() != 0) {
     total_size += 1 + 8;
   }
 
-  // double speculation_favorable = 3;
+  // double speculation_favorable = 2;
   if (this->speculation_favorable() != 0) {
     total_size += 1 + 8;
   }
 
-  // double hedging_favorable = 4;
+  // double hedging_favorable = 3;
   if (this->hedging_favorable() != 0) {
     total_size += 1 + 8;
   }
 
-  // double arbitrage_favorable = 5;
+  // double arbitrage_favorable = 4;
   if (this->arbitrage_favorable() != 0) {
     total_size += 1 + 8;
   }
 
-  // double market_favorable = 6;
+  // double market_favorable = 5;
   if (this->market_favorable() != 0) {
     total_size += 1 + 8;
   }
@@ -1408,10 +3467,6 @@ void cffex_margin_field::MergeFrom(const cffex_margin_field& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.exchangeid().size() > 0) {
-
-    exchangeid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchangeid_);
-  }
   if (from.pre_favorable() != 0) {
     set_pre_favorable(from.pre_favorable());
   }
@@ -1453,7 +3508,6 @@ void cffex_margin_field::Swap(cffex_margin_field* other) {
 }
 void cffex_margin_field::InternalSwap(cffex_margin_field* other) {
   using std::swap;
-  exchangeid_.Swap(&other->exchangeid_);
   swap(pre_favorable_, other->pre_favorable_);
   swap(speculation_favorable_, other->speculation_favorable_);
   swap(hedging_favorable_, other->hedging_favorable_);
@@ -1471,60 +3525,7 @@ void cffex_margin_field::InternalSwap(cffex_margin_field* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // cffex_margin_field
 
-// string exchangeid = 1;
-void cffex_margin_field::clear_exchangeid() {
-  exchangeid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-const ::std::string& cffex_margin_field::exchangeid() const {
-  // @@protoc_insertion_point(field_get:risk.cffex_margin_field.exchangeid)
-  return exchangeid_.GetNoArena();
-}
-void cffex_margin_field::set_exchangeid(const ::std::string& value) {
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:risk.cffex_margin_field.exchangeid)
-}
-#if LANG_CXX11
-void cffex_margin_field::set_exchangeid(::std::string&& value) {
-  
-  exchangeid_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:risk.cffex_margin_field.exchangeid)
-}
-#endif
-void cffex_margin_field::set_exchangeid(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:risk.cffex_margin_field.exchangeid)
-}
-void cffex_margin_field::set_exchangeid(const char* value, size_t size) {
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:risk.cffex_margin_field.exchangeid)
-}
-::std::string* cffex_margin_field::mutable_exchangeid() {
-  
-  // @@protoc_insertion_point(field_mutable:risk.cffex_margin_field.exchangeid)
-  return exchangeid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-::std::string* cffex_margin_field::release_exchangeid() {
-  // @@protoc_insertion_point(field_release:risk.cffex_margin_field.exchangeid)
-  
-  return exchangeid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-void cffex_margin_field::set_allocated_exchangeid(::std::string* exchangeid) {
-  if (exchangeid != NULL) {
-    
-  } else {
-    
-  }
-  exchangeid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), exchangeid);
-  // @@protoc_insertion_point(field_set_allocated:risk.cffex_margin_field.exchangeid)
-}
-
-// double pre_favorable = 2;
+// double pre_favorable = 1;
 void cffex_margin_field::clear_pre_favorable() {
   pre_favorable_ = 0;
 }
@@ -1538,7 +3539,7 @@ void cffex_margin_field::set_pre_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.cffex_margin_field.pre_favorable)
 }
 
-// double speculation_favorable = 3;
+// double speculation_favorable = 2;
 void cffex_margin_field::clear_speculation_favorable() {
   speculation_favorable_ = 0;
 }
@@ -1552,7 +3553,7 @@ void cffex_margin_field::set_speculation_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.cffex_margin_field.speculation_favorable)
 }
 
-// double hedging_favorable = 4;
+// double hedging_favorable = 3;
 void cffex_margin_field::clear_hedging_favorable() {
   hedging_favorable_ = 0;
 }
@@ -1566,7 +3567,7 @@ void cffex_margin_field::set_hedging_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.cffex_margin_field.hedging_favorable)
 }
 
-// double arbitrage_favorable = 5;
+// double arbitrage_favorable = 4;
 void cffex_margin_field::clear_arbitrage_favorable() {
   arbitrage_favorable_ = 0;
 }
@@ -1580,7 +3581,7 @@ void cffex_margin_field::set_arbitrage_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.cffex_margin_field.arbitrage_favorable)
 }
 
-// double market_favorable = 6;
+// double market_favorable = 5;
 void cffex_margin_field::clear_market_favorable() {
   market_favorable_ = 0;
 }
@@ -1599,7 +3600,6 @@ void cffex_margin_field::set_market_favorable(double value) {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int dce_margin_field::kExchangeidFieldNumber;
 const int dce_margin_field::kPreFavorableFieldNumber;
 const int dce_margin_field::kSpFavorableFieldNumber;
 const int dce_margin_field::kSpcFavorableFieldNumber;
@@ -1619,10 +3619,6 @@ dce_margin_field::dce_margin_field(const dce_margin_field& from)
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  exchangeid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.exchangeid().size() > 0) {
-    exchangeid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchangeid_);
-  }
   ::memcpy(&pre_favorable_, &from.pre_favorable_,
     static_cast<size_t>(reinterpret_cast<char*>(&locked_favorable_) -
     reinterpret_cast<char*>(&pre_favorable_)) + sizeof(locked_favorable_));
@@ -1630,7 +3626,6 @@ dce_margin_field::dce_margin_field(const dce_margin_field& from)
 }
 
 void dce_margin_field::SharedCtor() {
-  exchangeid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&pre_favorable_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&locked_favorable_) -
       reinterpret_cast<char*>(&pre_favorable_)) + sizeof(locked_favorable_));
@@ -1643,7 +3638,6 @@ dce_margin_field::~dce_margin_field() {
 }
 
 void dce_margin_field::SharedDtor() {
-  exchangeid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 void dce_margin_field::SetCachedSize(int size) const {
@@ -1675,7 +3669,6 @@ void dce_margin_field::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  exchangeid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&pre_favorable_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&locked_favorable_) -
       reinterpret_cast<char*>(&pre_favorable_)) + sizeof(locked_favorable_));
@@ -1692,26 +3685,10 @@ bool dce_margin_field::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string exchangeid = 1;
+      // double pre_favorable = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_exchangeid()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->exchangeid().data(), static_cast<int>(this->exchangeid().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "risk.dce_margin_field.exchangeid"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double pre_favorable = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(17u /* 17 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(9u /* 9 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -1722,10 +3699,10 @@ bool dce_margin_field::MergePartialFromCodedStream(
         break;
       }
 
-      // double sp_favorable = 3;
-      case 3: {
+      // double sp_favorable = 2;
+      case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(25u /* 25 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(17u /* 17 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -1736,10 +3713,10 @@ bool dce_margin_field::MergePartialFromCodedStream(
         break;
       }
 
-      // double spc_favorable = 4;
-      case 4: {
+      // double spc_favorable = 3;
+      case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(33u /* 33 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(25u /* 25 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -1750,10 +3727,10 @@ bool dce_margin_field::MergePartialFromCodedStream(
         break;
       }
 
-      // double locked_favorable = 5;
-      case 5: {
+      // double locked_favorable = 4;
+      case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(41u /* 41 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(33u /* 33 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -1790,34 +3767,24 @@ void dce_margin_field::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string exchangeid = 1;
-  if (this->exchangeid().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->exchangeid().data(), static_cast<int>(this->exchangeid().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "risk.dce_margin_field.exchangeid");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->exchangeid(), output);
-  }
-
-  // double pre_favorable = 2;
+  // double pre_favorable = 1;
   if (this->pre_favorable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(2, this->pre_favorable(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->pre_favorable(), output);
   }
 
-  // double sp_favorable = 3;
+  // double sp_favorable = 2;
   if (this->sp_favorable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(3, this->sp_favorable(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(2, this->sp_favorable(), output);
   }
 
-  // double spc_favorable = 4;
+  // double spc_favorable = 3;
   if (this->spc_favorable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(4, this->spc_favorable(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(3, this->spc_favorable(), output);
   }
 
-  // double locked_favorable = 5;
+  // double locked_favorable = 4;
   if (this->locked_favorable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(5, this->locked_favorable(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(4, this->locked_favorable(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1834,35 +3801,24 @@ void dce_margin_field::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string exchangeid = 1;
-  if (this->exchangeid().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->exchangeid().data(), static_cast<int>(this->exchangeid().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "risk.dce_margin_field.exchangeid");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->exchangeid(), target);
-  }
-
-  // double pre_favorable = 2;
+  // double pre_favorable = 1;
   if (this->pre_favorable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(2, this->pre_favorable(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->pre_favorable(), target);
   }
 
-  // double sp_favorable = 3;
+  // double sp_favorable = 2;
   if (this->sp_favorable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(3, this->sp_favorable(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(2, this->sp_favorable(), target);
   }
 
-  // double spc_favorable = 4;
+  // double spc_favorable = 3;
   if (this->spc_favorable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(4, this->spc_favorable(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(3, this->spc_favorable(), target);
   }
 
-  // double locked_favorable = 5;
+  // double locked_favorable = 4;
   if (this->locked_favorable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(5, this->locked_favorable(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(4, this->locked_favorable(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1882,29 +3838,22 @@ size_t dce_margin_field::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // string exchangeid = 1;
-  if (this->exchangeid().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->exchangeid());
-  }
-
-  // double pre_favorable = 2;
+  // double pre_favorable = 1;
   if (this->pre_favorable() != 0) {
     total_size += 1 + 8;
   }
 
-  // double sp_favorable = 3;
+  // double sp_favorable = 2;
   if (this->sp_favorable() != 0) {
     total_size += 1 + 8;
   }
 
-  // double spc_favorable = 4;
+  // double spc_favorable = 3;
   if (this->spc_favorable() != 0) {
     total_size += 1 + 8;
   }
 
-  // double locked_favorable = 5;
+  // double locked_favorable = 4;
   if (this->locked_favorable() != 0) {
     total_size += 1 + 8;
   }
@@ -1938,10 +3887,6 @@ void dce_margin_field::MergeFrom(const dce_margin_field& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.exchangeid().size() > 0) {
-
-    exchangeid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchangeid_);
-  }
   if (from.pre_favorable() != 0) {
     set_pre_favorable(from.pre_favorable());
   }
@@ -1980,7 +3925,6 @@ void dce_margin_field::Swap(dce_margin_field* other) {
 }
 void dce_margin_field::InternalSwap(dce_margin_field* other) {
   using std::swap;
-  exchangeid_.Swap(&other->exchangeid_);
   swap(pre_favorable_, other->pre_favorable_);
   swap(sp_favorable_, other->sp_favorable_);
   swap(spc_favorable_, other->spc_favorable_);
@@ -1997,60 +3941,7 @@ void dce_margin_field::InternalSwap(dce_margin_field* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // dce_margin_field
 
-// string exchangeid = 1;
-void dce_margin_field::clear_exchangeid() {
-  exchangeid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-const ::std::string& dce_margin_field::exchangeid() const {
-  // @@protoc_insertion_point(field_get:risk.dce_margin_field.exchangeid)
-  return exchangeid_.GetNoArena();
-}
-void dce_margin_field::set_exchangeid(const ::std::string& value) {
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:risk.dce_margin_field.exchangeid)
-}
-#if LANG_CXX11
-void dce_margin_field::set_exchangeid(::std::string&& value) {
-  
-  exchangeid_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:risk.dce_margin_field.exchangeid)
-}
-#endif
-void dce_margin_field::set_exchangeid(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:risk.dce_margin_field.exchangeid)
-}
-void dce_margin_field::set_exchangeid(const char* value, size_t size) {
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:risk.dce_margin_field.exchangeid)
-}
-::std::string* dce_margin_field::mutable_exchangeid() {
-  
-  // @@protoc_insertion_point(field_mutable:risk.dce_margin_field.exchangeid)
-  return exchangeid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-::std::string* dce_margin_field::release_exchangeid() {
-  // @@protoc_insertion_point(field_release:risk.dce_margin_field.exchangeid)
-  
-  return exchangeid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-void dce_margin_field::set_allocated_exchangeid(::std::string* exchangeid) {
-  if (exchangeid != NULL) {
-    
-  } else {
-    
-  }
-  exchangeid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), exchangeid);
-  // @@protoc_insertion_point(field_set_allocated:risk.dce_margin_field.exchangeid)
-}
-
-// double pre_favorable = 2;
+// double pre_favorable = 1;
 void dce_margin_field::clear_pre_favorable() {
   pre_favorable_ = 0;
 }
@@ -2064,7 +3955,7 @@ void dce_margin_field::set_pre_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.dce_margin_field.pre_favorable)
 }
 
-// double sp_favorable = 3;
+// double sp_favorable = 2;
 void dce_margin_field::clear_sp_favorable() {
   sp_favorable_ = 0;
 }
@@ -2078,7 +3969,7 @@ void dce_margin_field::set_sp_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.dce_margin_field.sp_favorable)
 }
 
-// double spc_favorable = 4;
+// double spc_favorable = 3;
 void dce_margin_field::clear_spc_favorable() {
   spc_favorable_ = 0;
 }
@@ -2092,7 +3983,7 @@ void dce_margin_field::set_spc_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.dce_margin_field.spc_favorable)
 }
 
-// double locked_favorable = 5;
+// double locked_favorable = 4;
 void dce_margin_field::clear_locked_favorable() {
   locked_favorable_ = 0;
 }
@@ -2111,7 +4002,6 @@ void dce_margin_field::set_locked_favorable(double value) {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int czce_margin_field::kExchangeidFieldNumber;
 const int czce_margin_field::kPreFavorableFieldNumber;
 const int czce_margin_field::kSpdFavorableFieldNumber;
 const int czce_margin_field::kIpsFavorableFieldNumber;
@@ -2135,10 +4025,6 @@ czce_margin_field::czce_margin_field(const czce_margin_field& from)
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  exchangeid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.exchangeid().size() > 0) {
-    exchangeid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchangeid_);
-  }
   ::memcpy(&pre_favorable_, &from.pre_favorable_,
     static_cast<size_t>(reinterpret_cast<char*>(&locked_favorable_) -
     reinterpret_cast<char*>(&pre_favorable_)) + sizeof(locked_favorable_));
@@ -2146,7 +4032,6 @@ czce_margin_field::czce_margin_field(const czce_margin_field& from)
 }
 
 void czce_margin_field::SharedCtor() {
-  exchangeid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&pre_favorable_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&locked_favorable_) -
       reinterpret_cast<char*>(&pre_favorable_)) + sizeof(locked_favorable_));
@@ -2159,7 +4044,6 @@ czce_margin_field::~czce_margin_field() {
 }
 
 void czce_margin_field::SharedDtor() {
-  exchangeid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 void czce_margin_field::SetCachedSize(int size) const {
@@ -2191,7 +4075,6 @@ void czce_margin_field::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  exchangeid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&pre_favorable_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&locked_favorable_) -
       reinterpret_cast<char*>(&pre_favorable_)) + sizeof(locked_favorable_));
@@ -2208,26 +4091,10 @@ bool czce_margin_field::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string exchangeid = 1;
+      // double pre_favorable = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_exchangeid()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->exchangeid().data(), static_cast<int>(this->exchangeid().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "risk.czce_margin_field.exchangeid"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double pre_favorable = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(17u /* 17 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(9u /* 9 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -2238,10 +4105,10 @@ bool czce_margin_field::MergePartialFromCodedStream(
         break;
       }
 
-      // double spd_favorable = 3;
-      case 3: {
+      // double spd_favorable = 2;
+      case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(25u /* 25 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(17u /* 17 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -2252,10 +4119,10 @@ bool czce_margin_field::MergePartialFromCodedStream(
         break;
       }
 
-      // double ips_favorable = 4;
-      case 4: {
+      // double ips_favorable = 3;
+      case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(33u /* 33 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(25u /* 25 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -2266,10 +4133,10 @@ bool czce_margin_field::MergePartialFromCodedStream(
         break;
       }
 
-      // double prt_favorable = 5;
-      case 5: {
+      // double prt_favorable = 4;
+      case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(41u /* 41 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(33u /* 33 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -2280,10 +4147,10 @@ bool czce_margin_field::MergePartialFromCodedStream(
         break;
       }
 
-      // double std_favorable = 6;
-      case 6: {
+      // double std_favorable = 5;
+      case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(49u /* 49 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(41u /* 41 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -2294,10 +4161,10 @@ bool czce_margin_field::MergePartialFromCodedStream(
         break;
       }
 
-      // double stg_favorable = 7;
-      case 7: {
+      // double stg_favorable = 6;
+      case 6: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(57u /* 57 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(49u /* 49 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -2308,10 +4175,10 @@ bool czce_margin_field::MergePartialFromCodedStream(
         break;
       }
 
-      // double zprt_favorable = 8;
-      case 8: {
+      // double zprt_favorable = 7;
+      case 7: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(65u /* 65 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(57u /* 57 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -2322,10 +4189,10 @@ bool czce_margin_field::MergePartialFromCodedStream(
         break;
       }
 
-      // double locked_favorable = 9;
-      case 9: {
+      // double locked_favorable = 8;
+      case 8: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(73u /* 73 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(65u /* 65 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -2362,54 +4229,44 @@ void czce_margin_field::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string exchangeid = 1;
-  if (this->exchangeid().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->exchangeid().data(), static_cast<int>(this->exchangeid().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "risk.czce_margin_field.exchangeid");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->exchangeid(), output);
-  }
-
-  // double pre_favorable = 2;
+  // double pre_favorable = 1;
   if (this->pre_favorable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(2, this->pre_favorable(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->pre_favorable(), output);
   }
 
-  // double spd_favorable = 3;
+  // double spd_favorable = 2;
   if (this->spd_favorable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(3, this->spd_favorable(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(2, this->spd_favorable(), output);
   }
 
-  // double ips_favorable = 4;
+  // double ips_favorable = 3;
   if (this->ips_favorable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(4, this->ips_favorable(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(3, this->ips_favorable(), output);
   }
 
-  // double prt_favorable = 5;
+  // double prt_favorable = 4;
   if (this->prt_favorable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(5, this->prt_favorable(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(4, this->prt_favorable(), output);
   }
 
-  // double std_favorable = 6;
+  // double std_favorable = 5;
   if (this->std_favorable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(6, this->std_favorable(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(5, this->std_favorable(), output);
   }
 
-  // double stg_favorable = 7;
+  // double stg_favorable = 6;
   if (this->stg_favorable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(7, this->stg_favorable(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(6, this->stg_favorable(), output);
   }
 
-  // double zprt_favorable = 8;
+  // double zprt_favorable = 7;
   if (this->zprt_favorable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(8, this->zprt_favorable(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(7, this->zprt_favorable(), output);
   }
 
-  // double locked_favorable = 9;
+  // double locked_favorable = 8;
   if (this->locked_favorable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(9, this->locked_favorable(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(8, this->locked_favorable(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -2426,55 +4283,44 @@ void czce_margin_field::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string exchangeid = 1;
-  if (this->exchangeid().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->exchangeid().data(), static_cast<int>(this->exchangeid().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "risk.czce_margin_field.exchangeid");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->exchangeid(), target);
-  }
-
-  // double pre_favorable = 2;
+  // double pre_favorable = 1;
   if (this->pre_favorable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(2, this->pre_favorable(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->pre_favorable(), target);
   }
 
-  // double spd_favorable = 3;
+  // double spd_favorable = 2;
   if (this->spd_favorable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(3, this->spd_favorable(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(2, this->spd_favorable(), target);
   }
 
-  // double ips_favorable = 4;
+  // double ips_favorable = 3;
   if (this->ips_favorable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(4, this->ips_favorable(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(3, this->ips_favorable(), target);
   }
 
-  // double prt_favorable = 5;
+  // double prt_favorable = 4;
   if (this->prt_favorable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(5, this->prt_favorable(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(4, this->prt_favorable(), target);
   }
 
-  // double std_favorable = 6;
+  // double std_favorable = 5;
   if (this->std_favorable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(6, this->std_favorable(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(5, this->std_favorable(), target);
   }
 
-  // double stg_favorable = 7;
+  // double stg_favorable = 6;
   if (this->stg_favorable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(7, this->stg_favorable(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(6, this->stg_favorable(), target);
   }
 
-  // double zprt_favorable = 8;
+  // double zprt_favorable = 7;
   if (this->zprt_favorable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(8, this->zprt_favorable(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(7, this->zprt_favorable(), target);
   }
 
-  // double locked_favorable = 9;
+  // double locked_favorable = 8;
   if (this->locked_favorable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(9, this->locked_favorable(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(8, this->locked_favorable(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -2494,49 +4340,42 @@ size_t czce_margin_field::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // string exchangeid = 1;
-  if (this->exchangeid().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->exchangeid());
-  }
-
-  // double pre_favorable = 2;
+  // double pre_favorable = 1;
   if (this->pre_favorable() != 0) {
     total_size += 1 + 8;
   }
 
-  // double spd_favorable = 3;
+  // double spd_favorable = 2;
   if (this->spd_favorable() != 0) {
     total_size += 1 + 8;
   }
 
-  // double ips_favorable = 4;
+  // double ips_favorable = 3;
   if (this->ips_favorable() != 0) {
     total_size += 1 + 8;
   }
 
-  // double prt_favorable = 5;
+  // double prt_favorable = 4;
   if (this->prt_favorable() != 0) {
     total_size += 1 + 8;
   }
 
-  // double std_favorable = 6;
+  // double std_favorable = 5;
   if (this->std_favorable() != 0) {
     total_size += 1 + 8;
   }
 
-  // double stg_favorable = 7;
+  // double stg_favorable = 6;
   if (this->stg_favorable() != 0) {
     total_size += 1 + 8;
   }
 
-  // double zprt_favorable = 8;
+  // double zprt_favorable = 7;
   if (this->zprt_favorable() != 0) {
     total_size += 1 + 8;
   }
 
-  // double locked_favorable = 9;
+  // double locked_favorable = 8;
   if (this->locked_favorable() != 0) {
     total_size += 1 + 8;
   }
@@ -2570,10 +4409,6 @@ void czce_margin_field::MergeFrom(const czce_margin_field& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.exchangeid().size() > 0) {
-
-    exchangeid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exchangeid_);
-  }
   if (from.pre_favorable() != 0) {
     set_pre_favorable(from.pre_favorable());
   }
@@ -2624,7 +4459,6 @@ void czce_margin_field::Swap(czce_margin_field* other) {
 }
 void czce_margin_field::InternalSwap(czce_margin_field* other) {
   using std::swap;
-  exchangeid_.Swap(&other->exchangeid_);
   swap(pre_favorable_, other->pre_favorable_);
   swap(spd_favorable_, other->spd_favorable_);
   swap(ips_favorable_, other->ips_favorable_);
@@ -2645,60 +4479,7 @@ void czce_margin_field::InternalSwap(czce_margin_field* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // czce_margin_field
 
-// string exchangeid = 1;
-void czce_margin_field::clear_exchangeid() {
-  exchangeid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-const ::std::string& czce_margin_field::exchangeid() const {
-  // @@protoc_insertion_point(field_get:risk.czce_margin_field.exchangeid)
-  return exchangeid_.GetNoArena();
-}
-void czce_margin_field::set_exchangeid(const ::std::string& value) {
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:risk.czce_margin_field.exchangeid)
-}
-#if LANG_CXX11
-void czce_margin_field::set_exchangeid(::std::string&& value) {
-  
-  exchangeid_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:risk.czce_margin_field.exchangeid)
-}
-#endif
-void czce_margin_field::set_exchangeid(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:risk.czce_margin_field.exchangeid)
-}
-void czce_margin_field::set_exchangeid(const char* value, size_t size) {
-  
-  exchangeid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:risk.czce_margin_field.exchangeid)
-}
-::std::string* czce_margin_field::mutable_exchangeid() {
-  
-  // @@protoc_insertion_point(field_mutable:risk.czce_margin_field.exchangeid)
-  return exchangeid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-::std::string* czce_margin_field::release_exchangeid() {
-  // @@protoc_insertion_point(field_release:risk.czce_margin_field.exchangeid)
-  
-  return exchangeid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-void czce_margin_field::set_allocated_exchangeid(::std::string* exchangeid) {
-  if (exchangeid != NULL) {
-    
-  } else {
-    
-  }
-  exchangeid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), exchangeid);
-  // @@protoc_insertion_point(field_set_allocated:risk.czce_margin_field.exchangeid)
-}
-
-// double pre_favorable = 2;
+// double pre_favorable = 1;
 void czce_margin_field::clear_pre_favorable() {
   pre_favorable_ = 0;
 }
@@ -2712,7 +4493,7 @@ void czce_margin_field::set_pre_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.czce_margin_field.pre_favorable)
 }
 
-// double spd_favorable = 3;
+// double spd_favorable = 2;
 void czce_margin_field::clear_spd_favorable() {
   spd_favorable_ = 0;
 }
@@ -2726,7 +4507,7 @@ void czce_margin_field::set_spd_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.czce_margin_field.spd_favorable)
 }
 
-// double ips_favorable = 4;
+// double ips_favorable = 3;
 void czce_margin_field::clear_ips_favorable() {
   ips_favorable_ = 0;
 }
@@ -2740,7 +4521,7 @@ void czce_margin_field::set_ips_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.czce_margin_field.ips_favorable)
 }
 
-// double prt_favorable = 5;
+// double prt_favorable = 4;
 void czce_margin_field::clear_prt_favorable() {
   prt_favorable_ = 0;
 }
@@ -2754,7 +4535,7 @@ void czce_margin_field::set_prt_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.czce_margin_field.prt_favorable)
 }
 
-// double std_favorable = 6;
+// double std_favorable = 5;
 void czce_margin_field::clear_std_favorable() {
   std_favorable_ = 0;
 }
@@ -2768,7 +4549,7 @@ void czce_margin_field::set_std_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.czce_margin_field.std_favorable)
 }
 
-// double stg_favorable = 7;
+// double stg_favorable = 6;
 void czce_margin_field::clear_stg_favorable() {
   stg_favorable_ = 0;
 }
@@ -2782,7 +4563,7 @@ void czce_margin_field::set_stg_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.czce_margin_field.stg_favorable)
 }
 
-// double zprt_favorable = 8;
+// double zprt_favorable = 7;
 void czce_margin_field::clear_zprt_favorable() {
   zprt_favorable_ = 0;
 }
@@ -2796,7 +4577,7 @@ void czce_margin_field::set_zprt_favorable(double value) {
   // @@protoc_insertion_point(field_set:risk.czce_margin_field.zprt_favorable)
 }
 
-// double locked_favorable = 9;
+// double locked_favorable = 8;
 void czce_margin_field::clear_locked_favorable() {
   locked_favorable_ = 0;
 }

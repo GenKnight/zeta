@@ -19,7 +19,7 @@ eric     2017.8.5   1.0     Create
 namespace zeta 
 {
     void server::run(const size_t thread_num)
-	{
+    {
         m_message_server.run(thread_num);
 
         //for test
@@ -42,31 +42,31 @@ namespace zeta
 
         get_AmqEngine().Init(m_notify);
 
-	}
+    }
 
     void server::join()
     {
         m_message_server.join();
     }
 
-	void server::stop()
-	{
+    void server::stop()
+    {
         m_message_server.stop();
-	}
+    }
 
-	void server::send_messages( int type, const char* stream, MESSAGE_HEAD &header )
-	{
-		switch(type)
-		{
-		case 1:
-			{
+    void server::send_messages( int type, const char* stream, MESSAGE_HEAD &header )
+    {
+        switch(type)
+        {
+        case 1:
+            {
                   get_AmqEngine().GetTradeServer().AmqSendStream(stream, header);
-				break;
-			}			
-		default:
-			{
-				break;
-			}
-		}
-	}
+                break;
+            }            
+        default:
+            {
+                break;
+            }
+        }
+    }
 }

@@ -28,3 +28,6 @@ project/db_sync/log/*
 *.log
 *.bak
 *.con
+*.suo
+*.db
+*.opendb
